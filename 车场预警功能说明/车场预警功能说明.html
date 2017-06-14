@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>车辆预警功能说明</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+            word-wrap: break-word;
+            word-break: break-all;
+            /*border: 1px solid red;*/
+            /*overflow: hidden;*/
+        }
+
+        img {
+            /*border: 1px solid black;*/
+            /*display: block;*/
+            /*margin: 0 auto;*/
+
+            display: block;
+            margin: -20px auto 0;
+            -webkit-box-shadow: 7px 8px 4px #333333;
+            -moz-box-shadow: 7px 8px 4px #333333;
+            box-shadow: 7px 8px 4px #333333;
+            /*width: 100%;*/
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        pre {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        h5 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">车辆预警功能说明</h1>
+<h3>1.预警功能介绍</h3>
+<pre>
+    停车难,这个问题在大部分小区,都是一个老大难的问题.
+    其中有很大一部分是业主不按规定停车造成的,如买了地下车位的车主却把车停在地面.
+    本预警功能就是解决业主不按规定停车的问题.
+    实现方法是在软件里设置一个预警时间,当超出此时间车主还没有将车停到指定区域,软件会弹出含有该车信
+息的报警框,提醒管理人员去干预.
+    <span style="color: blue;">本功能只对登记在软件系统里的月租车有效;报警弹出框只在<em>服务端</em> 出现.</span>
+</pre>
+<h3>2.预警功能操作方法</h3>
+<pre>
+    此功能只针对月租车实用,不针对临时车.
+    解决月租车不停在自己的车位,在小区胡乱停放的问题.
+</pre>
+<h4>2.1 服务端模式设置</h4>
+<pre>
+    在软件根目录找到Confing文件夹,打开Confing Setting,将软件模式改成"服务端",保存退出.
+    <div align="center" ><img style="display: inline" src="img/config文件夹.png"><span> </span><img  style="display: inline" src="img/configSetting.png"><span> </span><img style="display: inline" src="img/软件工作模式.png"></div>
+</pre>
+<h4 style="clear: both;">2.2 启用车场预警功能</h4>
+<pre>
+    进入软件后,打开"车场公共属性配置"对话框.
+    <img src="img/车场公共属性配置.png">
+    设置一个预警时间.该时间默认是零,表示不启用车场预警功能.
+    当设置一个大于零的值时就开始启用此功能.
+    <img src="img/超出指定时间预警.png">
+    举例说明预警时间的作用:
+    某业主的车进入小区时间是15:20,预警时间是30分钟,该车应停放在一期地下车库.
+    如果该业主在15:50前没有将车停放在一期地下车库,也没有驶出小区,那软件就会弹出报警框,告诉管理人
+    员该业主车进入小区后没按规定停放.
+    如果在15:50前停到一期地下车库,软件就不予处理.
+</pre>
+<h4>2.3 预警功能具体操作</h4>
+<pre>   举例说明:
+    a.假设某小区有两个车场:地面和地下,临时车停地面,业主车停地下.
+    <img style="margin-bottom: 10px;" src="img/车场设置.png"><img width="100%" src="img/车道设置.png">
+    b.预警时间设置的是15分钟.
+    c.编辑车辆,指定该车所属车场.此处如果不选择,表示该车不启用车场预警功能.
+    <img src="img/车辆登记.png">
+    d.该车进入小区后如果没停在地库,超过15分钟后服务端会弹出如下对话框.
+    <img width="100%" src="img/弹出预警对话框.png">
+    e.人为干预.
+    管理人员到小区内寻找这辆车并通知车主按规停车后,再回到软件端点击"处理此条数据"按钮.
+    至此,就实现了车场的预警功能.
+</pre>
+</body>
+</html>

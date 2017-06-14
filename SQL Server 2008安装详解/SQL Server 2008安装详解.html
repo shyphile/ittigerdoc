@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>SQL Server 2008安装详解</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+            word-wrap: break-word;
+            word-break: break-all;
+            /*border: 1px solid red;*/
+            /*overflow: hidden;*/
+        }
+
+        img {
+            /*border: 1px solid black;*/
+            /*display: block;*/
+            /*margin: 0 auto;*/
+
+            display: block;
+            margin: -20px auto 0;
+            -webkit-box-shadow: 7px 8px 4px #333333;
+            -moz-box-shadow: 7px 8px 4px #333333;
+            box-shadow: 7px 8px 4px #333333;
+            /*width: 100%;*/
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        pre, li {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        h5 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .redBig {
+            font-family: 微软雅黑;
+            font-size: 17px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">SQL Server 2008安装详解</h1>
+<pre>
+    本篇文章为大家介绍安装sql server 2008 的步骤,以及需要注意的事项.
+    安装链接:<a href="http://jingyan.baidu.com/article/86fae3469e6c4b3c48121a76.html" target="_blank">http://jingyan.baidu.com/article/86fae3469e6c4b3c48121a76.html</a>
+    <span class="redBig">如果在安装过程中出现错误提示,请根据错误信息自行百度.</span>
+    <span class="redBig">不要再问我们了,我们也确实不懂.</span>
+    <em style="color: blue;">SQL Server是微软的产品,遇见错误请第一时间请教百度.</em>
+</pre>
+<h4>1.进入安装程序</h4>
+<pre>
+    运行程序安装包里的"setup.exe"文件,出现"SQL Server安装中心".
+    这里我们在本机安装一个SQL Server默认实例,所以执行以下步骤:
+        a.在左侧的目录树中选择"安装".
+        b.在右侧的选择项中,选择第1项目"全新安装或向现有安装添加功能",然后就进入了安装程序.
+    <img src="img/安装中心.png">
+</pre>
+<h4>2.安装的准备过程</h4>
+<h5>(1)安装程序支持规则</h5>
+<pre>
+    在这个准备过程里,安装程序首先要扫描本机的一些信息,用来确定在安装过程中不会出现异常.
+    如果在扫描中发现了一些问题,则必须在修复这些问题之后才可能重新运行安装程序.
+    <img src="img/支持规则.png">
+</pre>
+<h5>(2)安装程序支持文件</h5>
+<pre>
+<img src="img/支持文件.png">
+    安装过程中,如果出现不能重启计算机这一项不能通过,则需要删除一个注册表项.
+    删除注册表中
+    HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager下PendingFileRenameOperations子键.
+    文件挂起操作的错误搞定,可以继续.
+    <img src="img/支持规则2.png">
+    下一步,选择"全新安装或者添加共享功能"
+    下一步,选择版本或输入产口密钥.
+    <img src="img/产品密钥.png">
+    选择"我接受许可条款".
+    <img src="img/许可条款.png">
+    下一步,选择"SQL Server功能安装".
+    <img src="img/设置角色.png">
+</pre>
+<h4>3.功能选择与配置</h4>
+<h5>(1)功能选择</h5>
+<pre>
+    在这里,除了"Analysis Services"和"Reporting Services"不勾外选外,其它都勾上.
+    这样做减少磁盘空间和节约安装时间.
+    <img src="img/功能选择.png">
+</pre>
+<h5>(2)安装规则</h5>
+<img src="img/安装规则.png">
+<h5>(3)实例配置</h5>
+<pre>
+    我们这里安装一个默认实例,系统自动将这个实例命名为:MSSQLSERVER.
+    <img src="img/实例配置.png">
+</pre>
+<h5>(4)磁盘空间要求</h5>
+<pre>
+    从这里可以看到,安装SQL Server的功能需要2814MB的磁盘空间.
+    <img src="img/磁盘空间要求.png">
+</pre>
+<h5>5)服务器配置</h5>
+<pre>
+    在这里,首先要配置服务器的服务帐户,也就是让操作系统用哪个帐户启动相应的服务.
+    为了省事,我们选择"对所有SQL Server服务使用相同的帐户".
+    建议选择"NT AUTHORITY\SYSTEM",用最高权限来运行服务.
+    接着,还要设备排序规则,默认是不区分大小写的,按你的要求自行调整.
+    <img src="img/服务器配置.png"><br><img src="img/使用相同帐户.png">
+</pre>
+<h5>(6)数据库引擎配置</h5>
+<pre>
+    数据库引擎的设置主要有3项.
+    帐户设置中,一般MSSQLSERVER都做为网络服务器存在,为了方便,都使用混合身份验证,设置自己的用户密码.然
+    后添加一个本地帐户方便管理即可.
+    目录和FILESTREAM没有必要修改.
+    对于数据目录,习惯将软件都装在系统盘.在使用SQLSERVER时,数据库文件都放在其他盘,然后附加数据,这样不
+会混乱自己的数据库和系统的数据库.毕竟数据安全是第一.
+    <img src="img/引擎配置.png">
+    后面的过程比较简单,一路下一步然后是等待安装完成即可.
+    <img src="img/错误报告.png">
+    <img src="img/配置规则.png">
+    <img src="img/准备安装.png">
+    <img src="img/完成.png">
+    至此sql server 2008安装结束.
+</pre>
+<h5>(7)最后一步重要操作</h5>
+<pre>    启用数据库TCP/IP协议,允许数据库共享.
+    开始->所有程序,找到"Microsoft SQL Server 2008 R2",再找到如下的配置管理器.
+    <img src="img/共享数据设置1.png">
+    右健选择"启用".
+    <img src="img/共享数据设置2.png">
+    <img src="img/共享数据库设置3.png">
+    按 <img style="display:inline;border: 0px;margin-bottom: -6px;" src="img/win键.png"> + R键,输入如下命令:
+    <img src="img/共享数据库设置4.png">
+    右健选择"重新启动".
+    <img src="img/共享数据设置5.png">
+</pre>
+</body>
+</html>

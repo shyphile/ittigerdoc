@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>SQL Server 客户端连接的问题</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+            word-wrap: break-word;
+            word-break: break-all;
+            /*border: 1px solid red;*/
+            /*overflow: hidden;*/
+        }
+
+        img {
+            display: block;
+            margin: -20px auto 0;
+            -webkit-box-shadow: 7px 8px 4px #333333;
+            -moz-box-shadow: 7px 8px 4px #333333;
+            box-shadow: 7px 8px 4px #333333;
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        pre {
+            font-size: 16px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">SQL Server 客户端连接的问题</h1>
+<pre>
+    经常遇到 SQL Server 客户端无法连接到SQL Server 实例(服务).现在将这类问题归纳如下:
+</pre>
+<h3>1.SQL Server 实例(服务)的问题</h3>
+<pre>
+    <img src="img/1.png">
+</pre>
+<h4>1.1 实例(服务)未启动</h4>
+<pre>
+    打开"SQL Server 配置管理器"(或者"管理工具"中的"服务"),检查对应的实例(服务)的状态是否为"正在运行"
+(或者"已启动").如果该实例没有启动(甚至客户端在连接时使用了错误的主机名和实例名),这个时候客户端当然连
+接不到SQL Server数据库了.
+</pre>
+<h4>1.2 网络通讯协议未启用</h4>
+<pre>
+    <img src="img/2.png">
+    如果客户端使用网络协议去连接SQL Server,那么就要求SQL Server的实例(服务)也要启用相应的网络协议.
+一般可能出现有2种状况:
+    1)发现在 SQL Server 本机可以访问,但是客户端不行.这是因为,从 SQL Server 2005 开始,本地访问时默认
+使用 Shared Memory(可以理解为直接去内存中访问),而远程客户端是不可能使用Shared Memory 的.
+
+    2)修改了网络配置,启用了 TCP/IP 协议,务必记得重启 SQL Server 实例(服务),不然就没有生效.
+    <img src="img/3.png">
+</pre>
+<h4>1.3 TCP/IP 端口配置</h4>
+<pre>
+    对于 TCP/IP 协议,请注意端口的配置.
+    1)是否"全部侦听"
+    如下图,此时"协议"选项卡的"全部侦听"为"是",表示本机所有的网卡都使用相同的配置,即所有网卡都使用同一
+个TCP端口号码提供连接(忽略每一块网卡独立的配置信息,只使用 IPAll节点的配置).
+    <img src="img/4.png">
+    <img src="img/5.png">
+    如果"全部侦听"设置为"否",那么这台服务器的每一块网卡都可以独立配置"TCP端口"以及"已启用".
+
+    2)动态端口
+    如果"TCP动态端口"设为0,那么将使用动态端口.
+    由于动态端口在每次启用SQL Server实例(服务)时都可能改变,所以客户端访问时将自动向这台服务器的
+UDP 1434 端口查询,询问对应的 SQL Server 实例(服务)的当前端口.UDP 1434 对应的服务是 SQLServer Browser,
+它负责向客户端返回其查询的SQL Server实例(服务)对应的TCP端口.
+    因此,如果启用了动态端口,请启动 SQL Server Browser 服务.
+    <img src="img/6.png">
+
+    3)查看端口状态
+    例如,对于默认实例,可以使用 netstat 命令检查 TCP1433 端口是否打开.
+    <img src="img/7.png">
+</pre>
+<h4>1.4 总结</h4>
+<pre>
+    对于实例(服务)的问题,可以直接查看启动日志,启动日志一般为ERRORLOG(没有后缀),通常位于
+C:\Program Files\Microsoft SQL Server\实例ID\MSSQL\Log 文件夹.
+    <img src="img/8.png">
+</pre>
+<h3>2.网络问题</h3>
+<h4>2.1 防火墙</h4>
+<pre>
+    由于 Windows 2008 及后续版本增强了安全性,因此在安装 SQL Server 时并不会自动打开防火墙端口.
+    <img src="img/9.png">
+</pre>
+<h4>2.2 DNS</h4>
+<pre>
+    这里又可能出现两种常见问题.
+    1)主机名错误
+    如果填写了错误的主机名,例如 localhsot,肯定连接不上.
+
+    2)DNS服务器
+    如果是DNS服务器的问题,建议在连接之前先尝试 PING.同样要注意,PING也需要目标计算机打开防火墙端口.
+</pre>
+<h4>2.3 帐户与密码错误</h4>
+<pre>
+    1)访问权限的问题
+    客户端访问时使用的某个帐户没有权限,当然也就不能访问 SQL Server.
+
+    2)帐户被禁用
+    例如,默认情况下sa帐户被禁用,需要手动修改为"已启用".
+    <img src="img/10.png">
+
+    3)如果是SQL帐户登录
+    如果在安装SQL Server时就指定身份验证模式为"混合模式",那么就可以允许SQL Server帐户,否则只允许Windows帐户.
+    <img src="img/11.png">
+    安装完成之后,如果要修改身份验证模式,可以通过SQL Server Management Studio修改.修改后需要重启该
+SQL Server实例(服务)才会生效.
+    <img src="img/12.png">
+
+    4)密码错误
+    帐号的问题比较简单,通常报错信息比较明显.
+    <img src="img/13.png">
+</pre>
+</body>
+</html>

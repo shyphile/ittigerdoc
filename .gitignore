@@ -1,0 +1,11 @@
+bin/
+tool/
+.idea/
+Properties/
+obj/
+*.config
+*.rar
+*.zip
+*.dll
+*.csproj
+*.xml
