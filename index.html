@@ -6,130 +6,9 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <title>车牌识别资料集</title>
-    <style class="cp-pen-styles">
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-
-        #menu_smartphone {
-            height: 100%;
-            position: fixed;
-            background: #ffffff;
-            top: 0;
-            bottom: 0;
-            left: -450px;
-            width: 450px;
-            overflow: auto;
-        }
-
-        #menu_smartphone ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            color: #999999;
-        }
-
-        #menu_smartphone ul li {
-            /*height: 50px;*/
-            padding-left: 10px;
-            margin: 10px 0;
-            /*line-height: 50px;*/
-        }
-
-        #menu_smartphone ul li:hover {
-            background: #f7f7f7;
-        }
-
-        #menu_smartphone ul li a {
-            color: black;
-            text-decoration: none;
-            /*font-family: 微软雅黑;*/
-            font-size: 16px;
-        }
-
-        .background_profil {
-            background-image: url(./commPic/fond.png);
-            background-repeat: no-repeat;
-            height: 60px;
-        }
-
-        .pics_profil {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            background-size: cover;
-            /*background-image: url(welcome.png);*/
-            margin-top: -65px;
-        }
-
-        .name_profil {
-            font-size: 37px;
-            /*font-family: 微软雅黑;*/
-            font-weight: 400;
-            color: #666666;
-            margin-top: -50px;
-            margin-left: 140px;
-            margin-bottom: 40px;
-        }
-
-        .top {
-            /*background-color: #e51c23;*/
-            height: 70px;
-            position: fixed;
-            top: 0px;
-            /*width: 100%;*/
-            line-height: 70px;
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 400;
-            /*font-family: 微软雅黑;*/
-            padding-left: 10px;
-            text-align: left;
-        }
-
-        #grey_back {
-            display: none;
-            background-color: #000000;
-            opacity: 0.7;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-        }
-
-        .card {
-            /*width: 90%;*/
-            /*height: 300px;*/
-            /*background-color: #ffffff;*/
-            /*margin: 10px;*/
-            /*padding: 20px;*/
-            /*color: #666666;*/
-            /*font-weight: 300;*/
-            /*font-size: 36px;*/
-            /*text-align: center;*/
-            /*font-family: 'Roboto';*/
-            /*box-shadow: 0 0 2px #999999;*/
-        }
-
-        .menu_btn {
-            cursor: pointer;
-            left: 0px;
-            margin-top: 16px;
-        }
-
-        .liTitle {
-            font-size: 20px;
-            /*font-family: 微软雅黑;*/
-            color: mediumblue;
-        }
-
-        #menu_smartphone ul li a.vip {
-            background-color: brown;
-            color: yellow;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
     <div style="position: relative;">
@@ -139,262 +18,158 @@
         <div id="grey_back">
             &nbsp;
         </div>
-        <div id="menu_smartphone" class="menu_mobile_app" align="left">
+        <div id="menu_container" align="left">
             <div class="background_profil" onclick="displayCount()">
                 <div style="display: none; color: white;" id="count">
-                    <!-- start http://count.knowsky.com -->
                     您是第
                     <script src="http://count.knowsky.com/count1/count.asp?id=82048&sx=1&ys=41" language="JavaScript" charset="gb2312"></script>
                     位访客.
-                    <!-- Powered by http://www.knowsky.com -->
                 </div>
             </div>
-            <ul style="overflow-y: auto;">
+            <div class="index">
+                <ol>
+                    <li >布线、安装、接线、调试指导</li>
+                    <ol>
+                        <li>
+                            <a href="commPic/直观布线图1.png">布线图-分解说明</a>
+                        </li>
+                        <li>
+                        <a class="vip" href="./commPic/直接布线图2.png">布线图-示意说明</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="commPic/简化功能接线-接线指导图1.png">接线图-常用</a>
+                        </li>
+                        <li>
+                            <a href="commPic/特殊功能接线.png">接线图-特殊功能</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="./摄像机调试方法/摄像机调试方法.html">摄像机调试方法-经验分享</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="./摄像机安装和调试技巧/摄像机安装和调试技巧.html">摄像机安装和调试技巧</a>
+                        </li>
+                        <li>
+                            <a href="./车牌识别一体机安装调试指南/车牌识别一体机安装调试指南.html">摄像机安装调试指南</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="./sixStep/sixStep.html">调试流程六步走 </a>
+                        </li>
+                        <li>
+                            <a class="vip" href="http://pan.baidu.com/s/1gfvHf2N">64位的gohst win7 镜像(需要下载一键ghost工具) </a>
+                        </li>
+                    </ol>
+                    <li >软硬件调试</li>
+                    <ol>
+                        <li>
+                            <a class="vip" href="./tool/调试工具打包下载.rar">调试工具打包下载</a>
+                        </li>
+                        <li>
+                            <a href="ed2k://|file|cn_sql_server_2008_r2_developer_x86_x64_ia64_dvd_522724.iso|4662884352|E436F05BCB0165FDF7E5E61862AB6BE1|/">SQL2008R2数据库下载(请先安装迅雷，再下载)</a>
+                        </li>
+                        <li>
+                            <a href="http://pan.baidu.com/s/1bp9qOHp">SQL2008R2数据库下载(百度云盘提供，下载较慢)</a>
+                        </li>
+                        <li>
+                            <a href="./SQL Server 2008安装详解/SQL Server 2008安装详解.html">SQL Server 2008安装详解</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="./车牌识别共享操作集中说明/车牌识别共享操作集中说明.html">车牌识别共享操作集中说明</a>
+                        </li>
+                        <li>
+                            <a href="./白名单脱机显示和语音播报设置/白名单脱机显示和语音播报设置.html">脱机送显和报语音功能 参数设置</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="./收费员培训资料/收费员培训资料.html">收费员培训手册</a>
+                        </li>
+                        <li>
+                            <a class="vip" target="frame" href="./车牌识别管理软件快速操作手册/车牌识别管理软件快速操作手册.html">车牌识别管理软件快速操作手册</a>
+                        </li>
+                        <li>
+                            <a class="vip" target="frame" href="./驱动板不通讯的可能性/驱动板不通讯的可能性.html">驱动板不通讯的可能性</a>
+                        </li>
+                    </ol>
 
-                <!--<div class="pics_profil">-->
-                <!--</div>-->
-                <!--<div class="name_profil"></div>-->
-
-                <li class="liTitle">一.布线、安装、接线、调试指导</li>
-                <li>
-                    <a href="commPic/直观布线图1.png">1.布线图-分解说明</a>
-                </li>
-                <li>
-                    <a class="vip" href="./commPic/直接布线图2.png">2.布线图-立体说明</a>
-                </li>
-                <li>
-                    <a class="vip" href="commPic/简化功能接线-接线指导图1.png">3.接线图-常用</a>
-                </li>
-                <li>
-                    <a href="commPic/特殊功能接线.png">4.接线图-特殊</a>
-                </li>
-                <li>
-                    <a class="vip" href="./摄像机调试方法/摄像机调试方法.html">5.摄像机调试方法-经验分享</a>
-                </li>
-                <li>
-                    <a class="vip" href="./摄像机安装和调试技巧/摄像机安装和调试技巧.html">6.摄像机安装和调试技巧</a>
-                </li>
-                <li>
-                    <a href="./车牌识别一体机安装调试指南/车牌识别一体机安装调试指南.html">7.摄像机安装调试指南</a>
-                </li>
-                <li>
-                    <a class="vip" href="./sixStep/sixStep.html">8.调试流程六步走 </a>
-                </li>
-                <li>
-                    <a class="vip" href="http://pan.baidu.com/s/1gfvHf2N">9. 64位的gohst win7 镜像(需要下载一键ghost工具) </a>
-                </li>
-                <li class="liTitle">二.软硬件调试</li>
-                <li>
-                    <a class="vip" href="./tool/调试工具打包下载.rar">1.调试工具打包下载</a>
-                </li>
-                <li>
-                    <a href="ed2k://|file|cn_sql_server_2008_r2_developer_x86_x64_ia64_dvd_522724.iso|4662884352|E436F05BCB0165FDF7E5E61862AB6BE1|/">2.1.SQL2008R2数据库下载(请先安装迅雷，再下载)</a>
-                </li>
-                <li>
-                    <a href="http://pan.baidu.com/s/1bp9qOHp">2.2.SQL2008R2数据库下载(百度云盘提供，下载较慢)</a>
-                </li>
-                <li>
-                    <a href="./SQL Server 2008安装详解/SQL Server 2008安装详解.html">3.SQL Server 2008安装详解</a>
-                </li>
-                <li>
-                    <a class="vip" href="./车牌识别共享操作集中说明/车牌识别共享操作集中说明.html">4.车牌识别共享操作集中说明</a>
-                </li>
-                <li>
-                    <a href="./白名单脱机显示和语音播报设置/白名单脱机显示和语音播报设置.html">5.脱机送显和报语音功能 参数设置</a>
-                </li>
-                <li>
-                    <a class="vip" href="./收费员培训资料/收费员培训资料.html">6.收费员培训手册</a>
-                </li>
-                <li>
-                    <a class="vip" target="frame" href="./车牌识别管理软件快速操作手册/车牌识别管理软件快速操作手册.html">7.车牌识别管理软件快速操作手册</a>
-                </li>
-                <li>
-                    <a class="vip" target="frame" href="./驱动板不通讯的可能性/驱动板不通讯的可能性.html">8.驱动板不通讯的可能性</a>
-                </li>
-                <li class="liTitle">三.硬件资料</li>
-                <!--<li>
-                    <a href="./commPic/2行8字屏-尺寸及效果.Png">1.两行8字屏-尺寸及效果</a>
-                </li>
-                <li>
-                    <a href="./commPic/4行16字屏-尺寸及效果.Png">2.四行16字屏-尺寸及效果</a>
-                </li>
-                <li>
-                    <a href="./commPic/4行32字屏-尺寸及效果.Png">3.四行32字屏-尺寸及效果</a>
-                </li>-->
-                <li>
-                    <a href="./车牌识别一体机用户手册/车牌识别一体机用户手册.html">1.车牌识别一体机用户手册（新机壳）</a>
-                </li>
-                <li>
-                    <a href="tool/车牌识别管线图尺寸图.zip">2.车牌识别管线图+尺寸图 (CAD图纸)</a>
-                </li>
-                <li class="liTitle">四.软件资料</li>
-                <li>
-                    <a href="./车牌识别系统软件说明书/车牌识别系统软件说明书.html">1.车牌识别系统管理软件说明书</a>
-                </li>
-                <li>
-                    <a href="./中央收费说明/中央收费使用说明.html">2.中央收费使用说明书</a>
-                </li>
-                <li>
-                    <a href="./车场预警功能说明/车场预警功能说明.html">3.车场预警功能的使用</a>
-                </li>
-                <li>
-                    <a href="./脱机收费操作说明/脱机收费操作说明.html">4.脱机收费操作说明</a>
-                </li>
-                <li>
-                    <a href="./车牌识别系统现场施工手册/车牌识别系统现场施工手册.html">5.车牌识别系统现场施工手册</a>
-                </li>
-                <!--<li>
-                    <a href="https://drive.wps.cn/preview#l/2f9f3cdf003f44c085bc46830d57fc0a">4.常见问题解答</a>
-                </li>
-                <li>
-                    <a href="https://drive.wps.cn/preview#l/2bc09a7451ff477cbbb63f5f3304c6b6">5.车牌识别云端管理系统使用说明书</a>
-                </li>-->
-                <li>
-                    <a href="./单车道双向通行系统/单车道双向通行系统.html">6.单车道双向通行系统设置方法</a>
-                </li>
-                <li>
-                    <a href="SQL Server 客户端连接的问题/SQL Server 客户端连接的问题.html">7.SQL Server客户端连接的问题</a>
-                </li>
-
-                <li class="liTitle">五.调试工具</li>
-                <li>
-                    <a class="vip" href="tool/批量导入数据模版及工具V2.rar">1.批量导入数据模版及工具</a>
-                </li>
-                <li>
-                    <a class="vip" href="tool/设置可读可写共享文件夹.rar">2.设置可读可写共享文件夹(一键解决局域网内共享问题)</a>
-                </li>
-                <li>
-                    <a class="vip" href="tool/一体机配置工具1.0.15.2.rar">3.摄像机调试工具 (含白名单导入模版及功能)</a>
-                </li>
-                <!--<li>
-                    <a href="tool/软件参数初始化.rar">4.软件参数初始化</a>
-                </li>-->
-                <li>
-                    <a href="tool/显示屏驱动板调试工具.rar">5.显示屏驱动板调试工具</a>
-                </li>
-                <li>
-                    <a href="tool/脱机设置工具.rar">6.脱机收费设置工具(需配合带脱机收费功能相机使用)</a>
-                </li>
-                <li>
-                    <a class="vip" href="tool/一体机调试工具.rar">7.摄像机调试工具(双通道显示)</a>
-                </li>
-                <li>
-                    <a href="./tool/摄像机升级镜像-1511271.rar">8. 1.摄像机升级镜像-1511271 (5.0.6版相机用此镜像升级到5.1.6)</a>
-                </li>
-                <li>
-                    <a href="./tool/摄像机升级镜像-1604250.rar">8. 2.摄像机升级镜像-1604250 (5.1.6版相机用此镜像升级到5.1.7或5.3.7)</a>
-                </li>
-                <li>
-                    <a class="vip" href="./tool/摄像机升级镜像-1703150.rar">8. 3.摄像机升级镜像-1703150(5.1.7或5.3.7用此镜像升级)</a>
-                </li>
-                <!--<li>
-                    <a class="vip" href="./tool/新能源车牌识别升级包1.zip">8. 4.摄像机升级镜像-识别新能源车牌</a>
-                </li>-->
-                <li>
-                    <a href="./tool//NDP46-KB3045557-x86-x64-AllOS-ENU.rar"> 9.dotNet4.6(车牌识别管理软件基于此架构编写，需要它的支持才能够运行) </a>
-                </li>
-                <!--<li>
-                    <a href="./tool/摄像机车牌加密设置工具V1.rar"> 10.摄像机二次加密设置工具</a>
-                </li>-->
-                <li>
-                    <a href="./tool/相机授权文件生成器.rar"> 10.相机授权文件生成器</a>
-                </li>
-                <li class="liTitle">六.管理软件 (软件请勿放桌面、不支持XP系统)</li>
-                <li>
-                    <!--<a class="vip" href="./tool/LPR-2526.rar">1.LPR-2526(4月1日更新)</a>-->
-                    <a class="vip" href="./tool/LPR-2529V1.rar">1.LPR-2529(5月17日更新)</a>
-                </li>
-            </ul>
-
+                    <li >硬件资料</li>
+                    <ol>
+                        <li>
+                            <a href="./车牌识别一体机用户手册/车牌识别一体机用户手册.html">车牌识别一体机用户手册（新机壳）</a>
+                        </li>
+                        <li>
+                            <a href="tool/车牌识别管线图尺寸图.zip">车牌识别管线图+尺寸图 (CAD图纸)</a>
+                        </li>
+                    </ol>
+                    <li >软件资料</li>
+                    <ol>
+                        <li>
+                            <a href="./车牌识别系统软件说明书/车牌识别系统软件说明书.html">车牌识别系统管理软件说明书</a>
+                        </li>
+                        <li>
+                            <a href="./中央收费说明/中央收费使用说明.html">中央收费使用说明书</a>
+                        </li>
+                        <li>
+                            <a href="./车场预警功能说明/车场预警功能说明.html">车场预警功能的使用</a>
+                        </li>
+                        <li>
+                            <a href="./脱机收费操作说明/脱机收费操作说明.html">脱机收费操作说明</a>
+                        </li>
+                        <li>
+                            <a href="./车牌识别系统现场施工手册/车牌识别系统现场施工手册.html">车牌识别系统现场施工手册</a>
+                        </li>
+                        <li>
+                            <a href="./单车道双向通行系统/单车道双向通行系统.html">单车道双向通行系统设置方法</a>
+                        </li>
+                        <li>
+                            <a href="SQL Server 客户端连接的问题/SQL Server 客户端连接的问题.html">SQL Server客户端连接的问题</a>
+                        </li>
+                    </ol>
+                    <li >调试工具</li>
+                    <ol>
+                        <li>
+                            <a class="vip" href="tool/批量导入数据模版及工具V2.rar">批量导入数据模版及工具</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="tool/设置可读可写共享文件夹.rar">设置可读可写共享文件夹(一键解决局域网内共享问题)</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="tool/一体机配置工具1.0.15.2.rar">摄像机调试工具 (含白名单导入模版及功能)</a>
+                        </li>
+                        <li>
+                            <a href="tool/显示屏驱动板调试工具.rar">显示屏驱动板调试工具</a>
+                        </li>
+                        <li>
+                            <a href="tool/脱机设置工具.rar">脱机收费设置工具(需配合带脱机收费功能相机使用)</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="tool/一体机调试工具.rar">摄像机调试工具(双通道显示)</a>
+                        </li>
+                        <li>
+                            <a href="./tool/摄像机升级镜像-1511271.rar">摄像机升级镜像-1511271 (5.0.6版相机用此镜像升级到5.1.6)</a>
+                        </li>
+                        <li>
+                            <a href="./tool/摄像机升级镜像-1604250.rar">摄像机升级镜像-1604250 (5.1.6版相机用此镜像升级到5.1.7或5.3.7)</a>
+                        </li>
+                        <li>
+                            <a class="vip" href="./tool/摄像机升级镜像-1703150.rar">摄像机升级镜像-1703150(5.1.7或5.3.7用此镜像升级)</a>
+                        </li>
+                        <li>
+                            <a href="./tool//NDP46-KB3045557-x86-x64-AllOS-ENU.rar"> dotNet4.6(车牌识别管理软件基于此架构编写，需要它的支持才能够运行) </a>
+                        </li>
+                        <li>
+                            <a href="./tool/相机授权文件生成器.rar">相机授权文件生成器</a>
+                        </li>
+                    </ol>
+                    <li >管理软件 (软件请勿放桌面、不支持XP系统)</li>
+                    <ol>
+                        <li>
+                            <a class="vip" href="./tool/LPR-2529V1.rar">LPR-2529(5月17日更新)</a>
+                        </li>
+                    </ol>
+                </ol>
+            </div>
         </div>
         <div class="card">
             <iframe id="iframepage" name="frame" src="./homePage/homePage.html" width="100%" height="800px" frameborder="0"
             scrolling="auto" onload="reinitIframeEND()"></iframe>
         </div>
-        <!--<div class="card">-->
-        <!--</div>-->
-    </div>
-    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var isMenuOpen = false;
-
-            $("#menu_smartphone").clearQueue().animate({
-                left: '0px'
-            })
-            $("#grey_back").css({ 'opacity': '0.0' });
-            $("#grey_back").fadeIn('fast');
-            isMenuOpen = true;
-
-            $('.menu_btn').click(function () {
-                $("#grey_back").css({ 'opacity': '0.7' });
-                if (isMenuOpen == false) {
-                    $("#menu_smartphone").clearQueue().animate({
-                        left: '0px'
-                    })
-                    $("#grey_back").fadeIn('fast');
-                    $(this).fadeOut(200);
-                    isMenuOpen = true;
-                }
-            });
-            $('#grey_back').click(function () {
-                if (isMenuOpen == true) {
-                    $("#menu_smartphone").clearQueue().animate({
-                        left: '-450px'
-                    })
-                    $("#grey_back").fadeOut('fast');
-                    $(this).fadeOut(200);
-                    $(".menu_btn").fadeIn(300);
-                    isMenuOpen = false;
-                }
-            });
-            $('a').click(function () {
-                $('html,body').animate({ scrollTop: '0px' }, 800);
-            });
-            $('a').attr("target", "frame");
-            if ($('a').attr('href') == "http://count.knowsky.com/") {
-                $('a').attr('href', "");
-            }
-        });
-
-        function iFrameHeight() {
-            var ifm = document.getElementById("iframepage");
-            var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
-            if (ifm != null && subWeb != null) {
-                ifm.height = subWeb.body.scrollHeight;
-            }
-        }
-
-        function displayCount() {
-            if ($('#count a').attr('href') == 'http://count.knowsky.com') {
-                $('#count a').attr('href', './homePage/homePage.html');
-            }
-            $('#count').show();
-        }
-
-        var timer1;
-        var timeCount = 0;
-        function reinitIframe() {
-            timeCount++;
-            if (timeCount > 50) {
-                window.clearInterval(timer1);// 停止定时
-            }
-            var iframe = document.getElementById("iframepage");
-            var bHeight = iframe.contentWindow.document.body.scrollHeight;
-            var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-            var height = Math.min(bHeight, dHeight);
-            iframe.height = height;
-        }
-        function reinitIframeEND() {
-            timeCount = 0;
-            window.clearInterval(timer1);// 停止定时
-            var iframe = document.getElementById("iframepage");
-            var bHeight = iframe.contentWindow.document.body.scrollHeight;
-            var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-            var height = Math.min(bHeight, dHeight);
-            iframe.height = height;
-            timer1 = window.setInterval("reinitIframe()", 500); //定时开始
-        }
-    </script>
-</body>
-</html>
+    </body>
+    </html>

@@ -1,0 +1,118 @@
+body {
+    font-family:宋体;
+}
+
+#menu_container {
+    height: 100%;
+    position: fixed;
+    background: #ffffff;
+    top: 0;
+    bottom: 0;
+    left: -450px;
+    width: 450px;
+    overflow: auto;
+}
+
+.index>ol{
+    overflow-y: auto; 
+}
+
+.index>ol>li{
+   list-style-type:cjk-ideographic;
+   font-weight:bold;
+   font-size: 20px;
+   color: mediumblue;
+}
+
+.index ol ol li {
+ list-style-type:decimal-leading-zero;
+}
+
+#menu_container ol li {
+    margin: 10px;
+}
+
+ol ol li:hover {
+    background: #f7f7f7;
+}
+
+#menu_container ol li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.background_profil {
+    background-image: url(../commPic/fond.png);
+    background-repeat: no-repeat;
+    height: 60px;
+}
+
+.pics_profil {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-size: cover;
+    /*background-image: url(welcome.png);*/
+    margin-top: -65px;
+}
+
+.name_profil {
+    font-size: 37px;
+    /*font-family: 微软雅黑;*/
+    font-weight: 400;
+    color: #666666;
+    margin-top: -50px;
+    margin-left: 140px;
+    margin-bottom: 40px;
+}
+
+.top {
+    /*background-color: #e51c23;*/
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    /*width: 100%;*/
+    line-height: 70px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    /*font-family: 微软雅黑;*/
+    padding-left: 10px;
+    text-align: left;
+}
+
+#grey_back {
+    display: none;
+    background-color: #000000;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.card {
+    /*width: 90%;*/
+    /*height: 300px;*/
+    /*background-color: #ffffff;*/
+    /*margin: 10px;*/
+    /*padding: 20px;*/
+    /*color: #666666;*/
+    /*font-weight: 300;*/
+    /*font-size: 36px;*/
+    /*text-align: center;*/
+    /*font-family: 'Roboto';*/
+    /*box-shadow: 0 0 2px #999999;*/
+}
+
+.menu_btn {
+    cursor: pointer;
+    left: 0px;
+    margin-top: 16px;
+}
+
+#menu_container ol li a.vip {
+    background-color: #ccc;
+    color: red;
+}
