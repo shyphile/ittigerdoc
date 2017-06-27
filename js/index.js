@@ -37,6 +37,11 @@
     if ($('a').attr('href') == "http://count.knowsky.com/") {
         $('a').attr('href', "");
     }
+
+    //$('li>a').click(function(){
+    //    var iframepage=document.getElementById('iframepage');
+    //    setIframeHeight(iframepage);
+    //});
 });
 
  function iFrameHeight() {
@@ -56,24 +61,39 @@ function displayCount() {
 
 var timer1;
 var timeCount = 0;
-function reinitIframe() {
+function reinitIframe() 
+{
     timeCount++;
-    if (timeCount > 50) {
-                window.clearInterval(timer1);// 停止定时
-            }
-            var iframe = document.getElementById("iframepage");
-            var bHeight = iframe.contentWindow.document.body.scrollHeight;
-            var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-            var height = Math.min(bHeight, dHeight);
-            iframe.height = height;
-        }
-        function reinitIframeEND() {
-            timeCount = 0;
-            window.clearInterval(timer1);// 停止定时
-            var iframe = document.getElementById("iframepage");
-            var bHeight = iframe.contentWindow.document.body.scrollHeight;
-            var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-            var height = Math.min(bHeight, dHeight);
-            iframe.height = height;
-            timer1 = window.setInterval("reinitIframe()", 500); //定时开始
-        }
+    if (timeCount > 100) 
+    {
+        window.clearInterval(timer1);// 停止定时
+    }
+    var iframe = document.getElementById("iframepage");
+    var bHeight = iframe.contentWindow.document.body.scrollHeight;
+    var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+    var height = Math.min(bHeight, dHeight);
+    iframe.height = height;
+}
+
+function reinitIframeEND() {
+    timeCount = 0;
+    window.clearInterval(timer1);// 停止定时
+    var iframe = document.getElementById("iframepage");
+    var bHeight = iframe.contentWindow.document.body.scrollHeight;
+    var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+    var height = Math.min(bHeight, dHeight);
+    iframe.height = height;
+    timer1 = window.setInterval("reinitIframe()", 500); //定时开始
+}
+
+ // document.domain = "caibaojian.com";
+ function setIframeHeight(iframe) {
+     if (iframe) {
+         var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+         if (iframeWin.document.body) {
+             iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+             alert(iframe.height );
+         }
+     }
+ }
+
