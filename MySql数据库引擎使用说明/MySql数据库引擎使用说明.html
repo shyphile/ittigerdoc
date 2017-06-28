@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>MySql数据库引擎使用说明</title>
+</head>
+<body>
+<h1>MySql数据库引擎使用说明</h1>
+<pre>
+    管理软件支持MySql数据库,且无需单独安装MySql数据库.
+    使用MySql将无法使用与云有关的功能.
+    <span class="redBig">数据库类型一旦确定就不可更改.</span>
+</pre>
+<h3>1.数据库类型切换为MySql</h3>
+<pre>
+    找开软件根目录,找到"Config"文件夹下的"ExtendConfig"文件,用记事本格式打开,如下图:
+    <img src="img/extendconfig.png" alt="">
+    <img src="img/sqltype.png" alt="">
+    重新启动软件.
+</pre>
+<h3>2.服务器上初始化数据库文件</h3> 
+<pre>
+    <span class="redBig">服务器:准备作为运行数据库程序的电脑,且能保证长时间不关机.</span>
+    第一次启动软件,弹出如下图所示的对话框,选择"是".
+    <img src="img/警告框1.png" alt="">
+    如下图,出现数据库连接配置对话框.
+    <img src="img/服务端数据库配置.png" alt="">
+    ① 填写本机电脑的IP地址.
+    ② 在步骤1中所示电脑上创建数据库.
+    ③ 测试步骤1中所示电脑上是否存在数据库文件.
+    ④ 保存数据库连接信息,以便下次跳过配置,直接进入软件.
+    重新启动软件即可正常使用各项功能.
+</pre>
+<h3>3.远程访问数据库</h3>   
+<pre>
+    停车场局域网内其它电脑远程访问数据库时,只需如下配置即可.
+    启动软件,弹出警示窗口,选择"是".
+    <img src="img/警告框1.png" alt="">
+    如下图,出现数据库连接配置对话框.
+    <img src="img/客户端数据库配置.png" alt="">
+    ① 填写运行Mysql数据库电脑的IP地址.即服务器电脑的IP.
+    ② 测试步骤1中所示电脑上是否存在数据库文件.
+    ③ 保存数据库连接信息,以便下次跳过配置,直接进入软件.
+    重新启动软件即可正常使用各项功能.
+</pre>
+<h3>4.数据库备份与还原</h3>   
+<pre>
+    数据库备份和还原操作需要在服务器电脑上运行,即运行MySql数据库的电脑.
+    <img src="img/备份还原.png" alt="">
+    点击"数据库备份"按钮时,会自动将数据备份到软件根目录中的mySql文件下.
+    MySql数据库备份文件存储路径如下图所示:
+    <img src="img/数据备份路径.png" alt="">
+
+    点击软件"数据库还原"按钮时,会自动将上图备份的文件还原到MySql数据库中.
+</pre>
+<h3>5.可能遇到的问题</h3>   
+<h5>(1)数据库创建失败,路径不能为中文......</h5>
+<pre>
+    <img src="img/问题1.png" alt="">
+    可能的原因:
+    a.指定的服务器名称不正确,软件找不到对应电脑的IP.
+    b.软件所在路径太深.
+    c.如上排除还是报错,将软件拷贝到D盘根目录下运行.
+</pre>
+<h5>(2)数据库连接失败,失败原因......</h5>
+<pre>
+    <img src="img/问题2.png" alt="">
+    可能的原因:
+    a.指定ip电脑上未创建MySql数据库.
+    b.排除原因a,则指定ip电脑上MySql服务未运行.
+    <img src="img/mysql服务.png" alt="">
+    c.指定ip电脑上防火墙未关.
+    d.网络故障.
+</pre>
+</body>
+</html>
