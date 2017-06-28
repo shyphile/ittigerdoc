@@ -1,6 +1,10 @@
  $(document).ready(function () {
     var isMenuOpen = false;
-
+    if(!$("#menu_container").clearQueue().animate({
+        left: '0px'
+    })){
+        alert('浏览器不支持,请更换浏览器.');
+    }
     $("#menu_container").clearQueue().animate({
         left: '0px'
     })
