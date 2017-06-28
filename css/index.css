@@ -2,7 +2,7 @@
 body {
     margin:0px;
     padding:0px;
-    font-family:宋体;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 #menu_container {
@@ -18,17 +18,6 @@ body {
 
 .index>ol{
     overflow-y: auto; 
-}
-
-.index>ol>li{
-   list-style-type:cjk-ideographic;
-   font-weight:bold;
-   font-size: 20px;
-   color: mediumblue;
-}
-
-.index ol ol li {
- list-style-type:decimal-leading-zero;
 }
 
 #menu_container ol li {
@@ -71,16 +60,13 @@ ol ol li:hover {
 }
 
 .top {
-    /*background-color: #e51c23;*/
     height: 70px;
     position: fixed;
     top: 0px;
-    /*width: 100%;*/
     line-height: 70px;
     color: #ffffff;
     font-size: 20px;
     font-weight: 400;
-    /*font-family: 微软雅黑;*/
     padding-left: 10px;
     text-align: left;
 }
@@ -119,3 +105,33 @@ ol ol li:hover {
     background-color: #ccc;
     color: red;
 }
+
+html>body ol {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    counter-reset: level1;
+}
+
+ol li:before {
+    font-size:20px;
+    font-weight:bold;
+    content: counter(level1) ". ";
+    counter-increment: level1;
+    color:#5555FF;
+}
+ol li ol {
+    margin:20px;
+    list-style-type: none;
+    counter-reset: level2;
+}
+ol li ol li:before {
+    font-size:100%;
+    font-weight:bold;
+    content: counter(level1) "." counter(level2) " ";
+    counter-increment: level2;
+    color:#009FCC;
+}
+ol li span { /* For IE6/7. */
+    margin: 0 250px 5px -25px;
+}   
