@@ -1,9 +1,7 @@
  $(document).ready(function () {
     var isMenuOpen = false;
-    if(!$("#menu_container").clearQueue().animate({
-        left: '0px'
-    })){
-        alert('浏览器不支持,请更换浏览器.');
+    if (!window.innerWidth) {
+        alert('为了更好的浏览效果,请更换其它浏览器访问本网站,\r或者升级IE浏览器版本至IE8以上.');
     }
     $("#menu_container").clearQueue().animate({
         left: '0px'
