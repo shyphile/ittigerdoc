@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>支付宝-条码支付功能开通详解</title>
+</head>
+<body>
+<h1>支付宝-条码支付功能开通详解</h1>
+<pre>
+    条码支付：即商家使用扫码设备，扫描用户支付宝钱包上的条码/二维码，完成收款。
+    链接:<a href="https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.jIqxso&treeId=194&articleId=106039&docType=1" title="" target="_blank">https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.jIqxso&treeId=194&articleId=106039&docType=1</a>
+</pre>
+<h3>1.客户需要在支付宝开放平台创建一个应用，通过该应用来接入条码支付功能。</h3>
+<pre>
+    <a href="https://open.alipay.com/platform/home.htm" title="" target="_blank">登录支付宝开放平台.</a>
+    创建应用需要准备的工作:
+      a.应用名称:取一个有形象有名称.
+      b.应用图标:上传公司形象LOGO.
+    上述两项会显示在支付页面中,所以请慎重考虑.
+    <img src="img/步骤1.png" alt="" width="100%">
+    <img src="img/基础信息.png" alt="" >
+    <img src="img/设置应用公钥.png" alt="" >
+    <img src="img/sha1withrsa.png" alt="" >
+    <img src="img/验证帐户.png" alt="" >
+    <img src="img/查看密钥生成方法.png" alt="" >
+    <img src="img/生成windows密钥.png" alt="" >
+    <img src="img/rsa签名工具.png" alt="" >
+    在第4步中打开的文件夹里将"应用私钥1024"文件保存好.
+    将第3步复制的公钥拷贝到网页里,如下图:
+    <img src="img/公钥信息.png" alt="" >
+    <img src="img/公钥上传成功.png" alt="" >
+    <img src="img/支付宝公钥.png" alt="" >
+    该支付宝公钥信息很重要,请和"应用私钥1024"文件保存在一个文件夹里.
+    <img src="img/提交审核.png" alt="" >
+    <img src="img/等待审核结果.png" alt="" width="100%" >
+    等待马云爸爸审核你提交的信息,时间是1个工作日.
+</pre>
+<h3>2.签约当面付</h3> 
+<pre>
+    审核通过,即应用上线了,开发者可以点击“概览”页签中“功能选项”右侧的“立即签约”按钮签约当面付，如下图:
+    <img src="img/签约当面付.png" alt="" width="100%" >
+    <img src="img/签约页面.png" alt=""  >
+    签约表示与阿里巴巴签署使用合同。
+    签约需要准备的材料:
+    个体工商信息,如工商局注册号,营业执照等;
+    经营者信息,如上传身份证照片;
+    银行账户信息,用于收款.
+    签约过程比较简单,按照提示信息操作即可.
+</pre>
+<h3>3.生成支付所需key文件</h3> 
+<pre>
+	签约通过后,客户将如下信息发送给我方:
+        APPID,应用私钥,支付宝公钥.
+    应用私钥和支付宝公钥是上文提醒保存在同一个文件夹里的两个文件.
+    APPID需要在支付宝开放平台上查看.
+    查看APPID和支付宝公钥的方法:
+    <img src="img/查看appid和应用私钥.png" alt="" width="100%" >   
+	我方接收到此三个信息后会生成一个key文件,将该key文件拷贝到软件根目录下,即实现了支付宝的条码支付功能.
+    特别注意，密钥要去掉注释部分，且转换成一行字符，否则回车换行也成为密钥的一部分，将导致无法正常加解密。
+	<img src="img/alipay.png" alt="">
+</pre>
+</body>
+</html>
