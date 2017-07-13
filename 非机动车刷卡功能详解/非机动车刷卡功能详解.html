@@ -19,7 +19,7 @@
             if($(this).offset().top<ch){
                 $(this).attr('src',$(this).attr('data-original'));
             }
-            else{
+           // else{
              $(document).scroll(function(){
                 var distance=$(document).scrollTop();
                 if($(element).offset().top<(distance+ch)){
@@ -27,7 +27,7 @@
                     //$(element).fadeOut().fadeIn(3000);
                 }
             });
-         }
+         //}
      });
 
         //   $(document).scroll(function(){
