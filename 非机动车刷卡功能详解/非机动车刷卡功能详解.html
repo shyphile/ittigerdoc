@@ -10,10 +10,37 @@
     <script src='../js/jquery.lazyload.min.js?v=1.9.1'></script>
     <script>
         $(document).ready(function(){
-            $("img").lazyload({effect: "fadeIn"});
+            var imgs=$('img');
+            getImgSrc(imgs);
         });
-    </script>
-    <title>非机动车刷卡功能详解</title>
+        function getImgSrc(imgs){
+          var ch=$(window).height();
+          imgs.each(function(index,element){
+            if($(this).offset().top<ch){
+                $(this).attr('src',$(this).attr('data-original'));
+            }
+            else{
+             $(document).scroll(function(){
+                var distance=$(document).scrollTop();
+                if($(element).offset().top<(distance+ch)){
+                    $(element).attr('src',$(element).attr('data-original'));
+                    //$(element).fadeOut().fadeIn(3000);
+                }
+            });
+         }
+     });
+
+        //   $(document).scroll(function(){
+        //     var distance=$(document).scrollTop();
+        //     imgs.each(function(index,element){
+        //         if($(this).offset().top<(distance+ch)){
+        //             $(this).attr('src',$(this).attr('data-original'));
+        //         }
+        //     });
+        // });
+    }
+</script>
+<title>非机动车刷卡功能详解</title>
 </head>
 <body>
     <h1>非机动车刷卡功能详解</h1>
@@ -42,25 +69,25 @@
     </pre>
     <h3>3.发行卡片</h3> 
     <pre>
-       a.发行固定卡
-       进入"车辆管理"界面,选择"快速增加车辆".步骤如下图:
-       <img data-original="img/发行卡片.png" alt="">
-       注意:卡片需另建用户发行,以下发行方式是错误的.
-       <img data-original="img/错误录入.png" alt="">
-       也可按照常规方式,先在"用户管理"新建用户,再为该用户录入卡片.
+     a.发行固定卡
+     进入"车辆管理"界面,选择"快速增加车辆".步骤如下图:
+     <img data-original="img/发行卡片.png" alt="">
+     注意:卡片需另建用户发行,以下发行方式是错误的.
+     <img data-original="img/错误录入.png" alt="">
+     也可按照常规方式,先在"用户管理"新建用户,再为该用户录入卡片.
 
-       b.发行临时卡
-       发行方法与固定卡基本相同,不同的主要是以下两点:
-       <img data-original="img/发行临时卡.png" alt="">	
-       临时卡一般会放在吐卡机内自动发卡.
-       登记临时卡避免了外来卡片随意刷卡进入.
+     b.发行临时卡
+     发行方法与固定卡基本相同,不同的主要是以下两点:
+     <img data-original="img/发行临时卡.png" alt="">	
+     临时卡一般会放在吐卡机内自动发卡.
+     登记临时卡避免了外来卡片随意刷卡进入.
 
-       卡片内码可直接通过发卡器读出,操作方式很简单:
-       将发卡器通讯线插入电脑USB口,输入法切换为英文输入法,在卡片内码栏点击鼠标,然后将要发行的卡片在
-       发卡器刷一下即可读出卡片内码.
-   </pre>
-   <h3>3.远程控制人行通道开关</h3>   
-   <pre>
+     卡片内码可直接通过发卡器读出,操作方式很简单:
+     将发卡器通讯线插入电脑USB口,输入法切换为英文输入法,在卡片内码栏点击鼠标,然后将要发行的卡片在
+     发卡器刷一下即可读出卡片内码.
+ </pre>
+ <h3>3.远程控制人行通道开关</h3>   
+ <pre>
     启动软件进入实时监控.
     根据车道类型的不同,实时监控界面也有不同.
 
