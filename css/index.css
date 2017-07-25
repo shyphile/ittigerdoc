@@ -7,7 +7,7 @@ body {
 #menu_container {
     height: 100%;
     position: fixed;
-    background: #ffffff;
+    background: #ccc;
     top: 0;
     bottom: 0;
     left: -450px;
@@ -101,7 +101,7 @@ ol ol li:hover {
 }
 
 #menu_container ol li a.vip {
-    background-color: #ccc;
+    // background-color: #ccc;
     color: red;
 }
 
@@ -112,24 +112,24 @@ html>body ol {
     counter-reset: level1;
 }
 
-ol li:before {
+ol li a:before {
     font-size:20px;
     font-weight:bold;
     content: counter(level1) ". ";
     counter-increment: level1;
-    color:#5555FF;
+    color:yellow;
 }
 ol li ol {
     margin:20px;
     list-style-type: none;
     counter-reset: level2;
 }
-ol li ol li:before {
-    font-size:100%;
+ol li ol li a:before {
+    font-size:17px;
     font-weight:bold;
     content: counter(level1) "." counter(level2) " ";
     counter-increment: level2;
-    color:#009FCC;
+    color:purple;
 }
 ol li span { /* For IE6/7. */
     margin: 0 250px 5px -25px;

@@ -7,8 +7,9 @@
     <meta http-equiv="expires" content="0"/>
     <title>车牌识别资料集</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/cblstyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/cblnormalize.css">
     <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
-    <!--<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>-->
     <script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
@@ -30,8 +31,8 @@
             </div>
             <div class="index">
                 <ol>
-                    <li>布线、安装、接线、调试指导
-                        <ol>
+                    <li class="dropdown"><a data-toggle="dropdown">布线、安装、接线、调试指导<i class="icon-arrow"></i></a>
+                        <ol class="dropdown-menu">
                             <li>
                                 <a href="commPic/直观布线图1.png">布线图-分解说明</a>
                             </li>
@@ -61,8 +62,8 @@
                             </li>
                         </ol>
                     </li>
-                    <li>软硬件调试
-                        <ol>
+                    <li class="dropdown"><a data-toggle="dropdown">软硬件调试<i class="icon-arrow"></i></a>
+                        <ol class="dropdown-menu">
                             <li>
                                 <a href="ed2k://|file|cn_sql_server_2008_r2_developer_x86_x64_ia64_dvd_522724.iso|4662884352|E436F05BCB0165FDF7E5E61862AB6BE1|/">SQL2008R2数据库下载(请先安装迅雷,再下载)</a>
                             </li>
@@ -89,8 +90,8 @@
                             </li>
                         </ol>
                     </li>
-                    <li>硬件资料
-                        <ol>
+                    <li  class="dropdown"><a data-toggle="dropdown">硬件资料<i class="icon-arrow"></i></a>
+                        <ol class="dropdown-menu">
                             <li>
                                 <a href="./车牌识别一体机用户手册/车牌识别一体机用户手册.html">车牌识别一体机用户手册（新机壳）</a>
                             </li>
@@ -102,8 +103,8 @@
                             </li>
                         </ol>
                     </li>
-                    <li>软件资料
-                        <ol>
+                    <li  class="dropdown"><a data-toggle="dropdown">软件资料<i class="icon-arrow"></i></a>
+                        <ol class="dropdown-menu">
                             <li>
                                 <a href="./车牌识别系统软件说明书/车牌识别系统软件说明书.html">车牌识别系统管理软件说明书</a>
                             </li>
@@ -136,8 +137,8 @@
                             </li>
                         </ol>
                     </li>
-                    <li>调试工具
-                        <ol>
+                    <li  class="dropdown"><a data-toggle="dropdown">调试工具<i class="icon-arrow"></i></a>
+                        <ol class="dropdown-menu">
                             <li>
                                 <a class="vip" href="tool/批量导入数据模版及工具V21.zip">批量导入数据模版及工具</a>
                             </li>
@@ -170,7 +171,7 @@
                                 <a class="vip" href="./tool/摄像机升级镜像-1706212.rar">摄像机升级镜像-1706212(5.1.7或5.3.7用此镜像升级)</a>
                             </li>-->
                             -------------------200万像素升级镜像--------------------
-                             <li>
+                            <li>
                                 <a class="vip" href="./tool/摄像机升级镜像-1706220.zip">摄像机升级镜像-1706220(200w相机专用)</a>
                             </li>
                             <li>
@@ -182,8 +183,8 @@
                                 </li>
                             </ol>
                         </li>
-                        <li>管理软件 (软件请勿放桌面、不支持XP系统)
-                            <ol>
+                        <li  class="dropdown" ><a data-toggle="dropdown" id="activeBtn">管理软件 (软件请勿放桌面、不支持XP系统)<i class="icon-arrow"></i></a>
+                            <ol class="dropdown-menu">
                                 <li>
                                     <a class="vip" href="./tool/LPR-2529V1.rar">LPR-2529(5月17日更新)</a>
                                 </li>
@@ -195,8 +196,9 @@
                                 </li>
                             </ol>
                         </li>
-                    </ol>
+                    </ol>  
                 </div>
+                 <p class="title">Intentions to be the best</p>
             </div>
             <div class="card">
                 <iframe id="iframepage" name="frame" src="./homePage/homePage.html" frameborder="0" scrolling="no"
@@ -204,10 +206,33 @@
             </div>
         </div>
         <script>
-            $("#iframepage").load(function () {
-                var mainheight = $(this).contents().find("body").height() + 30;
-                $(this).height(mainheight);
+           $("#iframepage").load(function () {
+            var mainheight = $(this).contents().find("body").height() + 30;
+            $(this).height(mainheight);
+
+            var topWin = $("#iframepage")[0].contentWindow; //子窗口对象
+            var ch=$(window).height(); //父窗口的可视高度
+            var imgs=topWin.document.getElementsByTagName('img'); //子窗口所有img对象
+            $(imgs).each(function(index,element){
+                if($(this).offset().top<ch){
+                    $(this).attr('src',$(this).attr('dataOrigin'));
+                }
             });
-        </script>
-    </body>
-    </html>
+
+            document.onscroll=function(){ //因为兼容性问题 不能用jquery的scroll();
+            var distance=$(this).scrollTop();  //父窗口滚动距离
+            $(imgs).each(function(index,element){
+                if($(this).offset().top<(distance+ch)){
+                    $(this).attr('src',$(this).attr('dataOrigin'));
+                }
+            });
+        };
+
+    });
+           function adjustIframeHeight(height){
+            $("#iframepage").height(height);
+        }
+    </script>
+    <script src="js/cbl.js"></script>
+</body>
+</html>

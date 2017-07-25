@@ -32,12 +32,14 @@
             isMenuOpen = false;
         }
     });
-    $('a').click(function () {
-        $('html,body').animate({ scrollTop: '0px' }, 800);
+    $('a').click(function () { //点击导航 子窗口页自动滚动到页面顶端
+        $('html,body').animate({ scrollTop: '0px' }, 800); 
     });
-    $('a').attr("target", "frame");
+
+    $('a').attr("target", "frame"); 
+
     if ($('a').attr('href') == "http://count.knowsky.com/") {
-        $('a').attr('href', "");
+        $('a').attr('href', ""); //网站点击量屏蔽广告用
     }
 
     if ($('ol:first').css('list-style-type') != 'none') { /* For IE6/7 only. */
@@ -47,10 +49,12 @@
             ol.children('li').each(function(i, li) {
                 li = $(li);
                 var level2 = level1 + '.' + (li.index() + 1);
-                li.prepend('<span>' + level2+ '</span>');
+                li.prepend('<span>' + level2 + '</span>');
             });
         });
     }
+
+    $('#activeBtn').click();  //使管理软件一栏默认展开
 
     //$('li>a').click(function(){
     //    var iframepage=document.getElementById('iframepage');
