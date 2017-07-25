@@ -32,8 +32,10 @@
             isMenuOpen = false;
         }
     });
-    $('a').click(function () { //点击导航 子窗口页自动滚动到页面顶端
+    $("a:not([data-toggle='dropdown'])").click(function () { //点击导航 子窗口页自动滚动到页面顶端
         $('html,body').animate({ scrollTop: '0px' }, 800); 
+        $('a').css({'background':''});
+        $(this).css({'background':'#a1f1f1'});
     });
 
     $('a').attr("target", "frame"); 
