@@ -5,6 +5,9 @@
     <meta http-equiv="pragma" content="no-cache"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>        
     <title>驱动板不通讯的可能性</title>
     <style>
         body {
@@ -38,28 +41,28 @@
         <li>
             <h3>摄像机的端子排插错位</h3>
             打开摄像机顶盖查看.
-            <img src="img/端子插错位.png">
+            <img dataOrigin="img/端子插错位.png">
             上图所示端子排插错位了,现场人员一定要检查这里,我们已经被"坑"了不下十次.
         </li>
         <li>
             <h3>语音输出道口编号不一致</h3>
             打开管理软件,在"车道设置",双击某条车道信息查看.
-            <img src="img/语音输出道口.png">
+            <img dataOrigin="img/语音输出道口.png">
             道口编号是软件自动生成的,不要修改.<br>
             如上图,道口编号和语音输出道口号<span class="apparent">必须一致</span>,除非你确定不一致的作用是什么.
         </li>
         <li>
             <h3>摄像机与驱动板RS485连接不对</h3>
             检查摄像机到驱动板的连线.
-            <img src="img/摄像机与显示屏连线.png">
-            <img src="img/A和B.png">
+            <img dataOrigin="img/摄像机与显示屏连线.png">
+            <img dataOrigin="img/A和B.png">
             如上图,摄像机的A2接驱动板的A+,B2接驱动板的B-.
         </li>
         <li>
             <h3>检查"Config Setting.exe"的LED类型不是室内屏2.0</h3>
             打开软件根目录,找到"Config"文件夹里的"Config Setting.exe".
-            <img src="img/ConfigSetting.png">
-            <img src="img/LED类型.png">
+            <img dataOrigin="img/ConfigSetting.png">
+            <img dataOrigin="img/LED类型.png">
             LED类型必须选"室内屏2.0",除非你知道其它类型的用途.<br>
             软件发布时,默认设置的LED类型是"室内屏2.0".
         </li>
@@ -72,15 +75,15 @@
         <li>
             <h3>RS485通讯线是网线的两芯</h3>
             摄像机到驱动板的RS485线建议用两芯的铜软线,如下图:
-            <img src="img/线材正确1.png">
+            <img dataOrigin="img/线材正确1.png">
             最低要求也是网线的四芯,如下图:
-            <img src="img/线材正确2.png">
+            <img dataOrigin="img/线材正确2.png">
             <span class="apparent">千万不要用网线的两芯做RS485的通讯线,如下图:</span>
-            <img src="img/线材错误.png">
+            <img dataOrigin="img/线材错误.png">
         </li>
         <li>
             <h3>驱动板故障</h3>
-            <img width="100%" src="img/驱动板信号指示灯.png">
+            <img width="100%" dataOrigin="img/驱动板信号指示灯.png">
             检查驱动板上的指示灯.<br>
             <span class="apparent">重点关注驱动板上的D6和D7指示灯</span>,相机发送指令给驱动板时,这两个指示灯会闪烁.<br>
             D5是运行指示灯,正常情况下间隔1秒闪烁一次.<br>

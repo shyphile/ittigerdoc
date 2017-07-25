@@ -210,6 +210,7 @@
             var mainheight = $(this).contents().find("body").height() + 30;
             $(this).height(mainheight);
 
+            //所有子网页的图像延迟加载
             var topWin = $("#iframepage")[0].contentWindow; //子窗口对象
             var ch=$(window).height(); //父窗口的可视高度
             var imgs=topWin.document.getElementsByTagName('img'); //子窗口所有img对象
@@ -222,15 +223,15 @@
             document.onscroll=function(){ //因为兼容性问题 不能用jquery的scroll();
             var distance=$(this).scrollTop();  //父窗口滚动距离
             $(imgs).each(function(index,element){
-                if($(this).offset().top<(distance+ch)){
+                if($(this).offset().top<(distance+ch-10)){
                     $(this).attr('src',$(this).attr('dataOrigin'));
                 }
             });
         };
-
     });
+           //子网页图像加载后,调用此方法,动态调整iframe的高度
            function adjustIframeHeight(height){
-            $("#iframepage").height(height);
+            $("#iframepage").height(height+30);
         }
     </script>
     <script src="js/cbl.js"></script>

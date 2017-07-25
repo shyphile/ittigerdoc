@@ -5,6 +5,9 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>    
     <title>车牌识别系统现场施工手册</title>
     <style>
         body {
@@ -54,33 +57,33 @@
 <pre>
     停车场系统的局域网原则上是尽量做简单傻瓜一点,不要涉及三层及以上的数据交换,
     基本上两层交换就可以满足大多数停车场的要求.
-    <img width="80%" src="img/停车场拓扑图.png">
+    <img width="80%" dataOrigin="img/停车场拓扑图.png">
     上图就是两层的数据交换网络示意图,层级越少对于我们系统来说检修就越方便且系统也越稳定.
     下面以组建简单的停车场局域网为例说明局域网组网的方法和一些技巧.
     准备材料及工具:四芯光缆(长度客户自己核算),光纤盒,光收发器,光纤跳线,光纤耦合器,交换机,网线,水晶头,网线钳.
     光缆传输相关设备图片如下:
-    <img width="30%" src="img/光缆.png"><p class="explain">光缆</p>
-    <img width="30%" src="img/光纤盒.png"><p class="explain">光纤盒</p>
-    <img width="30%" src="img/光收发器.png"><p class="explain">光收发器</p>
-    <img width="30%" src="img/SC光纤跳线.png">
-    <img style="margin-top: -50px;" width="30%" src="img/ST光纤跳线.png"><p class="explain">光纤跳线SC\ST(尾纤)</p>
-    <img width="30%" src="img/尾纤.png"><p class="explain">完整的一根跳线</p>
-    <img width="30%" src="img/光纤连接器.png"><p class="explain">光纤耦合器(法兰盘)</p>
-    <img width="100%" src="img/光纤连接示意图.png">
+    <img width="30%" dataOrigin="img/光缆.png"><p class="explain">光缆</p>
+    <img width="30%" dataOrigin="img/光纤盒.png"><p class="explain">光纤盒</p>
+    <img width="30%" dataOrigin="img/光收发器.png"><p class="explain">光收发器</p>
+    <img width="30%" dataOrigin="img/SC光纤跳线.png">
+    <img style="margin-top: -50px;" width="30%" dataOrigin="img/ST光纤跳线.png"><p class="explain">光纤跳线SC\ST(尾纤)</p>
+    <img width="30%" dataOrigin="img/尾纤.png"><p class="explain">完整的一根跳线</p>
+    <img width="30%" dataOrigin="img/光纤连接器.png"><p class="explain">光纤耦合器(法兰盘)</p>
+    <img width="100%" dataOrigin="img/光纤连接示意图.png">
     先光缆从室外进来,光缆要熔接在光纤盒里.光缆的熔接是门技术,需要把光缆剥开,用尾纤与光缆里的细纤维熔接,熔接好放在
 盒子里,这样我们尾纤就出来了.光纤出来的头接在ODF上(一种架子,用光纤耦合器连接),架子的另一侧也是用尾纤(说是光纤跳线
 也可以,其实尾纤就是做光纤跳线用的)出来,接在光收发器上,光收发器出网线连接路由器----交换机---局域网---主机.
     在上面的步骤可以忽略光纤的配线架,尾纤出来后直接接在光纤收发器上,这样也不用耦合器了.
     光信号通过光收发器转成电信号后,经过交换机再将数据传输到各个电脑,这部分比较简单,日常应用也很多,就不展开讲解了.
     示意图如下:
-    <img src="img/光纤组网.png">
+    <img dataOrigin="img/光纤组网.png">
     停车场网络组成后,给每台电脑分配IP地址,IP地址必须唯一.
     如岗亭A电脑IP是192.168.1.2,岗亭B电脑是192.168.1.3.
     简单测试网络是否连通的方法:
     在B岗亭电脑输入如下命令,测试能否访问A电脑:ping 192.168.1.2 -t
-    <img src="img/运行框.png">
+    <img dataOrigin="img/运行框.png">
     出现下图表示与A岗亭电脑通讯正常:
-    <img src="img/ping命令窗.png">
+    <img dataOrigin="img/ping命令窗.png">
     上面只是简单介绍了局域网组网的基本知识,实际应用时可根据现场情况灵活调整.
 </pre>
 <h3>2.放线与安装</h3>
@@ -89,7 +92,7 @@
     以1进1出集中管理的停车场为例说明放线规则:从岗亭放1根网线+1根电源线到入口摄像机,其中电源线是到显示屏,然后从摄
 像机放2根网线到道匣,从显示屏放1根电源线到道匣.出口一样,也是从岗亭放1根网线+1根电源线到入口摄像机,其中电源线是到显
 示屏,然后从摄像机放2根网线到道匣,从显示屏放1根电源线到道匣.
-    <img width="50%" src="img/直接布线图2.png"><p class="explain">直观的布线图</p>
+    <img width="50%" dataOrigin="img/直接布线图2.png"><p class="explain">直观的布线图</p>
     从上图可以看出从岗亭过来是2根主线,在立柱里要穿4根主线,只要记住这两点,线就不会放错.
     最后需要注意的一点是,放线时要留余线3米,用于向上穿过立柱接提示屏和摄像机.
 </pre>
@@ -118,7 +121,7 @@
     地感线圈的主要用途是防止车辆被砸,当地感检测到车辆时不允许道匣落杆.
     在道匣杆正下方切一个1800mm×600mm的线槽,深度为5cm,宽度为5mm,实际使用时线槽的大小应以车道大小而定,尽量让来自
 不同方向的车辆能压到线圈的边缘处,因为线圈的边缘处感应最强.
-    <div style="margin:20px;"><img style="float: left;" src="img/地感切割示意图1.png"><img src="img/地感切割示意图2.png"></div><p style="clear: both;" class="explain">地感切割示意图</p></div>
+    <div style="margin:20px;"><img style="float: left;" dataOrigin="img/地感切割示意图1.png"><img dataOrigin="img/地感切割示意图2.png"></div><p style="clear: both;" class="explain">地感切割示意图</p></div>
     铺设地感线圈时,一般都是围绕地感线槽放5圈,圈数不够,可能底盘高的车辆会检测不到.
     线圈的接头处到地感检测器的插头处一定要双绞,双绞可以滤除干扰,有效的防止地感的死机与误动作.
     当两地感线圈的中心距离在五米之内时,线圈的圈数或面积一定不能相同（可在绕线时线圈的圈数错开）,否则两线圈会相互
@@ -127,13 +130,13 @@
     有活动导体的地方不能埋设线圈（如不能太靠近水沟）,否则地感加电后很难复位.
     线圈的固定方法:然后用净水泥封上或最好能用环氧树脂加固化剂封口.
     <span class="redBig">注意:不要让线圈松动,线圈的松动会直接造成地感检测器的死机.
-    </span><img src="img/地感线圈的地面缠绕.png">
+    </span><img dataOrigin="img/地感线圈的地面缠绕.png">
 </pre>
 <h4>2.3 接线与调试</h4>
 <pre>
     接线比较简单,看下面两张图就能明白.
-    <img width="80%" src="img/全功能接线-接线指导图2.png"><p class="explain">全功能接线图,道匣接口不同厂商有不同</p>
-    <img width="80%" src="img/简化功能接线-接线指导图1.png"><p class="explain">简化功能接线图</p>
+    <img width="80%" dataOrigin="img/全功能接线-接线指导图2.png"><p class="explain">全功能接线图,道匣接口不同厂商有不同</p>
+    <img width="80%" dataOrigin="img/简化功能接线-接线指导图1.png"><p class="explain">简化功能接线图</p>
     上图遥控收费是选配功能,需搭配硬件支持.
     常见的就是按照简化功能接线图接线.
 </pre>

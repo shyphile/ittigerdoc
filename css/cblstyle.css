@@ -15,10 +15,10 @@ body {
   border-sizing: border-box;
 }
 
-// .container {
+/*// .container {
 //   width: 350px;
 //   margin: 50px auto;
-// }
+// }*/
 .index > ol {
   list-style: none;
   padding: 0;
@@ -47,6 +47,7 @@ body {
   box-shadow: 0 1px 0 #409ad5 inset, 0 -1px 0 #20638f inset;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   padding: 10px;
+  cursor: default;
 }
 .dropdown [data-toggle="dropdown"]:hover {
   background: #2c89c6;
