@@ -10,14 +10,7 @@
     <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // swap all the gifs on the page.
-            $('.gif').each(function () {
-                $(this).gif();
-            });
-        });
-    </script>
+    <script src="../js/imgload_gifload.js"></script>
 
     <style>
         body {
@@ -130,32 +123,32 @@
 <h3>1.常用文件夹</h3>
 <pre>
     打开软件安装文件夹,出现下图所示文件夹目录.
-    <img src="img/文件夹目录.png">    如上图,红色框框选的是三个常用文件夹.
+    <img dataOrigin="img/文件夹目录.png">    如上图,红色框框选的是三个常用文件夹.
     <a name="backup"></a>Backup文件夹:车牌识别系统数据文件默认备份路径.该目录如果不存在,软件在自动备份数据库时会报错.
-    <img src="img/数据库配置备份路径1.png">
+    <img dataOrigin="img/数据库配置备份路径1.png">
     Config文件夹:与软件初始化有关的配置文件存在该目录下.常用的配置工具"Config Setting'即在此.
-    <img src="img/ConfigSetting文件夹.png">
+    <img dataOrigin="img/ConfigSetting文件夹.png">
     Data文件夹:车牌识别系统数据文件默认存储目录,该目录很重要,不能删除.
-    <img src="img/IT_ParkV10.png">    上图所示的是软件数据文件.
+    <img dataOrigin="img/IT_ParkV10.png">    上图所示的是软件数据文件.
 </pre>
 <h3>2.常用配置工具</h3>
 <pre>
     "CreateDatabase":数据库创建工具.初次部署软件时通过它来创建数据库文件,只需运行一次.
-    <img src="img/CreateDataBase.png">
+    <img dataOrigin="img/CreateDataBase.png">
     "Service Setup":加密狗共享服务设置工具.在插入加密狗的电脑上运行该工具,只需运行一次.
-    <img src="img/ServiceSetup.png">
+    <img dataOrigin="img/ServiceSetup.png">
     "ParkUI":软件程序运行入口.将其发送快捷方式到桌面,双击启动车牌识别软件.
-    <img src="img/ParkUI.png">
+    <img dataOrigin="img/ParkUI.png">
     "Debug.log":软件运行中产生错误的日志文件.该文件记录了软件出错的信息.
     需要时可将其拷贝发送给厂家开发人员,供其分析.
-    <img src="img/Debug.png">
+    <img dataOrigin="img/Debug.png">
 </pre>
 <h2>三.软件初始参数配置</h2>
 <h3>1.创建数据库文件</h3>
 <pre>    <em>本操作请在安装数据库的电脑上执行，否则会执行不成功。</em>
     在软件根目录找到"CreateDatabase" <img style="display: inline;border: none;margin-bottom: -4px;"
-                                  src="img/CreateDataBase.png">  并打开.
-    <img src="img/创建数据库窗口.png">
+                                  dataOrigin="img/CreateDataBase.png">  并打开.
+    <img dataOrigin="img/创建数据库窗口.png">
     数据库名称:IT_ParkV10是软件数据库文件使用的名称,不能修改.
     服务器名称:填写已经安装了数据库电脑的IP地址.输入"."表示本机IP地址.
                如果数据库所在电脑上安装了多个数据库引擎,需要输入IP\实例名指定,如:192.168.1.50\SQLName.
@@ -167,15 +160,15 @@
     保存连接字符串:将数据库名称、服务器名称、登录名和密码保存在配置文件中,软件下次启用时自动调用该配置信息.
 
     初次使用软件时,系统内是没有数据库文件的.按照下图所示步骤创建数据库文件.
-    <img src="img/创建数据库步骤.png">
+    <img dataOrigin="img/创建数据库步骤.png">
     <em>创建数据文件操作只用做一次.如果系统内已经存在数据库文件,再执行本操作会报错,提示已存在数据库.</em>
     <span style="color: red;">注:数据库所在电脑不能关机,否则系统将不能运行.</span></pre>
 <h3>2.软件配置参数设置</h3>
 <pre>
     在软件根目录找到Confing文件夹,打开里面的Confing Setting.
-    <img src="img/ConfigSetting文件夹.png">
+    <img dataOrigin="img/ConfigSetting文件夹.png">
     弹出配置文件编辑窗口,如下图:
-    <img src="img/停车场配件文件ConfigSetting.png">
+    <img dataOrigin="img/停车场配件文件ConfigSetting.png">
     下面详解各参数的作用.
 </pre>
 <a name="rjms"></a><h5>(1)软件模式</h5>
@@ -187,10 +180,10 @@
 道,客户端却不能.但客户端可以收费,服务端却不能.
     <em>注:服务端模式下的电脑必须插入加密狗;客户端模式下最大只能管理四个摄像机,特殊情况除外.</em>
     下图显示服务端与客户端软件界面上的异同.
-    <img width="100%" src="img/服务端模式工具栏界面.png"><p class="explain">服务端模式下的工具栏</p>
-    <img src="img/客户端模式工具栏界面.png"><p class="explain">客户端模式下的工具栏</p>
-    <img width="100%" src="img/服务端实时监控界面.png"><p class="explain">服务端模式下的实时监控</p>
-    <img width="100%" src="img/客户端实时监控界面.png"><p class="explain">客户端模式下的实时监控</p></pre>
+    <img width="100%" dataOrigin="img/服务端模式工具栏界面.png"><p class="explain">服务端模式下的工具栏</p>
+    <img dataOrigin="img/客户端模式工具栏界面.png"><p class="explain">客户端模式下的工具栏</p>
+    <img width="100%" dataOrigin="img/服务端实时监控界面.png"><p class="explain">服务端模式下的实时监控</p>
+    <img width="100%" dataOrigin="img/客户端实时监控界面.png"><p class="explain">客户端模式下的实时监控</p></pre>
 <h5>(2)LED类型：</h5>
 <pre>
     LED类型指终端提示器里控制卡的类型.
@@ -210,14 +203,14 @@
     开启,则在实时监控界面显示监控视频,关闭则不显示.无论是否开启都不影响系统识别.
     电脑配置很低的或无独立显卡的,关闭此选项可提高系统运行效率.
     主流电脑配置建议开启此选项.
-    <img width="100%" src="img/关闭实时监控显示的界面.png"><p class="explain">实时视频关闭,不影响系统运行.有截图和记录产生</p></pre>
+    <img width="100%" dataOrigin="img/关闭实时监控显示的界面.png"><p class="explain">实时视频关闭,不影响系统运行.有截图和记录产生</p></pre>
 <a name="套餐收费"></a><h5>(5)套餐收费</h5>
 <pre>
     开启则软件里必须预先规划充值的套餐,然后给每辆月租车绑定一个套餐.车辆充值延期时自动调用套餐.
     关闭则充值延期时可以灵活的输入时间和金额.
-    如无特殊要求,关闭即可.<img src="img/停车场收费套餐管理.png"><p class="explain">停车场收费套餐管理</p>
-    <img src="img/车辆管理套餐绑定.png"><p class="explain">车辆管理-绑定套餐类型</p>
-    <img src="img/套餐收费下的充值延期.png"><p class="explain">套餐收费开启模式下的充值延期,不能随意修改充后时间和应付金额</p>
+    如无特殊要求,关闭即可.<img dataOrigin="img/停车场收费套餐管理.png"><p class="explain">停车场收费套餐管理</p>
+    <img dataOrigin="img/车辆管理套餐绑定.png"><p class="explain">车辆管理-绑定套餐类型</p>
+    <img dataOrigin="img/套餐收费下的充值延期.png"><p class="explain">套餐收费开启模式下的充值延期,不能随意修改充后时间和应付金额</p>
 </pre>
 <a name="jiedaofeimoshi"></a><h5>(6)借道费模式</h5>
 <pre>
@@ -229,7 +222,7 @@
 按实际停车费用收取.
     如无特殊要求,建议选择免费时间内收取.
     借道功能的启用和费用定义在软件车辆公共属性配置里设置.
-    <img src="img/公共属性配置借道功能.png">
+    <img dataOrigin="img/公共属性配置借道功能.png">
 </pre>
 <h5>(7)可关闭收费窗口</h5>
 <pre>
@@ -239,7 +232,7 @@
     此项开启的典型应用场合:某车驶进出口,软件弹出收费窗口准备收费,但车主因故未出场,这笔停车费也未交.
 此时收费人员可以将弹出的收费窗口关闭,等下次该车出场时再收费.
     开启此项前请关闭其它开启道匣的途径,防止人为舞弊.
-    <img src="img/临时车收费窗口.png"><p class="explain">不开启此选项,则不能关掉本窗口.防止人为舞弊.</p>
+    <img dataOrigin="img/临时车收费窗口.png"><p class="explain">不开启此选项,则不能关掉本窗口.防止人为舞弊.</p>
 </pre>
 <h5>(8)自动重启摄像机</h5>
 <pre>
@@ -255,7 +248,7 @@
     不是通过软件控制的开匣操作,软件都会记录.
     记录里会显示何人在何时为何车开的哪个道匣,并有车辆图片显示.
     如某保安通过道匣摇控器为某车开了道匣,这个操作软件就会记录下来.
-    <img src="img/异常开匣记录表.png">
+    <img dataOrigin="img/异常开匣记录表.png">
 </pre>
 <h5>(10)重启摄像机时间</h5>
 <pre>
@@ -277,7 +270,7 @@
 <h5>(13)无需原因手动开匣</h5>
 <pre>
     开启则无需输入原因就可以通过软件控制开匣,提高操作便利性和快捷性.
-    <img src="img/手动开匣输入原因.png"><p class="explain">关闭本选项则不会弹出手动开匣输入原因窗口,直接开匣</p>
+    <img dataOrigin="img/手动开匣输入原因.png"><p class="explain">关闭本选项则不会弹出手动开匣输入原因窗口,直接开匣</p>
 </pre>
 <a name="kehuduandingshicaozuo"></a><h5>(14)客户端执行定时操作</h5>
 <pre>
@@ -302,14 +295,14 @@
 <h5>(17)月租车过期自动转临时车</h5>
 <pre>
     开启则对过期的月租车无需人工确认,自动放入车场.反之则会弹出确认框,人工选择是否允许放入场内.
-    <img src="img/月租车过期转换提示.png"><p class="explain">已过期的月租车会弹出确认框</p>
+    <img dataOrigin="img/月租车过期转换提示.png"><p class="explain">已过期的月租车会弹出确认框</p>
 </pre>
 <h5>(18)收费窗口显示车辆入场图片</h5>
 <pre>
     开启则在弹出收费窗口时显示该车入场时的图片,供人工比对.
     <em>建议开启此项.</em>
-    <img src="img/收费窗口显示车辆入场图片.png"><p class="explain">开启此项后显示车辆入场图片</p>
-    <img src="img/收费窗口不显示车辆入场图片.png"><p class="explain">关闭此项后不显示车辆入场图片</p>
+    <img dataOrigin="img/收费窗口显示车辆入场图片.png"><p class="explain">开启此项后显示车辆入场图片</p>
+    <img dataOrigin="img/收费窗口不显示车辆入场图片.png"><p class="explain">关闭此项后不显示车辆入场图片</p>
 </pre>
 <h5>(19)从数据库查询车辆入场时间</h5>
 <pre>
@@ -342,10 +335,10 @@
 <p style="color: red;font-weight: bold;">&nbsp;&nbsp;以上配置更改后,需重启软件才能生效.</p>
 <h2>四.软件初始数据设置</h2>
 <p style="color: red;font-weight: bold;">&nbsp;&nbsp;以下数据更改后,即时存储在数据库内,一处更改处处生效.</p>
-<h3>1.车场公共属性配置<img class="coinImg" src="img/车场公共属性配置图标.png"></h3>
+<h3>1.车场公共属性配置<img class="coinImg" dataOrigin="img/车场公共属性配置图标.png"></h3>
 <pre>
     配置软件运行的全局属性.
-    <img src="img/停车场公共属性设置.png">
+    <img dataOrigin="img/停车场公共属性设置.png">
 </pre>
 <h5>(1)出入场图片保存路径</h5>
 <pre>
@@ -388,7 +381,7 @@
 <pre>
     勾选后软件会记录不能正常进出的车辆信息.这里所说的不能正常进出是指软件逻辑判断的不能正常进出.在报
 表管理"进出错误记录表"里可查询记录.双击某条记录可看到对应车辆图片.
-    <img width="100%" src="img/进出错误记录表.png">
+    <img width="100%" dataOrigin="img/进出错误记录表.png">
 </pre>
 <h5>(9)月租车提示时间不足天数</h5>
 <pre>
@@ -411,7 +404,7 @@
     该设定值用于固定优惠金额.
     如:某商场规定,凭购物小票可减免停车费5元,则此处设定值为5,收费时选择"自定义优惠(F4)",系统自动作扣
 除5元的处理,并记录.
-    <img src="img/临时车自定义优惠.png">
+    <img dataOrigin="img/临时车自定义优惠.png">
 </pre>
 <h5>(13)启用借道通行收费</h5>
 <pre>
@@ -439,26 +432,26 @@
     模糊匹配忽略汉字:勾上则允许省份识别错.此项是单独设置的,不计算在车牌模糊匹配位数中.
     模糊匹配仅匹配当前车场:勾上则只在该车辆所属的车场内匹配相似的车牌,否则在整个停车系统内匹配.
                            车辆所属车场在车辆登记时指定.
-    <img src="img/车辆管理所属车场.png"><p class="explain">指定所属车场</p>
+    <img dataOrigin="img/车辆管理所属车场.png"><p class="explain">指定所属车场</p>
     模糊匹配成月租车需人工确认:车牌识别结果触发了模糊匹配功能时会弹出确认框,如下图:
-    <img width="100%" src="img/模糊匹配确认窗口.png">
+    <img width="100%" dataOrigin="img/模糊匹配确认窗口.png">
     管理员通过比对真实车牌在识别结果中选择.
     如上图:系统内登记了一辆月租车鄂A8BK79,当临时车鄂A8BK78进场时会触发模糊匹配功能.
     如果不勾上本项,该临时车直接被匹配成月租车放入场内,系统认为是月租车进场,也就不会产生停车费用.当勾
 上本项后,模糊匹配功能触发时,就会弹出如上图的确认窗口,供人工比对.
     <em>相似车牌定义:车牌号指定位置上只是字符不同,如鄂A12345和鄂A54321就不是相似车牌,而鄂A12345和鄂A12367就是相似车牌.</em>
 </pre>
-<h3>2.数据库配置<img class="coinImg" src="img/数据库配置图标.png"></h3>
+<h3>2.数据库配置<img class="coinImg" dataOrigin="img/数据库配置图标.png"></h3>
 <pre>
     设置每天定时备份数据库文件的路径和时间.
     默认路径是软件根目录的Backup文件夹.请参考<a href="#backup">"Backup文件夹说明"</a>
     注意:该备份是完整模式备份,即每次备份都是一份完整的数据库文件,所以请定期删除老的数据库文件.
     <span style="color: blue;">软件模式没有"服务端"的停车场,请指定一台"客户端"模式电脑开启"客户端执行定时操作",具体参考<a href="#kehuduandingshicaozuo">"(14)客户端执行定时操作".</a></span>
 </pre>
-<h3>3.报表配置<img class="coinImg" src="img/报表配置图标.png"></h3>
+<h3>3.报表配置<img class="coinImg" dataOrigin="img/报表配置图标.png"></h3>
 <pre>
     设定时间自动删除报表列表中不在保留天数的记录.
-    <img src="img/自动删除报表配置.png">
+    <img dataOrigin="img/自动删除报表配置.png">
     如上图,设定的是每天凌晨2点删除180天前的车辆进出图片,保留180天后的图片;清除30天前进入的车辆,即将
 这些车手动出场.其它未勾选的选项类似.
     <em>建议将车辆进出图片设置一个保留天数,因为硬盘存储空间是有限的,而图片日积月累产生的存储容量是比较大的.
@@ -467,7 +460,7 @@
     <span style="color: blue;">软件模式没有"服务端"的停车场,请指定一台"客户端"模式电脑开启"客户端执行定时操作",具体参考<a href="#kehuduandingshicaozuo">"(14)客户端执行定时操作".</a></span>
 
 </pre>
-<h3>4.收费设置<img class="coinImg" src="img/收费设置图标.png"></h3>
+<h3>4.收费设置<img class="coinImg" dataOrigin="img/收费设置图标.png"></h3>
 <pre>
     设置收费标准,供系统计算停车费用.
     目前提供二种通用的收费标准模式,基本可满足市面90%的需求.需要定制收费标准的请与工程师联系.</pre>
@@ -489,7 +482,7 @@
     某车停车时间是3小时,即180分钟,总停车费计算规则如下:
     前90分钟是首停时间,单独收取3元.后90分钟是首停后的停车时间,已经超过1小时但未过2小时按2小时的标准
 收取,是2元,故总停车费就是3+2=5元.
-    <img src="img/24小时制收费标准.png">
+    <img dataOrigin="img/24小时制收费标准.png">
     例:上图表示停1个小时收1元钱，停2小时收2元钱...;可免费停30分钟;停车时间满24小时收20元,相当于优惠了4元。
 </pre>
 <h5>(2)二段式收费设置</h5>
@@ -504,7 +497,7 @@
     停车单位,停车收费:首停单位后每间隔一个停车单位计算一次停车费用,停车费用通过"停车收费"指定.
     封顶收费:该时间段内最高的收费金额.
     跨时段收费时,按时段一收费:停车时间跨两个时间段时,选择跨了时间段的停车单位按哪个时段收取,默认按时段二.
-    <img src="img/二段式收费设置.png">
+    <img dataOrigin="img/二段式收费设置.png">
     例:上图表示收费标准如下:
     白天时间段,7:00-18:59,免费时间30分钟,2元/小时,4元封顶;晚上时间段,19:00-7:00,免费时间30分钟,3元/小时,
 6元封顶,跨时段时按时段二的标准收费.
@@ -518,9 +511,9 @@
 <h5>(3)测试收费标准</h5>
 <pre>
     测试设置的收费标准是否正确.
-    <img src="img/收费标准测试.png">
+    <img dataOrigin="img/收费标准测试.png">
 </pre>
-<h3>5.车场设置<img class="coinImg" src="img/车场设置图标.png"></h3>
+<h3>5.车场设置<img class="coinImg" dataOrigin="img/车场设置图标.png"></h3>
 <pre>
     设置与停车场特征信息,如车场名称、收费标准、车位数等.
     车场名称:定义车场名称,如:XX公共停车场.
@@ -537,9 +530,9 @@
     月租车允许重复入场:勾选则不判断月租车是否有出场记录都可进场,反之则进不了场,并提示"此车已入场".
     月租车过期允许入场(按临时车收费):勾选则过期的月租车被转换成临进车,出场时按临时车收费,反之则不允许入场.
     临时车入场需人工确认:勾选则临时车进场时会弹出确认窗口需要人工处理,选择是否放行.反之则无需干预,直接入场.
-    <img src="img/车场设置.png">
+    <img dataOrigin="img/车场设置.png">
 </pre>
-<h3>6.车道设置<img class="coinImg" src="img/车道设置图标.png"></h3>
+<h3>6.车道设置<img class="coinImg" dataOrigin="img/车道设置图标.png"></h3>
 <pre>
     设置停车场内进出口车道的信息,如车道名称、车道所属摄像机信息等.
     所属车场:绑定已经设置好的车场名称,即为本车道指定车场.车场名称在车场设置里定义.
@@ -559,45 +552,45 @@
     是否启用摄像机:勾选则启用该车道的摄像机识别,反之则不启用.
     是否启用独立模糊匹配:勾选则车辆在该道口触发模糊匹配功能时使用该道口设置的模糊匹配参数,反之则使用
 车场公共属性配置的模糊匹配参数.模糊匹配参数请参考<a href="#mohupipei">"(15)模糊匹配"</a>
-    <img src="img/道口管理.png">
+    <img dataOrigin="img/道口管理.png">
 </pre>
-<h3>7.角色管理<img class="coinImg" src="img/角色管理图标.png"></h3>
+<h3>7.角色管理<img class="coinImg" dataOrigin="img/角色管理图标.png"></h3>
 <pre>
     分配操作员权限.系统默认会提供管理员角色,该角色拥有操作软件的全部权限.
     点击增加角色,在弹出的角色管理窗口中勾选该角色的权限.如下图:
-    <img src="img/角色管理收费员.png"><p class="explain">收费员角色只有实时监控、手动开匣和手动输入车牌的权限</p>
+    <img dataOrigin="img/角色管理收费员.png"><p class="explain">收费员角色只有实时监控、手动开匣和手动输入车牌的权限</p>
 </pre>
-<h3>8.操作员管理<img class="coinImg" src="img/操作员管理图标.png"></h3>
+<h3>8.操作员管理<img class="coinImg" dataOrigin="img/操作员管理图标.png"></h3>
 <pre>
     分配操作员登录帐户.
     系统默认会提供超级管理员帐户admin,密码初始为空,该帐户所属角色是管理员,即拥有操作软件的全部权限.
-    <img src="img/操作员管理.png">
+    <img dataOrigin="img/操作员管理.png">
     操作员名称:填写帐户登录名,如:"张三";
     操作员工号:系统提供,不用更改;
     登录密码,确认密码:填写帐户登录密码;
     所属角色:选择帐户的角色,该角色决定了操作员的软件权限.
-    <img src="img/操作员列表.png">
+    <img dataOrigin="img/操作员列表.png">
 </pre>
-<h3>9.部门管理<img class="coinImg" src="img/部门管理图标.png"></h3>
+<h3>9.部门管理<img class="coinImg" dataOrigin="img/部门管理图标.png"></h3>
 <pre>
     用于用户分组,必须添加一个部门.
-    <img src="img/部门列表.png"><p class="explain">软件里必须新建一个部门</p>
+    <img dataOrigin="img/部门列表.png"><p class="explain">软件里必须新建一个部门</p>
 </pre>
 <a name="yonghuguanli"></a>
-<h3>10.用户管理<img class="coinImg" src="img/用户管理图标.png"></h3>
+<h3>10.用户管理<img class="coinImg" dataOrigin="img/用户管理图标.png"></h3>
 <pre>
     用户即车主,本功能用于管理车主信息.
 </pre>
 
 <pre>
     增删改用户有两种选择操作的方法,一是在工具栏上选择,二是右键选择,如下图:
-    <img src="img/增删改用户.png"><p class="explain">在工具栏上选择</p>
-    <img src="img/增删改用户右键.png"><p class="explain">右键选择</p>
+    <img dataOrigin="img/增删改用户.png"><p class="explain">在工具栏上选择</p>
+    <img dataOrigin="img/增删改用户右键.png"><p class="explain">右键选择</p>
 </pre>
 <h5>(1) 增加用户和车辆</h5>
 <pre>
     <span class="redBig">车辆必须从用户管理功能里添加,因为车辆必须绑定到某一个用户上.</span>
-    <img src="img/新增用户.png">
+    <img dataOrigin="img/新增用户.png">
     车位数量:该车主拥有的车位数.
     储值金额:该用户名下如果登记了储值车,此处金额为名下所有储值车共享.
     用户车辆超过车位数量时允许正常入场:
@@ -607,11 +600,11 @@
 换成临时车;若B车先入场,则A,C车入场时转换成临时车,依此类推.转换成临时车的,出场按临时车收费.
     若勾选此项,则车位数量的限制失效,A,B,C三辆车都以月租车进出场.
     录入完用户基本信息后,点击"车辆管理按钮",输入车辆信息.如下图:
-    <img src="img/车辆管理按钮.png">
-    <img width="100%" class="gif" src="img/车辆添加.png" data-gif="img/车辆添加.gif"><p class="explain">录入车辆信息</p>
+    <img dataOrigin="img/车辆管理按钮.png">
+    <img width="100%" class="gif" dataOrigin="img/车辆添加.png" data-gif="img/车辆添加.gif"><p class="explain">录入车辆信息</p>
     下图是车牌信息录入窗口:
-    <img src="img/车辆管理编辑窗口.png">
-    车辆类型:<img src="img/车辆类型.png">
+    <img dataOrigin="img/车辆管理编辑窗口.png">
+    车辆类型:<img dataOrigin="img/车辆类型.png">
     月租车:即长租车,泛指一类固定车辆,该类型车辆是可登记的固定车辆,具体到期时间可自由设定,并不是按月设定.
     临时车:该类型车辆将按照指定的收费标准收费,一般用于单独计费的外来车辆.
     储值车:该类型车辆也是按照指定的收费标准收费,只是可以先充值后扣费.
@@ -631,74 +624,74 @@
     所属车场:具体请参考<a href="../车场预警功能说明/车场预警功能说明.html" target="_blank">"车场预警说明"</a>,可为空.
     道口权限:该车能通行哪些道口就勾上对应道口的通行权限.
     如下图表示鄂A11111不能通行地库车场.
-    <img src="img/通行权限.png">
+    <img dataOrigin="img/通行权限.png">
 </pre>
 <h5>(2) 查询、编辑和删除用户</h5>
 <pre>
     软件提供了多样的,便利的查询用户的方法.
     用户管理列表的首行是查询条件输入栏,支持精细和模糊查询,下面以图示的方式展现软件查询的优越功能.
-    <img src="img/用户查询-用户名.png"><p class="explain">用户名查询,首行输入'小'进行模糊查询,查询结果只包含用户名字含小的用户</p>
-    <img src="img/用户查询-最大车位数.png"><p class="explain">最大车位数查询,首行输入'2'进行精细查询,查询结果只包含车位数为2的用户</p>
+    <img dataOrigin="img/用户查询-用户名.png"><p class="explain">用户名查询,首行输入'小'进行模糊查询,查询结果只包含用户名字含小的用户</p>
+    <img dataOrigin="img/用户查询-最大车位数.png"><p class="explain">最大车位数查询,首行输入'2'进行精细查询,查询结果只包含车位数为2的用户</p>
     其它列类似,只需在首行输入条件即可自动筛选符合的记录.
 
     查找到指定用户后,就可以进行用户编辑和删除操作了.如下图:
-    <img width="100%" class="gif" src="img/编辑删除用户.png" data-gif="img/编辑删除用户.gif">
+    <img width="100%" class="gif" dataOrigin="img/编辑删除用户.png" data-gif="img/编辑删除用户.gif">
     <em>快捷操作:选中某条用户记录,双击或鼠标右键可弹出用户编辑窗口.</em>
 </pre>
 <h5>(3) 用户车辆管理</h5>
 <pre>
     选中某条用户记录,单击用户车辆管理,弹出如下界面.
-    <img src="img/用户车辆管理界面.png">
+    <img dataOrigin="img/用户车辆管理界面.png">
     在该界面可以看到用户登记的车辆信息,也可以在该用户名下继续添加车辆.
 </pre>
 <h5>(4) 储值用户充值</h5>
 <pre>
     即给名下所有储值车类型的车辆充值,充值金额为名下所有储值车共享.
     如下图,用户名为小明1的名下有两辆储值车,一辆月租车.
-    <img src="img/含储值车用户.png">
+    <img dataOrigin="img/含储值车用户.png">
     选中小明1用户记录,再点击储值用户充值.
-    <img class="gif" src="img/储值用户充值.png" data-gif="img/储值用户充值.gif">
+    <img class="gif" dataOrigin="img/储值用户充值.png" data-gif="img/储值用户充值.gif">
     管理员对用户增删改的所有操作,均记录在报表管理里的"重要操作记录表",方便管理员日后审查.</em>
-    <img width="100%" src="img/用户操作报表记录.png"><p class="explain">重要操作记录表</p>
+    <img width="100%" dataOrigin="img/用户操作报表记录.png"><p class="explain">重要操作记录表</p>
 </pre>
 <a name="clgl"></a>
-<h3>11.车辆管理<img class="coinImg" src="img/车辆管理图标.png"></h3>
+<h3>11.车辆管理<img class="coinImg" dataOrigin="img/车辆管理图标.png"></h3>
 <pre>
     本功能是用来管理软件登记的车辆,如查询、编辑、删除车辆和车辆延期,但不能在此添加车辆.
 </pre>
 <h5>(1) 查询、编辑和删除车辆</h5>
 <pre>
     同查询用户操作方法一样,查询车辆也是在列表的首行输入条件查询,如下图所示:
-    <img width="80%" class="gif" src="img/查改删车辆.png" data-gif="img/查改删车辆.gif">
+    <img width="80%" class="gif" dataOrigin="img/查改删车辆.png" data-gif="img/查改删车辆.gif">
     <em>快捷操作:选中某条用户记录,双击或鼠标右键可弹出车辆编辑窗口.</em>
 </pre>
 <h5>(2) 车辆充值</h5>
 <pre>
     本功能是用来为车辆延期,如下图所示.
-    <img width="100%" class="gif" src="img/车辆充值延期.png" data-gif="img/车辆充值延期.gif">
+    <img width="100%" class="gif" dataOrigin="img/车辆充值延期.png" data-gif="img/车辆充值延期.gif">
 </pre>
 <h2>五.其它功能介绍</h2>
 <h3>1.手动开匣原因管理</h3>
 <pre>
     预先输入一些手动开匣的原因,方便收费员手动开匣时选择.
-    <img  class="gif" src="img/开匣原因.png" data-gif="img/开匣原因.gif">
+    <img  class="gif" dataOrigin="img/开匣原因.png" data-gif="img/开匣原因.gif">
     设置完成后,重启软件才能生效.
     实时监控使用效果如下图:
-    <img src="img/实时监控-开匣原因选择.png">
+    <img dataOrigin="img/实时监控-开匣原因选择.png">
 </pre>
 <h3>2.停车场收费套餐管理</h3>
 <pre>
     开启套餐收费模式时,需要预先设置停车场套餐,如下图:
-    <img src="img/停车场收费套餐管理.png">
+    <img dataOrigin="img/停车场收费套餐管理.png">
     详细使用说明请参考<a href="#套餐收费">(5)套餐收费</a>.
 </pre>
 <a name="shuaxinshexiangjiquanxian"></a>
 <h3>3.刷新摄像机权限</h3>
 <pre>
     强制将软件里录入的月租车和免费车类型车辆下传到摄像机里,以便相机脱机时使用.
-    <img class="gif" src="img/刷新摄像机权限.png" data-gif="img/刷新摄像机权限.gif">
+    <img class="gif" dataOrigin="img/刷新摄像机权限.png" data-gif="img/刷新摄像机权限.gif">
     下传的缓存数据存储在"道口脱机记录表"里,进入实时监控,软件会将该缓存数据下传到摄像机中存储.
-    <img width="100%" src="img/道口脱机记录表.png">
+    <img width="100%" dataOrigin="img/道口脱机记录表.png">
 </pre>
 <h3>4.LED语音提示管理</h3>
 <pre>
@@ -707,7 +700,7 @@
     默认情况下月租车入场提示内容和语音是:欢迎回家;出场时是:一路顺风.
     有些场合这些默认的内容可能就不合适了,如公共或机关单位机车场.
     这时我们就可以做如下设置,替换软件默认的设置.
-    <img class="gif" src="img/自定义语音内容.png" data-gif="img/自定义语音内容.gif">
+    <img class="gif" dataOrigin="img/自定义语音内容.png" data-gif="img/自定义语音内容.gif">
     如上设置后,月租车入场时会提示:XX车欢迎您,出场时提示:XX一路平安.
     其它的通行状态如法设置.
     设置完成后,重启软件才能生效.
@@ -716,13 +709,13 @@
 <pre>
     添加黑名单车牌信息,禁止黑名单的车辆进入.
     如下图设置,鄂A1102B的车辆就禁止进入本停车场了.
-    <img class="gif" src="img/黑名单车辆.png" width="100%" data-gif="img/黑名单车辆.gif">
+    <img class="gif" dataOrigin="img/黑名单车辆.png" width="100%" data-gif="img/黑名单车辆.gif">
     设置完成后,重启软件才能生效.
 </pre>
 <h2>六.报表操作及查询技巧介绍</h2>
 <pre>
     软件提供了报表集中管理的功能,有16种记录表,如下图:
-    <img src="img/报表管理.png">
+    <img dataOrigin="img/报表管理.png">
 </pre>
 <a name="cljcjlb"></a>
 <h3>1.车辆进出记录表</h3>
@@ -733,21 +726,21 @@
 <pre>
     举例说明:
     如要查询"鄂A8BK78"在2106年12月12日这一天的通行记录:
-    <img class="gif" src="img/查询进出记录.png" width="100%" data-gif="img/查询进出记录.gif">
+    <img class="gif" dataOrigin="img/查询进出记录.png" width="100%" data-gif="img/查询进出记录.gif">
     上图中在车牌号输入栏只是输入了"K78",这样就可以查询车牌号含有"K78"字符车辆的进出记录,提高查询效率.
     如果勾上"精确查询",则必须输入完整的车牌号.
     若所有勾选项均勾上,则会查询出所有车辆进出记录.
     若想精确查询结果,就在对应勾选项上去掉勾选,然后输入查询条件.
     如想查询"优贝"的进出记录:
-    <img src="img/进出记录表-用户名查询.png">
+    <img dataOrigin="img/进出记录表-用户名查询.png">
 </pre>
 <h5>(2)查询方法介绍-首行栏</h5>
 <pre>
     通过首行栏查询时,请将工具栏的所有勾选项都勾上,否则本查询结果是以工具栏查询的结果为基础进行的二次查询.
-    <img src="img/进出记录表-工具栏.png" width="100%">
+    <img dataOrigin="img/进出记录表-工具栏.png" width="100%">
     记录列表的首行是查询条件输入栏,支持精细和模糊查询,下面以图示的方式展现查询功能.
-    <img src="img/进出记录查询-车牌号.png" width="100%"><p class="explain">车牌号查询,首行输入'k78'进行模糊查询,查询结果只包含车牌号含'k78'的车辆进出记录</p>
-    <img src="img/进出记录查询-用户名.png"><p class="explain">用户名查询,首行输入'优'进行模糊查询,查询结果只包含用户名含'优'的进出记录</p>
+    <img dataOrigin="img/进出记录查询-车牌号.png" width="100%"><p class="explain">车牌号查询,首行输入'k78'进行模糊查询,查询结果只包含车牌号含'k78'的车辆进出记录</p>
+    <img dataOrigin="img/进出记录查询-用户名.png"><p class="explain">用户名查询,首行输入'优'进行模糊查询,查询结果只包含用户名含'优'的进出记录</p>
     其它列类似,只需在首行输入条件即可自动筛选符合的记录.
 
     <span class="redBig">以上介绍的两种查询方法适用本软件所有报表,故以下报表不再赘述。</span>
@@ -755,7 +748,7 @@
 <h5>(3)查看车辆抓拍图片</h5>
 <pre>
     双击指定的进出记录,会弹出该车辆抓拍的图片,如下图:
-    <img class="gif" width="100%" src="img/进出记录抓拍图片.png" data-gif="img/进出记录抓拍图片.gif">
+    <img class="gif" width="100%" dataOrigin="img/进出记录抓拍图片.png" data-gif="img/进出记录抓拍图片.gif">
     在图片上右键可以选择另存图片.
 
     <span class="redBig">以下报表可查询图片的方法类似,故不再赘述。</span>
@@ -777,7 +770,7 @@
 <pre>
     举例说明:
     如要查询操作员"8001"在2016年10月14日的收费情况,如下图:
-    <img src="img/收费明细记录表-操作员.png" width="100%">
+    <img dataOrigin="img/收费明细记录表-操作员.png" width="100%">
     上图中可以明确看到该操作员这一天收费的每一笔记录,还有金额总数.
     若想更加精细的查询一笔记录,请参考<a href="#cljcjlb">"车辆进出记录表"</a>的查询方法介绍.
 </pre>
@@ -795,73 +788,73 @@
 <pre>
     记录收费员交班的详细情况.
     可查询收费员当班的详细情况,如收取的金额,手动开匣次数等.
-    <img width="100%" src="img/交班信息记录表.png">
+    <img width="100%" dataOrigin="img/交班信息记录表.png">
 </pre>
 <h3>4.手动开匣记录表</h3>
 <pre>
     查询收费员手动开匣的记录.
     收费员通过软件远程开道匣时,软件会抓拍一张照片存档,供日后管理员核查.
     双击指定记录,可查看开匣时抓拍的图片,如下图:
-    <img src="img/手动开匣记录表-图片.png" width="100%">
+    <img dataOrigin="img/手动开匣记录表-图片.png" width="100%">
 </pre>
 <h3>5.车牌变更记录表</h3>
 <pre>
     管理员修改车牌时,该修改记录会保存在数据库中,供日后核查.
     如下图所示:
-    <img src="img/车牌变更记录表.png" width="100%">
+    <img dataOrigin="img/车牌变更记录表.png" width="100%">
 </pre>
 <h3>6.车辆充值记录表</h3>
 <pre>
     可查询每一笔月租车的充值延期记录,查询结果如下图:
-    <img src="img/车辆充值记录表.png" width="100%">
+    <img dataOrigin="img/车辆充值记录表.png" width="100%">
 </pre>
 <a name="zaichangjilubiao"></a><h3>7.在场记录表</h3>
 <pre>
     查询停放在车场内的车辆信息,这些车辆是软件"认为"未出场的车辆.
-    <img width="100%" src="img/在场车辆记录表.png">
+    <img width="100%" dataOrigin="img/在场车辆记录表.png">
     可能有些车辆通过其它途径已经出场,如未识别到由保安遥控放出,这时软件里仍会存储该车的在场信息,即软件
 "认为"该车未出场,导致软件显示车位数与实际不一致.
     当确认某辆车已不在停车场内时,管理员可通过"手动车辆出场"功能将该车强制清出场内,即从软件里删掉该车
 的在场信息.
     如下图所示:
-    <img src="img/手动车辆出场.png"><p class="explain">单击鼠标右键,选择'手动车辆出场'</p>
-    <img src="img/放行理由.png"><p class="explain">输入放行理由,以备日后核查</p>
+    <img dataOrigin="img/手动车辆出场.png"><p class="explain">单击鼠标右键,选择'手动车辆出场'</p>
+    <img dataOrigin="img/放行理由.png"><p class="explain">输入放行理由,以备日后核查</p>
     手动出场的车,在<a href="#sdccjlb">"手动出场车辆表"</a>里可以查询.
-    <img width="100%" src="img/手动出场车辆表.png">
+    <img width="100%" dataOrigin="img/手动出场车辆表.png">
     双击指定记录可查询对应车辆进场时的抓拍图片.
 </pre>
 <a name="sdccjlb"></a><h3>8.手动出场记录表</h3>
 <pre>
     可查询通过"手动车辆出场"功能清除出场的车辆记录,具体请查看<a href="#zaichangjilubiao">"在场记录表"</a>里的说明.
-    <img width="100%" src="img/手动出场车辆表.png">
+    <img width="100%" dataOrigin="img/手动出场车辆表.png">
 </pre>
 <h3>9.中央收费记录表</h3>
 <pre>
     本记录表只能查询通过中央收费功能收取的停车费详情信息,如下图:
-    <img width="100%" src="img/中央收费记录表.png">
+    <img width="100%" dataOrigin="img/中央收费记录表.png">
     若想查询所有收费信息,请在<a href="#sfmxjlb">"收费明细记录表"</a>里查询.
 </pre>
 <a name="ryxxjlb"></a><h3>10.人员信息记录表</h3>
 <pre>
     可查询软件里登记的用户信息,该功能等同<a href="#yonghuguanli">"用户管理"</a>的查询功能.
-    <img width="100%" src="img/人员信息记录表.png">
+    <img width="100%" dataOrigin="img/人员信息记录表.png">
 </pre>
 <h3>11.车辆信息记录表</h3>
 <pre>
     可查询软件里登记的车辆信息,该功能等同<a href="#clgl">"车辆管理"</a>的查询功能.
-    <img width="100%" src="img/车辆信息记录表.png">
+    <img width="100%" dataOrigin="img/车辆信息记录表.png">
 </pre>
 <h3>12.道口脱机记录表</h3>
 <pre>
     可查询通过"刷新摄像机权限"功能强制下传到摄像机的缓存数据.
-    <img width="100%" src="img/道口脱机记录表.png">
+    <img width="100%" dataOrigin="img/道口脱机记录表.png">
     该数据会在数据下传成功后清空.
     详情请查看<a href="#shuaxinshexiangjiquanxian">"刷新摄像机权限"</a>.
 </pre>
 <h3>13.进出错误记录表</h3>
 <pre>
     可查询软件"认为"不能正常进出的车辆通行记录.
-    <img width="100%" src="img/进出错误记录表.png">
+    <img width="100%" dataOrigin="img/进出错误记录表.png">
     <span class="redBig">须在"车场公共属性配置"里开启"记录车辆进出异常信息",否则软件不会记录进出错误记录.</span>
     详情请查看<a href="#jlcljcycxx">"记录车辆进出异常信息"</a>.
 </pre>
@@ -869,21 +862,21 @@
 <pre>
     本记录表的查询结果是储值用户充值操作产生的记录,不能查询储值用户帐户余额.
     想查询余额,可到<a href="#yonghuguanli">"用户管理"</a>或<a href="#ryxxjlb">"人员信息记录表"</a>里查询.
-    <img width="100%" src="img/储值充值记录表.png">
+    <img width="100%" dataOrigin="img/储值充值记录表.png">
 </pre>
 <h3>15.异常开匣记录表</h3>
 <pre>
     <span class="redBig">将道匣的开关状态反馈信号接入摄像机</span>,软件即可分析异常开匣事件.
     异常开匣即是不通过软件功能开启匣杆的事件,如收费员通过遥控或其它途径开启了道匣.
     本记录表可查询这些异常开匣信息.
-    <img width="100%" src="img/异常开匣记录表1.png">
+    <img width="100%" dataOrigin="img/异常开匣记录表1.png">
     双击指定记录可查看抓拍图片.
 </pre>
 <h3>16.重要操作记录表</h3>
 <pre>
     管理员对用户及车辆信息的增删改操作会记录在重要操作表里,供日后核查.
     本记录表可查询这些信息.
-    <img width="100%" src="img/重要操作记录表.png">
+    <img width="100%" dataOrigin="img/重要操作记录表.png">
 </pre>
 <h2>七.实时监控</h2>
 <pre>
@@ -896,10 +889,10 @@
 <pre>
     如下图是软件模式为服务端时,进入实时监控的界面.
     在该模式下不能做收费操作和车辆识别.
-    <img width="100%" src="img/服务端实时监控界面.png">
+    <img width="100%" dataOrigin="img/服务端实时监控界面.png">
     左边展示本停车场内所有车道,在对应车道上单击<span class="redBig">鼠标左键</span>可查看对应车道上摄像机的监控图像;单击<span class="redBig">鼠标右键</span>
 关闭监控图像.如下图所示:
-    <img src="img/服务端操作提示.png">
+    <img dataOrigin="img/服务端操作提示.png">
     对应监控画面右下角的开匣和关匣按钮,用于远程开关对应车道的道匣杆.
     若某车道没有保安值勤,当出现车辆不能识别的紧急情况时,服务端电脑可控制该处道匣.
 </pre>
@@ -908,17 +901,17 @@
     如下图是软件模式为客户端4通道模式时,进入实时监控的界面,也是目前用的最多的一种模式.
     在该模式下,可识别车辆和收费.
     需要注意一点的是:<span class="redBig">本模式下最多只能管理4个车道.</span>
-    <img width="100%" src="img/客户端4通道实时监控界面.png">
+    <img width="100%" dataOrigin="img/客户端4通道实时监控界面.png">
 </pre>
 <h4>(1)监控画面区</h4>
 <pre>
     监控画面区实时显示摄像机拍摄的监控图像.
-    <img src="img/监控画面区.png">
+    <img dataOrigin="img/监控画面区.png">
     当车辆驶入监控区域后,摄像机开始识别该车辆,识别抓拍图片会显示在本区域左下角的截图区.
     如下图:
-    <img src="img/截图区1.png">
+    <img dataOrigin="img/截图区1.png">
     在监控画面区单击鼠标左键可将截图区和实时监控切换成大图显示.如下图:
-    <img class="gif" src="img/截图和实时切换.png" data-gif="img/截图和实时切换.gif">
+    <img class="gif" dataOrigin="img/截图和实时切换.png" data-gif="img/截图和实时切换.gif">
 
     手动输入车牌:用于为不能识别的车辆手动输入车牌.
     开启队列:远程控制道匣,使道匣保持匣杆一直开启;停止队列后,恢复常规控制.
@@ -929,16 +922,16 @@
 <h4>(2)最近进出记录列表区</h4>
 <pre>
     如下图:
-    <img src="img/最近进出记录列表.png">
+    <img dataOrigin="img/最近进出记录列表.png">
     本列表只会列出最新的50条进出记录,并循环覆盖显示.
     最近50条之后的进出记录,请到"进出记录表"里查询.
     双击某条记录,可查看本记录的进出详情,如下图:
-    <img src="img/列表记录详情.png">
+    <img dataOrigin="img/列表记录详情.png">
 </pre>
 <h4>(3)车位数显示区</h4>
 <pre>
     本区域显示车场车位详情.
-    <img src="img/车位数显示区.png">
+    <img dataOrigin="img/车位数显示区.png">
     月租车数:已进入停车场的月租车数量;
     临时车数:已进入停车场的临时车数量;
     免费车数和储值车数定义类似.
@@ -949,7 +942,7 @@
 <h4>(4)收费金额显示区</h4>
 <pre>
     本区域显示本班收费员收取停车费用的总计金额.
-    <img src="img/本班金额.png">
+    <img dataOrigin="img/本班金额.png">
     本班应收金额:根据收费标准计算的每笔停车费用的总计;
     本班实收金额:收费员实际收取的停车费用总合,该金额不可能大于应收金额.
     本班减免金额:收费员根据停车场规定,未收取停车费的费用总合.
@@ -959,15 +952,15 @@
 <h4>(5)其它功能操作区</h4>
 <pre>
     如下图:
-    <img src="img/其它功能操作区.png">
+    <img dataOrigin="img/其它功能操作区.png">
     显示车牌截图:不勾选,则"监控画面区"左下角不显示截图区域.
-    <img src="img/不显示截图.png">
+    <img dataOrigin="img/不显示截图.png">
 
     中央收费:使用中央收费模式收取停车费用.
     收费记录查询:等同"收费明细记录表"查询.
     换班登录:用于收费员间交班时,结算上班的收费情况,确认交班后,上班收费金额显示区数据清零.
-    <img class="gif" src="img/交班操作.png" data-gif="img/交班操作.gif">
-    <img src="img/金额区清零.png">
+    <img class="gif" dataOrigin="img/交班操作.png" data-gif="img/交班操作.gif">
+    <img dataOrigin="img/金额区清零.png">
     退出监控:退出实时监控画面,返回软件主操作界面.
     具体的操作说明请参考<a href="../收费员培训资料/收费员培训资料.html" target="_blank">"收费员培训资料".</a>
 </pre>
@@ -975,10 +968,11 @@
 <pre>
     本模式最多可管理16个车道,但是不会显示对应的监控画面.
     除此之外,功能和客户端的4通道相同.
-    <img width="100%" src="img/16通道模式.png">
-    <img src="img/道口信息控制.png">
-    <img src="img/实时通行图片.png">
-    <img width="100%" src="img/实时通行表格.png">
+    <img width="100%" dataOrigin="img/16通道模式.png">
+    <img dataOrigin="img/道口信息控制.png">
+    <img dataOrigin="img/实时通行图片.png">
+    <img width="100%" dataOrigin="img/实时通行表格.png">
+    over;
 </pre>
 </body>
 </html>

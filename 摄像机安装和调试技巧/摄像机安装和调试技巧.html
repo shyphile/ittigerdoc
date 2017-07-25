@@ -5,6 +5,9 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>
     <title>摄像机安装和调试技巧</title>
     <style>
         body {
@@ -53,16 +56,16 @@
     推荐摄像机安装在道闸的前面,尽量避免起落杆遮挡画面影响车牌的识别,摄像机建议采用高杆安装方式,离地面
 1.4米以上,俯角在15~40,同时加装一个三维万向节.
     三维万向节如图:
-    <img src="img/万向节.png">
+    <img dataOrigin="img/万向节.png">
     <span class="redBig">我司设备出厂已配置万向节.</span>
     现场总体布局可参考下图:
-    <img src="img/布置图.png">
+    <img dataOrigin="img/布置图.png">
 </pre>
 <h3>2.摄像机安装的高度</h3>
 <pre >
     对小区,商场等以小车为主的停车场,安装高度推荐在1.4m至1.7m之间;
     对以大货车为主的场地,如地磅等,车牌位置较高,此时安装高度推荐在1.6m至2m之间;
-    <img src="img/安装高度影响.png">
+    <img dataOrigin="img/安装高度影响.png">
 </pre>
 <h3>3.虚拟线圈的设置</h3>
 <pre>
@@ -70,26 +73,26 @@
 能触碰到虚拟线圈,以此来确定虚拟线圈的宽度;
     虚拟线圈下边缘的线可以拉到视频画面的底部,以此来确定虚拟线圈的高度.
     如图:
-    <img width="100%" src="img/虚拟线圈.png">
+    <img width="100%" dataOrigin="img/虚拟线圈.png">
 </pre>
 <h3>4.车牌成像的要求:大小和水平</h3>
 <pre>
     车牌成像的像素值推荐在<span class="redBig">140~160</span>之间,能够达到最佳识别率,或者车牌在视频画面的宽度占视频画面宽度
 的<span class="redBig">1/8~1/9</span>最佳,最直观的调试方式,<span class="redBig">车牌在虚拟线圈区域的大小和蓝色虚拟车牌尺寸相当</span>.
     调试方式:
-    <img src="img/变倍聚焦.png">
+    <img dataOrigin="img/变倍聚焦.png">
     同时加装一个三维万向节.调节好摄像机的视角,<span class="redBig">尽量保持车牌水平</span>.避免出现车牌左高右低或者左低右高的
 
-情况.如<img style="display: inline" src="img/识别车牌-错.png">,出现此类效果会影响识别率.
+情况.如<img style="display: inline" dataOrigin="img/识别车牌-错.png">,出现此类效果会影响识别率.
 
-    最佳的效果可以参考:<img style="display: inline;height: 50px;" src="img/识别车牌-正确.png">.
+    最佳的效果可以参考:<img style="display: inline;height: 50px;" dataOrigin="img/识别车牌-正确.png">.
 </pre>
 <h3>5.识别区域的设置</h3>
 <pre>
     在IE网页端的"安装引导"上进行绘制,<span class="redBig">把车牌的在画面上的有效运动范围都包含进来.</span>
     <span class="redBig">注意:所有现场都必须画上识别区域!</span>
     如图:
-    <img width="100%" src="img/识别区.png">
+    <img width="100%" dataOrigin="img/识别区.png">
     绿色线圈即为识别区域;红色线圈即为虚拟线圈.
 </pre>
 <h3>6.外置补光灯的要求</h3>
@@ -101,13 +104,13 @@
     外置补光灯与摄像机的安装距离过近,如下图:
     两者的安装距离小于30cm,补光灯的光线会直接被车牌表面的反光涂层反射到镜头,导致车牌在视频图像中过曝,
 显得发白,影响最终的识别效果.
-    <img src="img/补光灯安装.png">
+    <img dataOrigin="img/补光灯安装.png">
     <span class="redBig">注意:请确保外置补光灯的安装位置到摄像机的垂直距离保持在50cm以上.</span>
 </pre>
 <h3>7.摄像机内置补光灯的设置</h3>
 <pre>
     内置补光灯过亮,会造成过曝,如下图:
-    <img src="img/车牌过爆.png">
+    <img dataOrigin="img/车牌过爆.png">
     此时应酌情降低内置补光灯的亮度等级.
     摄像机内置补光灯一般设置为等级1~3级,具体视曝光情况做调整;
     <span class="redBig">注意:内置补光灯仅用于照亮车牌,而不适于对环境进行补光!</span>
@@ -117,9 +120,9 @@
     (1)摄像机视频画面很卡,延迟很高,有什么诊断方式吗?
     答:在IE网页端"实时视频"视频画面的左上角有一个类似手机信号的图标,如果图标是绿色的,
 
-如图:<img style="display: inline;" src="img/网络信号-好.png"> 就表示网络通畅;
+如图:<img style="display: inline;" dataOrigin="img/网络信号-好.png"> 就表示网络通畅;
 
-    如果是红色或者黄色,如图:<img style="display: inline;" src="img/网络信号-差.png"> 就表示网络传输质量有问题,需要改善网络传输质量,建议换个
+    如果是红色或者黄色,如图:<img style="display: inline;" dataOrigin="img/网络信号-差.png"> 就表示网络传输质量有问题,需要改善网络传输质量,建议换个
 交换机的网口或者重启交换机.
 
     (2)摄像机内置的4个LED灯白天也亮着,能否关闭?
@@ -130,7 +133,7 @@
     答:摄像机的主板上有一个硬件复位按钮,按住它直到前面的4个LED灯闪烁2次再松手,此时摄像机重启后所有设置
 都被恢复到出厂设置,IP恢复为192.168.1.100.
     如图:
-    <img src="img/复位键.png">
+    <img dataOrigin="img/复位键.png">
     红色部分就是硬件复位按钮.
 
     (4)摄像机找不到IP地址,连不上了,怎么办?

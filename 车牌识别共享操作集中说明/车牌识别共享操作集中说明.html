@@ -6,6 +6,9 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <title>车牌识别共享操作集中说明</title>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>    
     <style>
         body {
             width: 800px;
@@ -85,27 +88,27 @@
 <pre>
     启用数据库TCP/IP协议,允许数据库共享.
     开始->所有程序,找到"Microsoft SQL Server 2008 R2",再找到如下的配置管理器.
-    <img src="img/共享数据设置1.png">
+    <img dataOrigin="img/共享数据设置1.png">
     右健选择"启用".
-    <img src="img/共享数据设置2.png">
-    <img src="img/共享数据库设置3.png">
-    按 <img style="display:inline;border: 0px;margin-bottom: -6px;" src="img/win键.png"> + R键,输入如下命令.
-    <img src="img/共享数据库设置4.png">
+    <img dataOrigin="img/共享数据设置2.png">
+    <img dataOrigin="img/共享数据库设置3.png">
+    按 <img style="display:inline;border: 0px;margin-bottom: -6px;" dataOrigin="img/win键.png"> + R键,输入如下命令.
+    <img dataOrigin="img/共享数据库设置4.png">
     右健选择"重新启动".
-    <img src="img/共享数据设置5.png">
+    <img dataOrigin="img/共享数据设置5.png">
 </pre>
 <a name="2"></a>
 <h3>2.设置可读可写共享文件夹</h3>
 <pre>
     <a href="http://it-wy.cn/download/tool/设置可读可写共享文件夹.rar">点此下载局域网共享工具</a>
-    用我们提供的<img style="display: inline;border: 0px;margin-bottom: -2px;" src="img/局域网共享软件.bmp">设置一个共享文件夹,具体操作方法请看里面的说明文档.
+    用我们提供的<img style="display: inline;border: 0px;margin-bottom: -2px;" dataOrigin="img/局域网共享软件.bmp">设置一个共享文件夹,具体操作方法请看里面的说明文档.
     <span style="color: blue;">注:局域网共享软件可能会被主流杀毒软件认为是病毒,所以请先关闭杀毒软件再使用.</span>
 </pre>
 <a name="3"></a>
 <h3>3.设置图片共享参数</h3>
 <pre>
     打开车牌识别管理软件,在"车场公共属性配置"里设置出入场图片保存路径.
-    <img src="img/公共属性配置.png"><br><img src="img/公共属性配置框.png">
+    <img dataOrigin="img/公共属性配置.png"><br><img dataOrigin="img/公共属性配置框.png">
     "出入场图片保存路径",填写设置的共享文件夹的网络路径,如:\\192.168.0.150\parkpicture.
     出现软件无故退出现象,请先查看图片保存路径是否正确.
 </pre>
@@ -113,30 +116,30 @@
 <h3>4.安装加密狗服务</h3>
 <pre>
     在软件根目录里找到Service Setup,右键以管理员身份运行安装服务.
-    <img src="img/serviceSetup.png">
-    按 <img style="display:inline;border: 0px;margin-bottom: -6px;" src="img/win键.png"> + R键,输入如下命令.
-    <img src="img/运行窗口.png">
+    <img dataOrigin="img/serviceSetup.png">
+    按 <img style="display:inline;border: 0px;margin-bottom: -6px;" dataOrigin="img/win键.png"> + R键,输入如下命令.
+    <img dataOrigin="img/运行窗口.png">
     找到"ParkingService",查看启动类型和服务状态是否如下图所示.
-    <img  src="img/PS的属性.png">
+    <img  dataOrigin="img/PS的属性.png">
     切换到"恢复"选项卡,将下列选项设置成"重新启动服务".
-    <img src="img/恢复选项卡.png">
+    <img dataOrigin="img/恢复选项卡.png">
 </pre>
 <a name="5"></a>
 <h3>5.加密狗共享设置</h3>
 <pre>
     在软件根目录找到"Confing"文件夹,打开"Confing Setting",更改"加密狗所在IP地址"这一项,在这里输入插
 加密狗电脑的IP地址,点击保存退出.
-    <img src="img/加密狗所在IP.png">
+    <img dataOrigin="img/加密狗所在IP.png">
 </pre>
 <a name="6"></a>
 <h3>6.软件里数据库连接设置</h3>
 <pre>
     在软件根目录找到"ParkUI"并打开它.
-    <img src="img/ParkUI目录.png">
+    <img dataOrigin="img/ParkUI目录.png">
     首次开软件时会提示找不到数据库,点击"yes",设置连接参数.
     服务器名称填SQL数据库所在电脑的IP地址,密码填安装数据库时设置的密码,点击连接测试,成功连接数据库之
 后保存并退出.
-    <img src="img/数据库连接配置.png">
+    <img dataOrigin="img/数据库连接配置.png">
 </pre>
 </body>
 </html>

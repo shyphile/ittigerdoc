@@ -8,7 +8,9 @@
     <title>摄像机调试方法</title>
     <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
     <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
-
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>
     <style>
         /**{*/
         /*margin: 0px;*/
@@ -62,10 +64,10 @@
     去现场观察,主要是要注意车道的长宽和来车方向.
     车道的宽度尽量控制在4米内,大于4米的要摆放隔离桩限制;长度至少要有6米,太短会造成车牌识别不正,就像下图这样,车迁
 直时摄像机已经看不到车牌了.
-    <img width="40%" src="img/车牌角度不正1.png">
+    <img width="40%" dataOrigin="img/车牌角度不正1.png">
     来车方向分单向来车和左右来车.单向来车就只用装一个摄像头,镜头对着车行来的方向;
     双向来车的,就比较复杂,如果车道长度不够的,就需要左右各装一个相机来识别两个方向的车辆,如下图就需要安装两个相机
-    <img width="50%" src="img/左右来车1.png"> <img width="50%" src="img/左右来车2.png">
+    <img width="50%" dataOrigin="img/左右来车1.png"> <img width="50%" dataOrigin="img/左右来车2.png">
 
     摄像头定位原则:
         a.摄像机安装在道闸主机前靠近车道的一侧,道匣杆起落时不能遮挡相机视线;
@@ -74,9 +76,9 @@
         d.尽量紧靠道闸主机但又不能影响道闸使用;
         e.摄像头定位处和车辆成像角度的侧角和俯角尽量控制在30度以内,最大不能高于45度,否则会影响识别率,若不能满足,
     就要找其它的定位点.
-    <img src="img/正确与错误安装方法.png">
+    <img dataOrigin="img/正确与错误安装方法.png">
         f.定位处必须保证车辆不管从何处方向驶来,都能保证车牌可以被拍摄到,若不能满足就必须装加装摄像机辅助.
-    <img src="img/定位示意图.png"><p class="remark">定位示意图</p>
+    <img dataOrigin="img/定位示意图.png"><p class="remark">定位示意图</p>
 </pre>
 <h3>2.修改摄像机IP地址</h3>
 <pre>
@@ -85,9 +87,9 @@
     a.将一个摄像机网线接入交换机,另一个像机暂不接入,因为像机出厂默认IP是192.168.1.100,如果同时接入会造成IP冲突.
 这里先将进口相机接入交换机.
     b.用"一体机配置工具"搜索相机IP,如果搜索的到,说明网络通讯正常.
-    <img src="img/一体机配置工具搜索IP.png">    上图表示能搜索到已接入网络的相机.
+    <img dataOrigin="img/一体机配置工具搜索IP.png">    上图表示能搜索到已接入网络的相机.
     c.修改该相机IP地址,然后接入下一台摄像机,依此修改所有相机的IP.
-    <img src="img/修改相机IP.png"><p class="remark">修改相机IP地址</p>
+    <img dataOrigin="img/修改相机IP.png"><p class="remark">修改相机IP地址</p>
     d.调好相机角度,登入相机网页设置识别区域和虚拟线圈位置
     就像前面说的,摄像头定位处和车辆成像角度的侧角和俯角尽量控制在30度以内,最大不能高于45度,满足这个条件的前提下
 我们设置识别区域才有意义.
@@ -97,31 +99,31 @@
     在网页端的"安装引导"上进行绘制,确保虚拟线圈绘制在视频画面的下半部分,务必确保所有来车的车牌都能触碰到虚拟线圈
 以此来确定虚拟线圈的宽度;
     虚拟线圈下边缘的线可以拉到视频画面的底部,以此来确定虚拟线圈的高度.如图:
-    <img width="100%" src="img/虚拟线圈绘制.png">
+    <img width="100%" dataOrigin="img/虚拟线圈绘制.png">
 </pre>
 <h3>4.车牌成像的要求:大小和水平</h3>
 <pre>
     车牌成像的像素值推荐在140~160之间,能够达到最佳识别率,或者车牌在视频画面的宽度占视频画面宽度的1/8~1/9最佳,最
 直观的调试方式:车牌在虚拟线圈区域的大小和蓝色虚拟车牌尺寸相当.
     调试方法:
-    <img src="img/变倍聚焦.png">
+    <img dataOrigin="img/变倍聚焦.png">
     先变倍使车牌在画面中的显示尽量大点,然后聚焦,使画面变清晰.
-    <img width="100%" class="gif" src="img/虚拟线圈设置动态图.png" data-gif="img/虚拟线圈设置动态图.gif">
+    <img width="100%" class="gif" dataOrigin="img/虚拟线圈设置动态图.png" data-gif="img/虚拟线圈设置动态图.gif">
     同时调节摄像机万向节,使车牌尽量保持水平,避免出现车牌左高右低或者左低右高的情况,最佳的效果可以参考下图:
-    <img width="100%" src="img/皖L.png">
-    <img width="100%" src="img/鲁Q.png">
+    <img width="100%" dataOrigin="img/皖L.png">
+    <img width="100%" dataOrigin="img/鲁Q.png">
     上图中,车牌在画面中基本是水平的,且大小合适.
     <em>小技巧:调节万向节,让相机往车辆驾驶室这边偏,直到车牌在图片中显示是水平的.</em>
-    <img width="20%" src="img/万向节.png">
+    <img width="20%" dataOrigin="img/万向节.png">
 </pre>
 <h3>5.识别区域设置</h3>
 <pre>
     识别区域要把车牌在画面上的有效运动范围都包含进来.
     <span class="redBig">注意:所有现场都必须画上识别区域!</span>
     如图:
-    <img width="100%" src="img/识别区域绘制.png"><p class="remark">绿色线圈即为识别区域线圈;红色线圈即为虚拟线圈.</p>
+    <img width="100%" dataOrigin="img/识别区域绘制.png"><p class="remark">绿色线圈即为识别区域线圈;红色线圈即为虚拟线圈.</p>
     设置完成后,在实时视频里查看效果.
-    <img width="100%" src="img/实时视频.png">
+    <img width="100%" dataOrigin="img/实时视频.png">
     注意观察虚拟线圈触发的识别结果,车牌宽度值是否介于140-160之间.
 
     <span class="redBig">最后说一下线圈的绘制对识别结果的影响:</span>
@@ -142,28 +144,16 @@
     注意:特别需要避免与以下外置补光灯错误的安装情形：
     外置补光灯与摄像机的安装距离过近,如下图,两者的安装距离小于30cm,补光灯的光线会直接被车牌表面的反光涂层反射
 到镜头,导致车牌在视频图像中过曝,显得发白,影响最终的识别效果.
-    <img src="img/补光灯安装示意.png">
+    <img dataOrigin="img/补光灯安装示意.png">
     <span class="redBig">注意:请确保外置补光灯的安装位置到摄像机的垂直距离保持在50cm以上.</span>
 </pre>
 <h3>7.摄像机内置补光灯的设置</h3>
 <pre>
     内置补光灯过亮,会造成过曝,如下图,此时应酌情降低内置补光灯的亮度等级.
-    <img width="50%" src="img/车牌过爆.png">
-    <img src="img/LED亮度设置.png"><p class="remark">LED一般设置3-4就可以了</p>
+    <img width="50%" dataOrigin="img/车牌过爆.png">
+    <img dataOrigin="img/LED亮度设置.png"><p class="remark">LED一般设置3-4就可以了</p>
     摄像机内置补光灯一般设置为等级1~3级,具体视曝光情况做调整;
     <span class="redBig">注意:内置补光灯仅用于照亮车牌,而不适于对环境进行补光!</span>
 </pre>
-
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../js/jquery.gif.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        // swap all the gifs on the page.
-        $('.gif').each(function () {
-            $(this).gif();
-        });
-    });
-</script>
-
 </body>
 </html>

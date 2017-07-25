@@ -6,6 +6,9 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <title>车牌识别摄像机用户手册</title>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>    
     <style>
         body {
             width: 800px;
@@ -88,7 +91,7 @@
 
 <a name="1"></a><h2>一.产品介绍</h2>
 <a name="2"></a><h3>1.产品概述</h3>
-<img width="100%" src="img/车牌识别摄像机.png">
+<img width="100%" dataOrigin="img/车牌识别摄像机.png">
 <pre>
     高清车牌识别一体机是专门针对停车场行业推出的基于嵌入式的智能高清车牌识别一体机产品,设备集车牌识
 别、摄像、前端储存、补光等于一体,采用高清宽动态CMOS和TI DSP,峰值计算能力高达6.4Ghz.基于车牌自动曝光
@@ -248,14 +251,14 @@
 <ul>
     <li>打开IE浏览器,在地址栏输入设备ip地址和端口号（例如 http://192.168.1.100:80/）,前往,可进入设备登陆界面.</li>
     <li>设备出厂默认 IP 地址为 192.168.1.100,端口80,用户名 admin,密码 admin.</li>
-    <li style="list-style: none;"><img src="img/登入界面.png"></li>
+    <li style="list-style: none;"><img dataOrigin="img/登入界面.png"></li>
 </ul>
 
 <a name="11"></a><h3>2.操作界面介绍</h3>
-<pre>   界面主要可操作:实时视频、安装引导、基本设置、图片预览、用户管理、设备维护与设备信息七部分.<img src="img/左边菜单栏.png"></pre>
+<pre>   界面主要可操作:实时视频、安装引导、基本设置、图片预览、用户管理、设备维护与设备信息七部分.<img dataOrigin="img/左边菜单栏.png"></pre>
 <a name="12"></a><h4>2.1 实时视频</h4>
 <pre style="margin: 0px;">
-    用于查看视频实时情况和识别情况.<img width="100%" src="img/实时视频.png">
+    用于查看视频实时情况和识别情况.<img width="100%" dataOrigin="img/实时视频.png">
 </pre>
 <ul style="margin-top: -20px;">
     <li>视频区域左上角显示车牌识别实时结果;车牌位置有虚线框标示出来,可显示虚拟线圈</li>
@@ -264,18 +267,18 @@
     <li>最新识别结果信息:最新车牌实际车牌图像,识别结果,和车牌信息</li>
 </ul>
 <a name="13"></a><h4>2.2 安装引导</h4>
-<img width="100%" src="img/安装引导.png">
+<img width="100%" dataOrigin="img/安装引导.png">
 <h5>(1)焦距调节</h5>
 <pre>    根据实际环境调节车牌大小,为达到最佳识别效果,建议放置一辆车在最佳识别位置上参照调节;
     勾选"显示最佳车牌识别尺寸"和"显示局部放大区域",调节变倍和调焦【＋】【－】,使车牌大小和最佳车牌
 尺寸匹配并且清晰;
     变倍后自动聚焦:用于调节变倍后设备自动进行聚焦;
-    车牌自动变倍:点击<img style="display: inline;border: 0px;margin-bottom: -10px;" src="img/车牌自动变倍.png"> 按钮后设备自动将当前识别的车牌自动调节到最佳识别尺寸范围.
+    车牌自动变倍:点击<img style="display: inline;border: 0px;margin-bottom: -10px;" dataOrigin="img/车牌自动变倍.png"> 按钮后设备自动将当前识别的车牌自动调节到最佳识别尺寸范围.
 </pre>
 <h5>(2)规则配置</h5>
 <ul>
     <li>识别区域:当场景较复杂时,请配置识别区域,点击绘制工具栏六边形图样<img style="display: inline;border: 0px;margin-bottom: -4px;"
-                                              src="img/识别区六边形.png"> 来绘制识别区域,通过配置识别区域可屏蔽掉不必要的干扰;<br>
+                                              dataOrigin="img/识别区六边形.png"> 来绘制识别区域,通过配置识别区域可屏蔽掉不必要的干扰;<br>
         <span style="color: blue;">小提示:在识别区域线上双击可增加节点来绘制成多边形;</span>
     </li>
     <li>虚拟线圈:当没有地感触发时,可移动虚拟线圈位置.当车辆进入线圈范围,设备会抓拍图像,并识别车牌结果,点击结点可拖动改变线圈大小和形状,点击【保存】修改成功</li>
@@ -284,7 +287,7 @@
 <h5>(3)LED 亮度:可选择 LED 补光亮度等级,有七个等级可选,系统默认为 LED3</h5>
 <h5>(4)设置预设省份,有助于提高识别率</h5>
 <h5>(5)识别参数设置</h5>
-<img src="img/识别参数设置.png">
+<img dataOrigin="img/识别参数设置.png">
 <ul>
     <li>图片质量:用于设置抓拍大图的质量,系统默认为100%,可修改图像百分比来更改图像质量比例.</li>
     <li>线圈设置:用于设置相同车牌的触发间隔时间和车辆通过方向.</li>
@@ -292,36 +295,36 @@
     <li>识别类型:根据实际环境中的车辆类型进行设置,勾选则代表需要识别输出.</li>
 </ul>
 <a name="14"></a><h4>2.3 基本设置</h4>
-<pre>    主要设置相机的基本信息和联动操作功能（如下图）<img src="img/基本设置.png"></pre>
+<pre>    主要设置相机的基本信息和联动操作功能（如下图）<img dataOrigin="img/基本设置.png"></pre>
 <h5>(1)视频设置</h5>
 <pre>    用于设置视频图像参数、编码参数及OSD信息</pre>
 <ul>
-    <li>图像参数:调节视频亮度、对比度、饱和度、清晰度,视频制式,曝光时间,图像翻转,根据实际环境调节使视频效果最佳.<img src="img/视频设置.png"></li>
-    <li style="margin-top: 20px;">编码参数:设置码流相关参数,分辨率,帧率,编码方式,码流控制,图像质量,码流上限,视频参数请根据实际场景设置,达到最佳效果.<img src="img/编码参数.png">
+    <li>图像参数:调节视频亮度、对比度、饱和度、清晰度,视频制式,曝光时间,图像翻转,根据实际环境调节使视频效果最佳.<img dataOrigin="img/视频设置.png"></li>
+    <li style="margin-top: 20px;">编码参数:设置码流相关参数,分辨率,帧率,编码方式,码流控制,图像质量,码流上限,视频参数请根据实际场景设置,达到最佳效果.<img dataOrigin="img/编码参数.png">
     </li>
-    <li style="margin-top: 20px;">Osd 参数:设置视频叠加信息,可以对识别信息、日期、时间、文字等内容和显示位置进行设置.<img src="img/OSD参数.png"></li>
+    <li style="margin-top: 20px;">Osd 参数:设置视频叠加信息,可以对识别信息、日期、时间、文字等内容和显示位置进行设置.<img dataOrigin="img/OSD参数.png"></li>
 </ul>
 <h5>(2)日期设置</h5>
 <pre>
     日期时间配置,可采用手动配置、与本地时间同步、ntp 时间服务器同步三种模式.
 </pre>
 <ul>
-    <li>设置时间,可选择手动设置和与本机时间同步.<img src="img/日期设置.png"></li>
-    <li style="margin-top: 20px;">设置ntp时间服务器同步.<img src="img/ntp时间服务器.png"></li>
+    <li>设置时间,可选择手动设置和与本机时间同步.<img dataOrigin="img/日期设置.png"></li>
+    <li style="margin-top: 20px;">设置ntp时间服务器同步.<img dataOrigin="img/ntp时间服务器.png"></li>
 </ul>
 <h5>(3)网络设置</h5>
 <pre>    网络配置包括:基本参数、upnp端口映射、动态域名、ftp、mail、3g、vpn 配置.</pre>
 <ul>
-    <li>点击"基本参数"设置服务器名,IP地址及流媒体相关设置. <img width="90%" src="img/基本参数.png"></li>
-    <li style="margin-top: 20px;">点击 upnp端口映射标签可设置upnp端口映射.<img src="img/upnp端口.png"></li>
-    <li style="margin-top: 20px;">点击动态域名标签,可设置动域名相关.<img src="img/动态域名.png"></li>
+    <li>点击"基本参数"设置服务器名,IP地址及流媒体相关设置. <img width="90%" dataOrigin="img/基本参数.png"></li>
+    <li style="margin-top: 20px;">点击 upnp端口映射标签可设置upnp端口映射.<img dataOrigin="img/upnp端口.png"></li>
+    <li style="margin-top: 20px;">点击动态域名标签,可设置动域名相关.<img dataOrigin="img/动态域名.png"></li>
     <li style="margin-top: 20px;">点击ftp标签,可配置ftp服务器地址及上传路径;配置成功后,点击【发送测试】按钮可到指定ftp目录查看<br> FtpTest.txt 文件是否配置成功.<img
-            src="img/ftp.png"></li>
-    <li style="margin-top: 20px;">点击mail标签,可设置邮件发送接收地址,将文件发送到个人邮箱,实时关注报警信息.<img src="img/mail.png"></li>
+            dataOrigin="img/ftp.png"></li>
+    <li style="margin-top: 20px;">点击mail标签,可设置邮件发送接收地址,将文件发送到个人邮箱,实时关注报警信息.<img dataOrigin="img/mail.png"></li>
 </ul>
 <h5>(4)HTTP推送</h5>
 <pre>
-    用于设置中心服务器相关的信息.<img src="img/中心服务器.png">
+    用于设置中心服务器相关的信息.<img dataOrigin="img/中心服务器.png">
 </pre>
 <ul>
     <li>服务器地址:中心服务器的地址、备选服务器地址、设备的IP地址必须在同一网段.</li>
@@ -337,9 +340,9 @@
 </ul>
 <h5>(5)串口设置</h5>
 <ul>
-    <li>串口参数:通过 485 通信时,需要配置好对应的波特率和串口号.<img src="img/串口参数.png"></li>
+    <li>串口参数:通过 485 通信时,需要配置好对应的波特率和串口号.<img dataOrigin="img/串口参数.png"></li>
     <li>串口推送配置:可自定义串口推送的数据字段和输出序列.</li>
-    <li style="list-style: none;"><img width="90%" src="img/串口推送配置.png"></li>
+    <li style="list-style: none;"><img width="90%" dataOrigin="img/串口推送配置.png"></li>
     <ul>
         <li>通用配置,包括标志头,标志尾、校验起始位、校验结束位、校验位和大小端、车牌加密、汉字编码.<br>
             <span style="color:blue;">小提示:车牌加密:用于设置识别到的车牌信息是否加密.</span>
@@ -355,7 +358,7 @@
 </ul>
 <h5>(6)输出联动</h5>
 <pre>
-    输出配置:根据实际情况对输入输出进行配置,勾选代表启用.<img width="100%" src="img/输出配置.png">
+    输出配置:根据实际情况对输入输出进行配置,勾选代表启用.<img width="100%" dataOrigin="img/输出配置.png">
 </pre>
 <ul style="margin-top: -30px;">
     <li>"车牌识别触发",针对白名单验证的触发,即有车牌触发时,对触发结果的处理.</li>
@@ -370,7 +373,7 @@
 </ul>
 <pre>
     车牌识别触发延迟,触发延迟时间配置,与闪光灯配合使用,延迟识别使闪关灯最亮的时候触发识别结果,使识别
-效果达到最佳.<img src="img/爆闪控制.png">
+效果达到最佳.<img dataOrigin="img/爆闪控制.png">
 </pre>
 <h5>(7)白名单设置</h5>
 <ul>
@@ -381,7 +384,7 @@
             <li>不启用:不检测上位机状态,直接在设备内禁止白名单验证.</li>
         </ul>
     </li>
-    <li style="list-style: none;"><img src="img/白名单验证.png"></li>
+    <li style="list-style: none;"><img dataOrigin="img/白名单验证.png"></li>
     <li>白名单验证模糊匹配,识别到的车牌在白名单查询时,有以下3种检索方式.
         <ul>
             <li>精确匹配,车牌号完全匹配才能验证通过.</li>
@@ -390,19 +393,19 @@
             <li>可配置忽略汉字.</li>
         </ul>
     </li>
-    <li style="list-style: none;"><img src="img/白名单模糊匹配.png"></li>
+    <li style="list-style: none;"><img dataOrigin="img/白名单模糊匹配.png"></li>
 </ul>
 <h5>(8)出入口配置界面</h5>
 <pre>
     对停车场的出入口设备进行组网管理,有效解决道路过宽时的双相机问题及进出车辆的信息比对.
-    出入口配置:对出入口的设备进行配置.<img width="100%" src="img/出入口配置.png">
+    出入口配置:对出入口的设备进行配置.<img width="100%" dataOrigin="img/出入口配置.png">
 </pre>
 操作步骤:
 <ul>
     <li>新建车库:点击"设备组织架构区"中的【新建车库】按钮新建车库名,并根据实际命名.</li>
     <li>配置设备:在"所有设备列表区"中将要加入组网的设备按住鼠标左键不放拖到设备架构区对应车库名称上.</li>
     <li>相辅设备配置:对于一个路口架设有方向相同的两台设备时请将第一台设备拖到车库名称上,第二台设备拖到第一台设备的名称上,系统将自动生成一个相辅组,用户可编辑组名称（如下图）</li>
-    <li style="list-style: none;"><img src="img/相辅设备配置.png"></li>
+    <li style="list-style: none;"><img dataOrigin="img/相辅设备配置.png"></li>
     <li>修改设备状态:在"设备编辑区"修改设备状态.</li>
     <li>保存修改:操作完成后点击【保存至组网设备】进行保存.</li>
 </ul>
@@ -410,7 +413,7 @@
     查看设备状态:在入口设备/出口设备中可看到选中车库中所有的出入口设备信息.
 </pre>
 <pre>
-    参数设置:<img src="img/出入口配置-参数设置.png">
+    参数设置:<img dataOrigin="img/出入口配置-参数设置.png">
 </pre>
 <ul style="margin-top: -30px;">
     <li>输出结果:用于配置参于组网的设备输出结果的个数（此功能目前暂未实现）.</li>
@@ -423,11 +426,11 @@
 </ul>
 <h5>(9)存储管理配置界面</h5>
 <pre>
-    可以查看存储卡使用情况,并对存储卡做格式化操作（谨慎操作,格式化后数据不能恢复）<img src="img/存储设备.png">
+    可以查看存储卡使用情况,并对存储卡做格式化操作（谨慎操作,格式化后数据不能恢复）<img dataOrigin="img/存储设备.png">
 </pre>
 <a name="15"></a><h4>2.4 图片预览</h4>
 <pre>
-    点击图片预览,在对应时间文件夹里面可查看抓拍的图片,点击图片,可放大图片查看,图片命名中<img src="img/图片预览.png">
+    点击图片预览,在对应时间文件夹里面可查看抓拍的图片,点击图片,可放大图片查看,图片命名中<img dataOrigin="img/图片预览.png">
     01 是稳定结果触发,
     02 是IO信号触发,
     04 是手动触发,
@@ -444,11 +447,11 @@
 <pre>
     新增用户,设置用户名（4～23 字符）,密码,再次输入密码,选择此用户权限（管理员,操作员,观察员）,点击
 【确定】,弹出对话框提示设置成功,点击【确定】,可新增用户管理此设备.
-    可点击页面右上角退出键,使用新用户登录网页,能登陆成功,且新用户只有对应设置的管理权限.<img src="img/用户管理.png"></pre>
+    可点击页面右上角退出键,使用新用户登录网页,能登陆成功,且新用户只有对应设置的管理权限.<img dataOrigin="img/用户管理.png"></pre>
 <h5>(2)删除用户</h5>
 <pre>
     删除用户,选择要删除用户,点击对应栏删除列的【删除】按钮,弹出对话框提示确认删除信息,确认后删除用户成功.
-    注:若删除当前登录用户,则不能删除成功.<img src="img/删除用户.png">
+    注:若删除当前登录用户,则不能删除成功.<img dataOrigin="img/删除用户.png">
 </pre>
 <h5>(3)编辑用户</h5>
 <pre>
@@ -456,7 +459,7 @@
 设置成功,点击【确定】.
     在用户名文本框直接输入需编辑用户名,在密码和确认密码重新输入新值,重新选择此用户权限,点击保存,弹
 出提示设置成功,点击确定即可编辑用户成功.
-    使用编辑后的账号和密码不能登陆,使用修改后的账号和密码才能登陆成功.<img src="img/编辑用户.png">
+    使用编辑后的账号和密码不能登陆,使用修改后的账号和密码才能登陆成功.<img dataOrigin="img/编辑用户.png">
 </pre>
 
 <a name="17"></a><h4>2.6 设备维护</h4>
@@ -466,18 +469,18 @@
 <h5>(1)升级和重启</h5>
 <pre>
     远程升级设备,选择本地升级文件,点击【浏览】,选择存放在本地的升级文件,点击升级,待网页跳转到登录界
-面,远程升级设备程序成功.<img src="img/远程升级.png">
-    点击【重启服务器】按钮,可远程重启设备.<img src="img/重启服务器.png">
+面,远程升级设备程序成功.<img dataOrigin="img/远程升级.png">
+    点击【重启服务器】按钮,可远程重启设备.<img dataOrigin="img/重启服务器.png">
 </pre>
 <h5>(2)恢复出厂设置</h5>
 <pre>
     点击"完全恢复出厂设置"后的确定按钮,设备将恢复所有设置,包括 ip 地址,此操作慎用,完全恢复后 ip 地址
 也将恢复,可能连不上设备.
-    点击"部分恢复出厂设置"后的确定按钮,设备将恢复部分设置（设备网络信息,用户名,密码,设备名称将不恢复）.<img src="img/恢复设备.png">
+    点击"部分恢复出厂设置"后的确定按钮,设备将恢复部分设置（设备网络信息,用户名,密码,设备名称将不恢复）.<img dataOrigin="img/恢复设备.png">
 </pre>
 <a name="18"></a><h4>2.7 设备信息</h4>
 <pre>
-    可查看设备信息:设备类型,软件版本,设备序列号,MAC 地址等信息.<img src="img/设备信息.png">
+    可查看设备信息:设备类型,软件版本,设备序列号,MAC 地址等信息.<img dataOrigin="img/设备信息.png">
 </pre>
 <a name="19"></a><h2>三.设备常见故障处理</h2>
 <h5>(1)设备不能正常显示怎么办?</h5>
@@ -588,12 +591,12 @@
 
 <a name="21"></a><h2>五.接口图</h2>
 <pre>
-    本接线图适用于V7.5和V8.0的板子.<img width="100%" src="img/接口图.png">
+    本接线图适用于V7.5和V8.0的板子.<img width="100%" dataOrigin="img/接口图.png">
 </pre>
 
 <a name="22"></a><h2>六.输入输出常见使用场景</h2>
 <pre>
-    整体结构:<img width="70%" src="img/整体结构.png">
+    整体结构:<img width="70%" dataOrigin="img/整体结构.png">
 </pre>
 <h5>(1)输入IO1接地感线圈,由地感触发车牌识别,请在安装引导—识别参数设置 输出类型中勾选“IO 输入1触发".</h5>
 <h5>(2)输入IO2接按钮,按下按钮,直接通过输出IO1开闸,不做车牌识别动作,请做如下配置:</h5>

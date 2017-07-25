@@ -6,6 +6,9 @@
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>
     <title>支付宝-条码支付功能开通详解</title>
 </head>
 <body>
@@ -21,29 +24,29 @@
       a.应用名称:取一个有形象有名称.
       b.应用图标:上传公司形象LOGO.
     上述两项会显示在支付页面中,所以请慎重考虑.
-    <img src="img/步骤1.png" alt="" width="100%">
-    <img src="img/基础信息.png" alt="" >
-    <img src="img/设置应用公钥.png" alt="" >
-    <img src="img/sha1withrsa.png" alt="" >
-    <img src="img/验证帐户.png" alt="" >
-    <img src="img/查看密钥生成方法.png" alt="" >
-    <img src="img/生成windows密钥.png" alt="" >
-    <img src="img/rsa签名工具.png" alt="" >
+    <img dataOrigin="img/步骤1.png" alt="" width="100%">
+    <img dataOrigin="img/基础信息.png" alt="" >
+    <img dataOrigin="img/设置应用公钥.png" alt="" >
+    <img dataOrigin="img/sha1withrsa.png" alt="" >
+    <img dataOrigin="img/验证帐户.png" alt="" >
+    <img dataOrigin="img/查看密钥生成方法.png" alt="" >
+    <img dataOrigin="img/生成windows密钥.png" alt="" >
+    <img dataOrigin="img/rsa签名工具.png" alt="" >
     在第4步中打开的文件夹里将"应用私钥1024"文件保存好.
     将第3步复制的公钥拷贝到网页里,如下图:
-    <img src="img/公钥信息.png" alt="" >
-    <img src="img/公钥上传成功.png" alt="" >
-    <img src="img/支付宝公钥.png" alt="" >
+    <img dataOrigin="img/公钥信息.png" alt="" >
+    <img dataOrigin="img/公钥上传成功.png" alt="" >
+    <img dataOrigin="img/支付宝公钥.png" alt="" >
     该支付宝公钥信息很重要,请和"应用私钥1024"文件保存在一个文件夹里.
-    <img src="img/提交审核.png" alt="" >
-    <img src="img/等待审核结果.png" alt="" width="100%" >
+    <img dataOrigin="img/提交审核.png" alt="" >
+    <img dataOrigin="img/等待审核结果.png" alt="" width="100%" >
     等待马云爸爸审核你提交的信息,时间是1个工作日.
 </pre>
 <h3>2.签约当面付</h3> 
 <pre>
     审核通过,即应用上线了,开发者可以点击“概览”页签中“功能选项”右侧的“立即签约”按钮签约当面付，如下图:
-    <img src="img/签约当面付.png" alt="" width="100%" >
-    <img src="img/签约页面.png" alt=""  >
+    <img dataOrigin="img/签约当面付.png" alt="" width="100%" >
+    <img dataOrigin="img/签约页面.png" alt=""  >
     签约表示与阿里巴巴签署使用合同。
     签约需要准备的材料:
     个体工商信息,如工商局注册号,营业执照等;
@@ -58,10 +61,10 @@
     应用私钥和支付宝公钥是上文提醒保存在同一个文件夹里的两个文件.
     APPID需要在支付宝开放平台上查看.
     查看APPID和支付宝公钥的方法:
-    <img src="img/查看appid和应用私钥.png" alt="" width="100%" >   
+    <img dataOrigin="img/查看appid和应用私钥.png" alt="" width="100%" >   
 	我方接收到此三个信息后会生成一个key文件,将该key文件拷贝到软件根目录下,即实现了支付宝的条码支付功能.
     特别注意，密钥要去掉注释部分，且转换成一行字符，否则回车换行也成为密钥的一部分，将导致无法正常加解密。
-	<img src="img/alipay.png" alt="">
+	<img dataOrigin="img/alipay.png" alt="">
 </pre>
 </body>
 </html>
