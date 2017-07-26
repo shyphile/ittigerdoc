@@ -103,8 +103,8 @@ ol ol li:hover {
 }
 
 #menu_container ol li a.vip {
-    // background-color: #ccc;
-    // color: red;
+    /*// background-color: #ccc;*/
+     color: red;
 }
 
 html>body ol {

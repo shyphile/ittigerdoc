@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
     <title>车牌识别共享操作集中说明</title>
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>    
+    <script src="../js/imgload_gifload.js"></script>
     <style>
         body {
             width: 800px;
@@ -66,9 +66,8 @@
     多终端管理型停车场,即两台及上电脑管理的停车场,就需要配置加密狗和数据库共享.
     <span style="color: blue;">单机管理型停车场,无需做共享操作.</span>
 
-    原理:整个停车场只需要安装1个数据库和使用1个加密狗.
-    假如在A电脑上安装了数据库和插入加密狗,按照本说明完成共享设置,之后其它电脑就可以共享A电脑上的数据
-库和加密狗,实现车辆从任何一个道口出去都能计算收费和查看图片.
+    整个停车场只需要安装1个数据库和使用1个加密狗.
+    假如在A电脑上安装了数据库和插入加密狗,按照本说明完成共享设置,之后其它电脑就可以共享A电脑上的数据库和加密狗,实现车辆从任何一个道口出去都能计算收费和查看图片.
      <span style="color: blue;">注：本文只介绍软件层面上的共享操作,需要物理上网络互访支持.如果网络都不通,就谈不上共享了.</span>
     <em style="color:white;font-weight: bold;font-size: 20px;background-color: #FF0000;">在进行操作前一定要关闭防火墙.</em>
 </pre>
@@ -120,15 +119,14 @@
     按 <img style="display:inline;border: 0px;margin-bottom: -6px;" dataOrigin="img/win键.png"> + R键,输入如下命令.
     <img dataOrigin="img/运行窗口.png">
     找到"ParkingService",查看启动类型和服务状态是否如下图所示.
-    <img  dataOrigin="img/PS的属性.png">
+    <img dataOrigin="img/PS的属性.png">
     切换到"恢复"选项卡,将下列选项设置成"重新启动服务".
     <img dataOrigin="img/恢复选项卡.png">
 </pre>
 <a name="5"></a>
 <h3>5.加密狗共享设置</h3>
 <pre>
-    在软件根目录找到"Confing"文件夹,打开"Confing Setting",更改"加密狗所在IP地址"这一项,在这里输入插
-加密狗电脑的IP地址,点击保存退出.
+    在软件根目录找到"Confing"文件夹,打开"Confing Setting",更改"加密狗所在IP地址"这一项,在这里输入插加密狗电脑的IP地址,点击保存退出.
     <img dataOrigin="img/加密狗所在IP.png">
 </pre>
 <a name="6"></a>
@@ -137,8 +135,7 @@
     在软件根目录找到"ParkUI"并打开它.
     <img dataOrigin="img/ParkUI目录.png">
     首次开软件时会提示找不到数据库,点击"yes",设置连接参数.
-    服务器名称填SQL数据库所在电脑的IP地址,密码填安装数据库时设置的密码,点击连接测试,成功连接数据库之
-后保存并退出.
+    服务器名称填SQL数据库所在电脑的IP地址,密码填安装数据库时设置的密码,点击连接测试,成功连接数据库之后保存并退出.
     <img dataOrigin="img/数据库连接配置.png">
 </pre>
 </body>

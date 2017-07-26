@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+﻿<!--最后更新时间:2017年7月26日 13:59:10-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
     <title>车牌识别管理软件快速操作手册</title>
     <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
     <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
@@ -39,7 +40,7 @@
         }
 
         h5 {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
         }
 
@@ -60,26 +61,22 @@
 </head>
 <body>
 <h1 align="center">车牌识别管理软件快速操作手册</h1>
+软件操作详细信息,请参考<a href="../车牌识别系统软件说明书/车牌识别系统软件说明书.html" target="_blank">"车牌识别系统管理软件说明书"</a>.
 <h3>1.选择数据库类型</h3>
     <pre>
-    软件支持MSSQL2008和MySql数据库引擎.
-    使用MSSQL2008数据库引擎的,需要额外安装微软MSSQL2008数据库;
+    本软件同时支持MSSQL2008和MySql数据库引擎.
+    使用MSSQL2008数据库引擎的,需要额外安装微软MSSQL2008数据库程序,程序文件大小大约4G左右;
     使用MySql的,无需单独安装此数据库,本软件已集成.
-    目前用MySql数据库的系统不能扩展云管理功能,所以若考虑以后要升级使用云管理功能的,请选择
+    注意:目前用MySql数据库的系统不能扩展云管理功能,所以若考虑以后要升级使用云管理功能的,请选择
 MSSQL2008数据库.    
-    数据库类型设置方法:
-    打开软件根目录,找到"Config"文件夹,在此文件夹下找到"ExtendConfig"文件,然后用记事本打开此文件.
-    找到下图所示的行.
-    <img dataOrigin="img/数据库类型设置.png" alt="">
-    设置"SqlType value"值为"0"表示软件使用MSSQL2008数据库存储数据;
-    设置"SqlType value"值为"1"表示软件使用MySql数据库存储数据;    </pre>
+     请根据应用需求,到<a href="http://www.it-wy.cn/download" target="_blank">技术资料下载</a>网站下载合适的软件版本.
+    <img dataOrigin="img/软件版本.png"></pre>
 <h3>2.创建数据库文件</h3>
     <pre>
     <span class="redBig">以下若无特殊说明,均是在安装了数据库的电脑上操作.</span>
-    若想获取软件操作详细信息,请参考<a href="../车牌识别系统软件说明书/车牌识别系统软件说明书.html" target="_blank">"车牌识别系统管理软件说明书"</a>.
     在车牌识别管理软件根目录里找到"CreateDatabase.exe"<img style="display: inline;" dataOrigin="img/CreateDatabase.png"> ,双击打开.
     <img dataOrigin="img/CreateDatabase目录结构.png">
-    根据所使用的数据库类型不同,数据库文件创建方式有不同.
+    根据所使用的数据库类型不同,数据库文件创建方式略有不同.
 
     <span style="background-color: blue;color:white;">创建MSSQL2008数据库文件</span>
     <img dataOrigin="img/创建数据库.png">
@@ -88,13 +85,15 @@ MSSQL2008数据库.
     a.点击"创建数据库",正常情况下会提示创建成功;
     b.点击"测试数据库连接",正常情况下会提示连接成功;
     c.点击"保存连接字符串",正常情况下会提示保存成功.
+    注意:服务器名称和数据库密码是安装MSSQL2008时指定的,他人不会知道.
 
     <span style="background-color: blue;color:white;">创建MySql数据库文件</span>
     <img dataOrigin="img/创建数据库-MySql.png">
     创建数据库步骤如下:
     a.服务器名称:输入本机IP.
     b.点击"创建数据库",正常情况下会在本机创建停车场使用的数据库文件;
-    c.点击"连接测试",测试服务器名称指定的主机上数据库文件是否存在;
+    c.点击"连接测试",测试服务器名称指定的主机上数据库文件是否存在
+    (一般用于未装数据库的电脑测试指定电脑上数据库是否能正常连接);
     d.点击"保存连接字符串",正常情况下会提示保存成功.   
 </pre>
 <h3>3.配置软件运行数据</h3>
@@ -102,26 +101,29 @@ MSSQL2008数据库.
 <pre>
     在管理软件根目录,找到"ParkUI.exe"<img style="display: inline;" dataOrigin="img/ParkUI图标.png"> ,并右键发送快捷方式到桌面.
     <img dataOrigin="img/发送到桌面.png">
-    打开管理软件,直接登录,没有密码.
+    打开管理软件,直接登录,初始是没有密码的.
     <img dataOrigin="img/登录.png">
 </pre>
 <h4>(2)车场公共属性配置 <img style="display: inline;" dataOrigin="img/公共属性配置图标.png"></h4>
 <pre>
     <img dataOrigin="img/公共属性设置.png">
-    图片保存路径:该路径所在的文件夹会保存车辆进出识别的抓拍图片.
-        单机管理的停车场此处设置成本地路径即可,多机管理的需要设置成网络路径.
+    图片保存路径:该路径会保存车辆进出识别的抓拍图片,默认是保存在软件根目录的Image文件夹里.
+    <img dataOrigin="img/image文件夹.png">
+    单机管理的停车场此处设置成本地路径即可,多机管理的需要设置成网络路径,如:\\192.168.0.18\pic.
     本地车牌号码:根据所在省份修改;
-    模糊匹配成月租车需人工确认:相似车牌匹配会弹出确认窗口,该选项根据收费员水平合理选择开启.
-    其它参数如无特殊需求可按上图设置.
+    模糊匹配成月租车需人工确认:相似车牌匹配会弹出确认窗口,该选项根据收费员素质水平合理选择开启.
+    其它参数如无特殊需求默认即可.
 </pre>
 <h4>(3)数据库配置 <img style="display: inline;" dataOrigin="img/数据库配置.png"></h4>
 <pre>
     <img dataOrigin="img/数据库定时备份设置.png" alt="">
     建议按上图设置,这样软件会每天凌晨1点定时备份数据库.
+    备份路径默认是保存在软件根目录的backup文件夹里.
+    <img dataOrigin="img/backup文件夹.png">
 </pre>
 <h4>(3)报表配置 <img style="display: inline;" dataOrigin="img/报表配置图标.png"></h4>
 <pre>
-    报表配置根据电脑硬盘容量和甲方想回看的时间限制合理设置.
+    报表配置根据电脑硬盘容量和想查询的时间合理设置.
     建议:在场车辆记录表的数据保留天数设置一个值,如10天,则软件会自动清理10天前进场的车辆.
     <img dataOrigin="img/在场车辆记录表.png">
 </pre>
@@ -131,40 +133,58 @@ MSSQL2008数据库.
     <img dataOrigin="img/临时车收费标准.png">
     例:上图表示停1个小时收1元钱,停2小时收2元钱...;可免费停30分钟;停车时间满24小时收20元,相当于优惠了4元.
     
-    <span style="background-color: blue;color:white;">测试收费标准</span> <img style="display: inline;" dataOrigin="img/测试收费标准图标.png">
+    <span style="background-color: blue;color:white;">测试收费标准</span> <img style="display: inline;"
+                                                                         dataOrigin="img/测试收费标准图标.png">
     测试收费标准设置的是否正确.
     <img dataOrigin="img/测试收费标准.png">
 </pre>
 <h4>(5)车场设置 <img style="display: inline;" dataOrigin="img/车场设置.png"></h4>
 <pre>
     <img dataOrigin="img/车场设置窗口.png" alt="">
-    总车位数尽量设置大一点,因为很可能由于停车场设备出现故障导致场内车辆没有识别即放出场,从而使场内可
+    总车位数尽量设置大一点,因为很可能由于各种故障导致场内车辆没有识别即被人为放出场,从而使场内可
 用车位数少于实际可用。
     月租车位数=总车位数-临时车位,上图所示月租车位数为200.
-    内部停车场:大车场嵌套小车场的,软件里设置小车场时,需勾上此选项.
+    屏幕首行显示内容:设置LED显示屏上首行的信息内容.
+    内部停车场:被大车场嵌套的小车场,如地库车场,需勾上此选项.
         被定义为内部停车场的车场,车辆可循环进出该车场,只要没有从大车场出去.
+    其它参数如无特殊需求默认即可.
 </pre>
 <h4>(6)车道设置 <img style="display: inline;" dataOrigin="img/车道设置.png"></h4>
 <pre>
     根据现场出入口情况增加车道信息.
+     <span style="background-color: blue;color:white;">搜索摄像机</span>
+    集成了摄像机的调试方法,如修改相机IP,绘制识别区和虚拟线圈,相机授权延期等.
+    快速操作方法如下:
+    <img width="100%" class="gif" dataOrigin="img/搜索摄像机.png" data-gif="img/搜索摄像机.gif">
     <img dataOrigin="img/道口管理.png">
     上图红色框选的参数,根据车道情况灵活调整.
     终端IP:填写管理本车道摄像机的电脑IP地址.
-        如上图表示IP是192.168.0.39的摄像机被192.168.0.18这台电脑监控,即只有这个电脑才能看到此
-    摄像机的监控图像.
+        如上图表示IP是192.168.1.101的摄像机被192.168.0.18这台电脑管理.
+    语音输出道口:默认即可,不用修改.
+    是否读取脱机记录:脱机收费相机使用,一般情况下不用勾选.
+    是否读卡:非机动车道刷IC卡通行使用,一般情况下不用勾选.
+    其它参数如无特殊需求默认即可.
 </pre>
 <h4>(7)操作员管理 <img style="display: inline;" dataOrigin="img/操作员管理图标.png"></h4>
 <pre>
+    <span style="background-color: blue;color:white;">角色管理</span>
+    <img dataOrigin="img/角色权限.png">
+    建议如上图设置"收费员"角色的权限,其中"手动开匣"一项,可根据实际情况选择.
+
     <img dataOrigin="img/操作员管理.png">
     所属角色:角色定义了该类操作员操作软件的权限,请合理选择所属角色.
 </pre>
 <h4>(8)用户和车辆管理</h4>
 <h5>a.新增用户和车辆</h5>
 <pre>
-    <span class="redBig">想在软件登记车辆信息时,必须先将该车的车主信息录入,之后再绑定车辆信息.</span>
+    <span style="background-color: blue;color:white;">方法一</span>
+    先录车主信息,再绑定车辆信息.
     新增用户和车辆信息流程如下:
     <img width="100%" class="gif" dataOrigin="img/录入用户和车辆信息.png" data-gif="img/录入用户和车辆信息.gif">
     注意到期时间和道口权限.
+    <span style="background-color: blue;color:white;">方法二</span>
+    快速录入车主信息和车辆信息,流程如下:
+     <img width="100%" class="gif" dataOrigin="img/快速录入车辆.png" data-gif="img/快速录入车辆.gif">
 </pre>
 <h5>b.查询用户和车辆</h5>
 <pre>
@@ -177,12 +197,19 @@ MSSQL2008数据库.
 </pre>
 <h5>c.车辆充值延期</h5>
 <pre>
-    本功能是用来为车辆延期,如下图所示.
-    <img width="100%" class="gif" dataOrigin="img/车辆充值延期.png" data-gif="img/车辆充值延期.gif">
+    延期操作在车辆管理界面里进行比较方便.
+    单个车辆延期:
+    <img dataOrigin="img/车辆充值延期流程.png">
+
+    多车批量延期:
+    鼠标点击车辆信息的同时,按住键盘的Ctrl或Shift键可以多选.
+    批量延期时,充值单位只能是月或年,不能指定具体的某一天.
+    <img width="100%" class="gif" dataOrigin="img/批量延期.png" data-gif="img/批量延期.gif">
 </pre>
 <h3>4.设置共享参数</h3>
 <pre>
-    参数<a href="../车牌识别共享操作集中说明/车牌识别共享操作集中说明.html" target="_blank">"车牌识别共享操作集中说明"</a>完成软件的一些共享设置.
+    多台电脑管理的停车场需要设置加密狗,识别图片,数据库的共享.
+    参考<a href="../车牌识别共享操作集中说明/车牌识别共享操作集中说明.html" target="_blank">"车牌识别共享操作集中说明"</a>完成软件的一些共享设置.
 </pre>
 <h3>5.实时监控</h3>
 <pre>
@@ -192,7 +219,7 @@ MSSQL2008数据库.
 <h3>6.进出记录和收费报表查询</h3>
 <h4>6.1 车辆进出记录表</h4>
 <pre>
-    从数据库查询车辆进出详细记录.
+    查询车辆进出的详细记录.
 </pre>
 <h5>(1)查询方法介绍-工具栏</h5>
 <pre>
@@ -211,10 +238,10 @@ MSSQL2008数据库.
     通过首行栏查询时,请将工具栏的所有勾选项都勾上,否则本查询结果是以工具栏查询的结果为基础进行的二次查询.
     <img dataOrigin="img/进出记录表-工具栏.png" width="100%">
     记录列表的首行是查询条件输入栏,支持精细和模糊查询,下面以图示的方式展现查询功能.
-    <img dataOrigin="img/进出记录查询-车牌号.png" width="100%"><p class="explain">车牌号查询,首行输入'k78'进行模糊查询,查询结果只包含车牌号含'k78'的车辆进出记录</p>
+    <img dataOrigin="img/进出记录查询-车牌号.png" width="100%"><p class="explain">
+    车牌号查询,首行输入'k78'进行模糊查询,查询结果只包含车牌号含'k78'的车辆进出记录</p>
     <img dataOrigin="img/进出记录查询-用户名.png"><p class="explain">用户名查询,首行输入'优'进行模糊查询,查询结果只包含用户名含'优'的进出记录</p>
     其它列类似,只需在首行输入条件即可自动筛选符合的记录.
-
     <span class="redBig">以上介绍的两种查询方法适用本软件所有报表,故以下报表不再赘述。</span>
 </pre>
 <h5>(3)查看车辆抓拍图片</h5>
@@ -222,15 +249,13 @@ MSSQL2008数据库.
     双击指定的进出记录,会弹出该车辆抓拍的图片,如下图:
     <img class="gif" width="100%" dataOrigin="img/进出记录抓拍图片.png" data-gif="img/进出记录抓拍图片.gif">
     在图片上右键可以选择另存图片.
-
     <span class="redBig">以下报表可查询图片的方法类似,故不再赘述。</span>
 </pre>
 <h5>(4)导出到Excel和打印</h5>
 <pre>
     导出到Excel:将查询的结果保存到Excel表格中;
     打印:调用本地打印机打印查询结果.
-    <span class="redBig">打印小票或者特殊打印要求的,需定制开发.</span>
-
+    <span class="redBig">打印小票或者特殊打印要求的,需联系厂商工程人员.</span>
     <span class="redBig">以下报表本功能类似,故不再赘述。</span>
 </pre>
 <a name="sfmxjlb"></a>
@@ -256,6 +281,5 @@ MSSQL2008数据库.
     所有进场时间的开始时间设置为查询的起始时间,即2016年10月1日,截止时间默认不改.
     所有出场时间的开始时间设置为查询的起始时间,即2016年10月1日;截止时间为查询的截止时间,即2016年12月12日.
 </pre>
-
 </body>
 </html>
