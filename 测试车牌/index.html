@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" onload="">
+<head>
+    <meta charset="UTF-8">
+    <title>点击屏幕切换车牌</title>
+    <style>
+        body {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #container {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        #imgDiv {
+            width: 100%;
+            margin: 0 auto;
+            position: absolute;
+            top: 0px;
+        }
+        #other{
+        	width: 200px;
+        	height: 200px;
+        	border-radius: 20px;
+        	background-color: yellow;
+        }
+    </style>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script>
+        var imgArr = ["鄂AF0236.png", "粤AFX787.png", "鄂A8BK78.png", "粤BD12345.png"];
+        imgArr = imgArr.concat(["粤BF12345.png", "川S0XX8警.png", "赣F16712.png", "京A0006警.png"]);
+        imgArr = imgArr.concat(["京A19598.png", "京MH5580.png", "鲁HTS521.png", "豫D15888.png"]);  //初始化图片
+
+        var randomArr = [0];
+        var winHeight; //body高度
+        var moveTimer;
+        const moveTimeValue = 1;  //时间移动速度
+        const movePx=2;  //像素移动速度
+        const initTop=-150;
+        var initTopValue = initTop;
+        var imgDiv, img;
+        $(document).ready(function () {
+            winHeight =$(document).height();
+            document.body.style.height = winHeight + "px";    
+            imgDiv = document.getElementById("imgDiv");
+            img = document.getElementById("img");
+            moveTimer = setInterval(moveImg, moveTimeValue);  //第一次启动图片移动
+            var container = document.getElementById("container");
+            var other=document.getElementById('other');
+            container.style.height = winHeight + "px";
+            container.onclick = changImg;
+            other.onclick = stopMove;
+        });
+        function changImg() {
+            clearInterval(moveTimer);
+            startMoveTimer();
+        }
+        
+        function startMoveTimer() {
+            getRandomImg();//必须先获取图片  再启动移动图片的定时器
+            moveTimer = setInterval(moveImg, moveTimeValue);
+            initTopValue = initTop;
+        }
+        
+        function moveImg() {
+            initTopValue += movePx;
+            imgDiv.style.top = initTopValue + "px";
+            if (initTopValue > winHeight) {  
+            //图片移动到最底部 获取下一张随机图片并从初始位置开始继续移动
+            getRandomImg();
+            initTopValue = initTop;
+        }
+    }
+        function stopMove(e) { //点击图片停止移动事件
+            clearInterval(moveTimer);
+            stopEvent(e);//阻止冒泡事件
+        }
+        function stopEvent(event) { //阻止冒泡事件
+            //取消事件冒泡
+            var e = arguments.callee.caller.arguments[0] || event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
+            if (e && e.stopPropagation) {
+                // this code is for Mozilla and Opera
+                e.stopPropagation();
+            } else if (window.event) {
+                // this code is for IE
+                window.event.cancelBubble = true;
+            }
+        }
+        function getRandomImg() {  //获取一张不重复的随机图片 
+            if (randomArr.length == imgArr.length) {
+                randomArr.shift(); //数组里最先进入的元素被删除
+            }
+            var randomIndex = Math.floor(Math.random() * (imgArr.length));
+            var d = randomArr.indexOf(randomIndex);
+            if (d == -1) {
+                randomArr.push(randomIndex);
+                var randomImgHeight = Math.floor(Math.random() * (280 - 220) + 220);
+
+                img.src = "img/" + imgArr[randomIndex];
+                img.height = randomImgHeight;
+            }
+            else {
+                getRandomImg();
+            }
+        }
+    </script>
+</head>
+<body bgcolor="#000">
+    <div id="container">
+        <div id="imgDiv">
+            <img src="img/鄂AF0236.png" height="200" id="img">
+        </div>
+        <div id="other">
+        	
+        </div>
+    </div>
+</body>
+</html>

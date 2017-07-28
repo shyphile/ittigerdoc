@@ -38,7 +38,7 @@
         $(this).css({'background':'#a1f1f1'});
     });
 
-    $('a').attr("target", "frame"); 
+    $("a:not(.blank)").attr("target", "frame"); 
 
     if ($('a').attr('href') == "http://count.knowsky.com/") {
         $('a').attr('href', ""); //网站点击量屏蔽广告用
