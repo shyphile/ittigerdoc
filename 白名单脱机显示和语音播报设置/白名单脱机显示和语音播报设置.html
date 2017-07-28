@@ -6,74 +6,49 @@
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
     <title>白名单脱机显示和语音播报设置</title>
+    <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>  
-    <style>
-        body {
-            width: 800px;
-            margin: 0 auto;
-            word-wrap: break-word;
-            word-break: break-all;
-            /*border: 1px solid red;*/
-            /*overflow: hidden;*/
-        }
-
-        img {
-            /*border: 1px solid black;*/
-            /*display: block;*/
-            /*margin: 0 auto;*/
-            display: block;
-            margin: -30px auto 0;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-            /*width: 100%;*/
-        }
-
-        h1 {
-            margin: 30px;
-        }
-
-        pre {
-            font-size: 16px;
-            line-height: 30px;
-        }
-
-        h4 {
-            color: firebrick;
-            margin: 0;
-        }
-    </style>
+    <script src="../js/imgload_gifload.js"></script> 
 </head>
 <body>
-<h1 align="center">白名单脱机显示和语音播报设置方法</h1>
+<p class="title">白名单脱机显示和语音播报设置方法</p>
 <pre>
     设置过程比较简单,下面主要以图片说明,按照下图所示步骤设置基本不会有错.
     特殊情况请咨询技术人员.
     <em>注:请用IE9+或360浏览器、百度浏览器等集成IE内核的浏览器设置.</em>
-    <h4>(1)登入摄像机</h4>
-    <span>打开浏览器,输入摄像机IP.</span>
+</pre>
+<h3>(1)登入摄像机</h3>
+<pre>
+    <span>打开浏览器,输入摄像机IP.</span>    
     <img dataOrigin="img/用户名和密码.png">
-    <h4>(2)输出联动设置</h4>
+</pre>
+<h3>(2)输出联动设置</h3>
+<pre>    
     <img dataOrigin="img/输入输出.png">
-    按下图所示设置.
+    按下图所示设置.    
     <img width="100%" dataOrigin="img/输出配置.png">
-    <h4>(3)白名单设置</h4>
-    <img dataOrigin="img/白名单设置.png">
-    <img dataOrigin="img/脱机自动启用.png">
+</pre>
+<h3>(3)白名单设置</h3>
+<pre>
+    <img dataOrigin="img/白名单设置.png">    
+    <img dataOrigin="img/脱机自动启用.png">    
     <img dataOrigin="img/模糊查询.png">
-    <h4>(4)串口设置</h4>
-    <img dataOrigin="img/串口设置.png">
+</pre>
+<h3>(4)串口设置</h3>
+<pre>
+    <img dataOrigin="img/串口设置.png">    
     <img dataOrigin="img/串口号.png">
-    <span style="color: red;font-weight: bold;">注意:下图除了勾选"车牌类型"外其它选项都不要勾.</span>
+    <span style="color: red;font-weight: bold;">注意:下图除了勾选"车牌类型"外其它选项都不要勾.</span>    
     <img dataOrigin="img/串口推送配置选项.png">
     <span style="color:red;font-weight:bold;">!!!若发现显示屏乱码或黑屏的,请将"车牌类型"的勾选去掉,并保存.!!!</span>
     继续按下图所示设置.
     <img dataOrigin="img/通用配置.png">
     语音配置各选项输入自定义的文字.
     <span style="color: red;font-weight: bold;">注意:语音头不要输入文字,否则显示会出现乱码.</span>
-    <img dataOrigin="img/语音配置.png">
+    <img dataOrigin="img/语音配置.png">    
     <img dataOrigin="img/语音配置展开.png">
     上图状态有4个:有效期内白名单、白名单内已过期、不在白名单内、白名单剩余天数。
     例如:状态选择"有效期内白名单",语音尾为"欢迎回家",当白名单车辆鄂A66666经过时,显示屏会显示对应

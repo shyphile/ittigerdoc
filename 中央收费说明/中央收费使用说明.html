@@ -5,70 +5,85 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
+    <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <title>中央收费说明</title>
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>
-    
+    <script src="../js/imgload_gifload.js"></script> 
+    <title>中央收费操作说明</title>
 </head>
 <body>
-<h1 align="center">中央收费使用说明</h1>
+<p class="title">中央收费操作说明</p>
 <h3>1.停车场中央收费模式介绍</h3>
-<pre>
-    车辆要离开车场时,车主先去中央收费处缴费,再开车驶向停车场出口,在一定时间内闸机自动抬闸放行的收费模式.
-    中央收费是一种软件定义的功能,只需在软件内操作即可.
+<pre>    车主要离开车场时,先到中央收费处缴费,缴完费用后再开车驶向停车场出口,在一定时间内闸机自动抬闸放行.中央收费是软件定义的功能,只需在软件内操作即可.
 </pre>
 <h3>2.软件操作说明</h3>
 <h4>2.1 参数设置</h4>
 <h5>(1)设置中央收费有效时间</h5>
-<pre style="font-size:12px; line-height:12px;color:blue;">
-    作用：车主在中央收费处交完费用后,必须在该有效时间内将车辆驶出停车场,否则将会产生停车费用.
-</pre>
 <pre>
-   登入软件,打开"车场公共属性配置".<img dataOrigin="img/车场公共属性配置.png"/>   在弹出的对话框中设置"中央收费有效时间（分钟）."<img dataOrigin="img/中央收费有效时间.png"/>
+    <span class="note">作用:设定一个免费时间,即车主交完费用后不超过该时间可免费出场,否则需要重新缴费.</span>
+    登入软件,打开"车场公共属性配置".
+    <img dataOrigin="img/车场公共属性配置.png"/>
+    在弹出的对话框中设置"中央收费有效时间（分钟）".
+    <img dataOrigin="img/中央收费有效时间.png"/>
 </pre>
 <h5>(2)设置免费停车时间</h5>
 <pre>
-    打开"收费设置".<img dataOrigin="img/收费设置.png">
-    编辑收费标准,在弹出的对话框中设置"免费时间".<img dataOrigin="img/免费时间.png"/>
+    打开"收费设置".
+    编辑收费标准,在弹出的对话框中设置"免费时间".
+    <img dataOrigin="img/免费时间.png"/>
 </pre>
 <h5>(3)以上两个时间对中央收费的影响</h5>
-<pre >    举例说明：
+<pre>    举例说明：
     中央收费有效时间设定是15分钟,免费停车时间设定是20分钟.
     车主到中央收费处缴费成功后,如果20分钟内车辆离开停车场不会重新收费且自动放行;
-    20分钟后如果车辆还没离场,当离场时会产生停车费用,系统会计算该车从中央缴费成功那刻起至离场那刻止停
-留在车场所产生的费用.
+    20分钟后如果车辆还没离场,当离场时会产生停车费用,系统会计算该车从中央缴费成功那刻起至离场那刻止停留在车场所产生的费用.
     当中央收费有效时间设定是20分钟,免费时间设定是15分钟时,车主缴费后依然可以免费停留20分钟.
-    所以,合理建议是将免费停车时间和中央收费有效时间设定成一致. </pre>
+    <span class="note">所以,合理建议是将免费停车时间和中央收费有效时间设定成一致.</span> 
 </pre>
 <h4>2.2 中央收费的两种操作方式</h4>
-<pre>    软件提供两种中央收费操作方式.
-    一种是在实时监控界面里,在这种方式下可看到车辆进场时的截图,也是系统比较推荐的方式.
-    另一种是在"在场车辆记录表"里,在这种方式下不能看到车辆截图.
+<pre>    软件提供三种中央收费操作方式.
+    一是在"实时监控"界面里操作;
+    二是在"在场车辆记录表"里操作;
+    三是在软件左侧"车场管理"展开栏里操作;
 </pre>
-<h5>(1)在"实时监控"里收费</h5>
+<h5>(1)"实时监控"里收费</h5>
 <pre>
-    打开"实时监控".<img dataOrigin="img/实时监控.png"/>
-    点击右下角的"实时监控"按钮.<img dataOrigin="img/实时监控-中央收费按钮.png">
-    在弹出对话框输入车牌查询.<span style="color: blue;">输入车牌时不需要输入完整车牌号,只需输入连续几个关键字即可.</span><img dataOrigin="img/实时监控-中央收费-输入车牌查询.png">
-    选中查询到的车牌.<img style="margin-bottom: 10px;" dataOrigin="img/中央收费车牌查询结果.png" /><img dataOrigin="img/当前选中车牌号.png" />
+    进入"实时监控".
+    点击窗口右下角的"中央收费"按钮.
+    在弹出对话框输入车牌查询.输入车牌时不需要输入完整车牌号,只需输入连续几个关键字即可.
+    选中查询到的车牌.
     点击右上角"确定收费"按钮,弹出收费金额确认窗口.
-    按照显示金额收取费用后,点击"确认收费"完成中央收费操作.<img dataOrigin="img/中央收费-收费框.png">
+    按照显示金额收取费用后,点击"确认收费"完成中央收费操作.
+    <img width="100%" class="gif" dataOrigin="img/中央收费-实时监控.png" data-gif="img/中央收费-实时监控.gif">
 </pre>
-<h5>(2)在"在场车辆记录表"里收费</h5>
+<h5>(2)"在场车辆记录表"里收费</h5>
 <pre>
     展开"报表管理",打开"在场车辆记录表".
-    在条件输入区域输入车牌,点击"查询"按钮.<img dataOrigin="img/在场记录表-输入查询条件.png">
-    出现对应车辆信息后,在车辆记录上右键选择"中央收费".<img dataOrigin="img/在场记录表-查询结果.png">
-    然后会弹出的收费窗口,据此收取费用.<img dataOrigin="img/中央收费-收费框.png">
+    在首行输入车牌,自动检索出结果.输入车牌时不需要输入完整车牌号,只需输入连续几个关键字即可.
+    选中查询到的车牌,在车辆记录上右键选择"中央收费".
+    然后会弹出的收费窗口,据此收取费用.
+    <span class="note">双击车辆记录可查看该车被抓拍的截图.</span>
+    <img width="100%" class="gif" dataOrigin="img/中央收费-在场车辆记录表.png" data-gif="img/中央收费-在场车辆记录表.gif">
 </pre>
-<h5>(3)中央收费报表查询</h5>
+<h5>(3)"车场管理"中央收费里收费</h5>
 <pre>
-    展开"报表管理",打开"中央收费记录表".<img dataOrigin="img/中央收费-报表查询.png"/>
+    展开"车场管理",打开"中央收费".
+    通过鼠标的选择输入车牌,输入车牌时不需要输入完整车牌号,只需输入连续几个关键字即可.
+    选中查询到的车牌,点击"选中"按钮.
+    然后会弹出的收费窗口,据此收取费用.
+    <img width="100%" class="gif" dataOrigin="img/中央收费-中央收费功能.png" data-gif="img/中央收费-中央收费功能.gif">
+</pre>
+<h5>(4)中央收费报表查询</h5>
+<pre>
+    展开"报表管理",打开"中央收费记录表".
+    <img dataOrigin="img/中央收费-报表查询.png"/>
     输入查询条件.
-    系统提供多样的查询条件,可以按车牌、操作员、车主姓名、车辆进场时间、实际收费时间查询.<img width="100%" dataOrigin="img/按时间查询收费.png"/><p style="font-size: 9px; text-align: center;margin-top: 0px;">按收费时间段查询</p>
-    点击"查询按钮",可以看到这段时间收费总额.<img width="100%" dataOrigin="img/查询收费的结果.png">
+    系统提供多样的查询条件,可以按车牌、操作员、车主姓名、车辆进场时间、实际收费时间查询.
+    <img width="100%" dataOrigin="img/按时间查询收费.png"/><p class="explain">按收费时间段查询</p>
+    点击"查询"按钮,可以看到这段时间收费总额.
+    <img width="100%" dataOrigin="img/查询收费的结果.png">
 </pre>
 </body>
 </html>

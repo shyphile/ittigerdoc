@@ -9,72 +9,27 @@
     <title>车牌识别管理软件快速操作手册</title>
     <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
     <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>
-    <style>
-        body {
-            width: 800px;
-            margin: 0 auto;
-            word-wrap: break-word;
-            word-break: break-all;
-            /*border: 1px solid red;*/
-            /*overflow: hidden;*/
-        }
-
-        img {
-            display: block;
-            margin: -20px auto 0;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-        }
-
-        h1 {
-            margin: 30px;
-        }
-
-        pre {
-            font-size: 16px;
-            line-height: 30px;
-        }
-
-        h5 {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .redBig {
-            font-family: 微软雅黑;
-            font-size: 17px;
-            color: red;
-            font-weight: bold;
-        }
-
-        .explain {
-            font-size: 12px;
-            text-align: center;
-            margin-bottom: -30px;
-            margin-top: 1px;
-        }
-    </style>
+    <script src="../js/imgload_gifload.js"></script>  
 </head>
 <body>
-<h1 align="center">车牌识别管理软件快速操作手册</h1>
+<p class="title">车牌识别管理软件快速操作手册</p>
 软件操作详细信息,请参考<a href="../车牌识别系统软件说明书/车牌识别系统软件说明书.html" target="_blank">"车牌识别系统管理软件说明书"</a>.
 <h3>1.选择数据库类型</h3>
-    <pre>
+<pre>
     本软件同时支持MSSQL2008和MySql数据库引擎.
     使用MSSQL2008数据库引擎的,需要额外安装微软MSSQL2008数据库程序,程序文件大小大约4G左右;
     使用MySql的,无需单独安装此数据库,本软件已集成.
-    注意:目前用MySql数据库的系统不能扩展云管理功能,所以若考虑以后要升级使用云管理功能的,请选择
-MSSQL2008数据库.    
-     请根据应用需求,到<a href="http://www.it-wy.cn/download" target="_blank">技术资料下载</a>网站下载合适的软件版本.
-    <img dataOrigin="img/软件版本.png"></pre>
+    注意:目前用MySql数据库的系统不能扩展云管理功能,所以若考虑以后要升级使用云管理功能的,请选择MSSQL2008数据库.    
+    请根据应用需求,到<a href="http://www.it-wy.cn/download" target="_blank">技术资料下载</a>网站下载合适的软件版本.
+    <img dataOrigin="img/软件版本.png">
+</pre>
 <h3>2.创建数据库文件</h3>
     <pre>
     <span class="redBig">以下若无特殊说明,均是在安装了数据库的电脑上操作.</span>
-    在车牌识别管理软件根目录里找到"CreateDatabase.exe"<img style="display: inline;" dataOrigin="img/CreateDatabase.png"> ,双击打开.
+    在车牌识别管理软件根目录里找到"CreateDatabase.exe"<img class="coinImg" dataOrigin="img/CreateDatabase.png"> ,双击打开.
     <img dataOrigin="img/CreateDatabase目录结构.png">
     根据所使用的数据库类型不同,数据库文件创建方式略有不同.
 
@@ -99,12 +54,12 @@ MSSQL2008数据库.
 <h3>3.配置软件运行数据</h3>
 <h4>(1)登录</h4>
 <pre>
-    在管理软件根目录,找到"ParkUI.exe"<img style="display: inline;" dataOrigin="img/ParkUI图标.png"> ,并右键发送快捷方式到桌面.
+    在管理软件根目录,找到"ParkUI.exe"<img class="coinImg" dataOrigin="img/ParkUI图标.png"> ,并右键发送快捷方式到桌面.
     <img dataOrigin="img/发送到桌面.png">
     打开管理软件,直接登录,初始是没有密码的.
     <img dataOrigin="img/登录.png">
 </pre>
-<h4>(2)车场公共属性配置 <img style="display: inline;" dataOrigin="img/公共属性配置图标.png"></h4>
+<h4>(2)车场公共属性配置 <img class="coinImg" dataOrigin="img/公共属性配置图标.png"></h4>
 <pre>
     <img dataOrigin="img/公共属性设置.png">
     图片保存路径:该路径会保存车辆进出识别的抓拍图片,默认是保存在软件根目录的Image文件夹里.
@@ -114,42 +69,41 @@ MSSQL2008数据库.
     模糊匹配成月租车需人工确认:相似车牌匹配会弹出确认窗口,该选项根据收费员素质水平合理选择开启.
     其它参数如无特殊需求默认即可.
 </pre>
-<h4>(3)数据库配置 <img style="display: inline;" dataOrigin="img/数据库配置.png"></h4>
+<h4>(3)数据库配置 <img class="coinImg" dataOrigin="img/数据库配置.png"></h4>
 <pre>
     <img dataOrigin="img/数据库定时备份设置.png" alt="">
     建议按上图设置,这样软件会每天凌晨1点定时备份数据库.
     备份路径默认是保存在软件根目录的backup文件夹里.
     <img dataOrigin="img/backup文件夹.png">
 </pre>
-<h4>(3)报表配置 <img style="display: inline;" dataOrigin="img/报表配置图标.png"></h4>
+<h4>(3)报表配置 <img class="coinImg" dataOrigin="img/报表配置图标.png"></h4>
 <pre>
     报表配置根据电脑硬盘容量和想查询的时间合理设置.
     建议:在场车辆记录表的数据保留天数设置一个值,如10天,则软件会自动清理10天前进场的车辆.
     <img dataOrigin="img/在场车辆记录表.png">
 </pre>
-<h4>(4)收费设置 <img style="display: inline;" dataOrigin="img/收费设置图标.png"></h4>
+<h4>(4)收费设置 <img class="coinImg" dataOrigin="img/收费设置图标.png"></h4>
 <pre>
     常见的收费标准都可以用"24小时收费设置"实现.
     <img dataOrigin="img/临时车收费标准.png">
     例:上图表示停1个小时收1元钱,停2小时收2元钱...;可免费停30分钟;停车时间满24小时收20元,相当于优惠了4元.
     
-    <span style="background-color: blue;color:white;">测试收费标准</span> <img style="display: inline;"
-                                                                         dataOrigin="img/测试收费标准图标.png">
+    <span style="background-color: blue;color:white;">测试收费标准</span> <img
+    class="coinImg" dataOrigin="img/测试收费标准图标.png">
     测试收费标准设置的是否正确.
     <img dataOrigin="img/测试收费标准.png">
 </pre>
-<h4>(5)车场设置 <img style="display: inline;" dataOrigin="img/车场设置.png"></h4>
+<h4>(5)车场设置 <img class="coinImg"  dataOrigin="img/车场设置.png"></h4>
 <pre>
     <img dataOrigin="img/车场设置窗口.png" alt="">
-    总车位数尽量设置大一点,因为很可能由于各种故障导致场内车辆没有识别即被人为放出场,从而使场内可
-用车位数少于实际可用。
+    总车位数尽量设置大一点,因为很可能由于各种故障导致场内车辆没有识别即被人为放出场,从而使场内可用车位数少于实际可用。
     月租车位数=总车位数-临时车位,上图所示月租车位数为200.
     屏幕首行显示内容:设置LED显示屏上首行的信息内容.
     内部停车场:被大车场嵌套的小车场,如地库车场,需勾上此选项.
         被定义为内部停车场的车场,车辆可循环进出该车场,只要没有从大车场出去.
     其它参数如无特殊需求默认即可.
 </pre>
-<h4>(6)车道设置 <img style="display: inline;" dataOrigin="img/车道设置.png"></h4>
+<h4>(6)车道设置 <img class="coinImg" dataOrigin="img/车道设置.png"></h4>
 <pre>
     根据现场出入口情况增加车道信息.
      <span style="background-color: blue;color:white;">搜索摄像机</span>
@@ -165,12 +119,11 @@ MSSQL2008数据库.
     是否读卡:非机动车道刷IC卡通行使用,一般情况下不用勾选.
     其它参数如无特殊需求默认即可.
 </pre>
-<h4>(7)操作员管理 <img style="display: inline;" dataOrigin="img/操作员管理图标.png"></h4>
+<h4>(7)操作员管理 <img class="coinImg" dataOrigin="img/操作员管理图标.png"></h4>
 <pre>
     <span style="background-color: blue;color:white;">角色管理</span>
     <img dataOrigin="img/角色权限.png">
     建议如上图设置"收费员"角色的权限,其中"手动开匣"一项,可根据实际情况选择.
-
     <img dataOrigin="img/操作员管理.png">
     所属角色:角色定义了该类操作员操作软件的权限,请合理选择所属角色.
 </pre>
@@ -190,8 +143,8 @@ MSSQL2008数据库.
 <pre>
     软件提供了多样的,便利的查询用户的方法.
     用户管理列表的首行是查询条件输入栏,支持精细和模糊查询,下面以图示的方式展现软件查询的优越功能.
-    <img dataOrigin="img/用户查询-用户名.png"><p class="explain">用户名查询,首行输入'小'进行模糊查询,查询结果只包含用户名字含小的用户</p>
-    <img dataOrigin="img/用户查询-最大车位数.png"><p class="explain">最大车位数查询,首行输入'2'进行精细查询,查询结果只包含车位数为2的用户</p>
+    <img dataOrigin="img/用户查询-用户名.png">    <p class="explain">用户名查询,首行输入'小'进行模糊查询,查询结果只包含用户名字含小的用户</p>
+    <img dataOrigin="img/用户查询-最大车位数.png">    <p class="explain">最大车位数查询,首行输入'2'进行精细查询,查询结果只包含车位数为2的用户</p>
     其它列类似,只需在首行输入条件即可自动筛选符合的记录.
     同查询用户操作方法一样,查询车辆也是在列表的首行输入条件查询.
 </pre>

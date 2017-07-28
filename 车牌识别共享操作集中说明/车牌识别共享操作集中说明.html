@@ -6,69 +6,22 @@
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
     <title>车牌识别共享操作集中说明</title>
+    <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>
-    <style>
-        body {
-            width: 800px;
-            margin: 0 auto;
-            word-wrap: break-word;
-            word-break: break-all;
-            /*border: 1px solid red;*/
-            /*overflow: hidden;*/
-        }
-
-        img {
-            /*border: 1px solid black;*/
-            /*display: block;*/
-            /*margin: 0 auto;*/
-
-            display: block;
-            margin: -20px auto 0;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-            /*width: 100%;*/
-        }
-
-        h1 {
-            margin: 30px;
-        }
-
-        pre, li {
-            font-size: 16px;
-            line-height: 30px;
-        }
-
-        h5 {
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        td {
-            text-align: center;
-        }
-
-        .menu > h4 {
-            text-indent: 1em;
-            font-size: 16px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-    </style>
+    <script src="../js/imgload_gifload.js"></script>  
 </head>
 <body>
-<h1 align="center">车牌识别共享操作集中说明</h1>
+<p class="title">车牌识别共享操作集中说明</p>
 <pre>
     多终端管理型停车场,即两台及上电脑管理的停车场,就需要配置加密狗和数据库共享.
-    <span style="color: blue;">单机管理型停车场,无需做共享操作.</span>
+    <span class="note">单机管理型停车场,无需做共享操作.</span>
 
     整个停车场只需要安装1个数据库和使用1个加密狗.
     假如在A电脑上安装了数据库和插入加密狗,按照本说明完成共享设置,之后其它电脑就可以共享A电脑上的数据库和加密狗,实现车辆从任何一个道口出去都能计算收费和查看图片.
-     <span style="color: blue;">注：本文只介绍软件层面上的共享操作,需要物理上网络互访支持.如果网络都不通,就谈不上共享了.</span>
+     <span class="note">注：本文只介绍软件层面上的共享操作,需要物理上网络互访支持.如果网络都不通,就谈不上共享了.</span>
     <em style="color:white;font-weight: bold;font-size: 20px;background-color: #FF0000;">在进行操作前一定要关闭防火墙.</em>
 </pre>
 <div class="menu" style="margin-bottom: 130px;">
@@ -101,13 +54,14 @@
 <pre>
     <a href="http://it-wy.cn/download/tool/设置可读可写共享文件夹.rar">点此下载局域网共享工具</a>
     用我们提供的<img style="display: inline;border: 0px;margin-bottom: -2px;" dataOrigin="img/局域网共享软件.bmp">设置一个共享文件夹,具体操作方法请看里面的说明文档.
-    <span style="color: blue;">注:局域网共享软件可能会被主流杀毒软件认为是病毒,所以请先关闭杀毒软件再使用.</span>
+    <span class="note">注:局域网共享软件可能会被主流杀毒软件认为是病毒,所以请先关闭杀毒软件再使用.</span>
 </pre>
 <a name="3"></a>
 <h3>3.设置图片共享参数</h3>
 <pre>
     打开车牌识别管理软件,在"车场公共属性配置"里设置出入场图片保存路径.
-    <img dataOrigin="img/公共属性配置.png"><br><img dataOrigin="img/公共属性配置框.png">
+    <img dataOrigin="img/公共属性配置.png">
+    <img dataOrigin="img/公共属性配置框.png">
     "出入场图片保存路径",填写设置的共享文件夹的网络路径,如:\\192.168.0.150\parkpicture.
     出现软件无故退出现象,请先查看图片保存路径是否正确.
 </pre>

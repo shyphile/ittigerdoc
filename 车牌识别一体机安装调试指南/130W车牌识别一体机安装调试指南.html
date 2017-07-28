@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>130万像素摄像机安装调试指南</title>
+    <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>    
+</head>
+<body>
+<p class="title">130万像素摄像机安装调试指南</p>
+<h3>1.选择安装位置和安装高度</h3>
+<pre>
+    摄像机安装在道闸主机前靠近车道的一侧安全岛为佳,以摄像机不伸出安全岛和紧靠道闸主机但不影响道闸使用为原则,如图示意:
+    <img dataOrigin="img/示意图.png"> 
+    保证有效识别距离在2m以上,推荐3~6米,支持2~8 米（按标配的2.8~12mm电动变焦镜头）.
+    <em style="color: blue;">若需识别更长距离,需升级镜头.</em>
+    <span class="note">小提示:车道长度不足的情况,摄像机可置于道闸后方.</span>
+</pre>
+<h3>2.连接设备</h3>
+<pre>
+    下图为接线板示例图,详见接口说明表.
+    <img width="100%" dataOrigin="img/单排端子.png">    <p class="explain">单排接线端子</p>
+    <img width="100%" dataOrigin="img/双排端子.png">    <p class="explain">双排接线端子</p>
+</pre>
+<h3>3.调节车辆成像角度</h3>
+<pre>
+    在IE地址栏输入设备IP地址（默认IP:http://192.168.1.100,账号:admin,密码:admin）,在网页实时视频查看车辆成像角度.
+    侧角:小于30度,支持45度;俯角:小于30度,支持45度.
+    <img width="100%" dataOrigin="img/安装方法.png">
+    <span class="note">小提示:如图正确安装,相机可尽量往车道平行方向调整.错误安装也能识别,但识别率会有2,3个百分点的影响.</span>
+</pre>
+<h3>4.调整车牌成像尺寸及聚焦</h3>
+<pre>
+    在网页"安装引导"页进行调节,引导页视频图像上已给出一个推荐的车牌尺寸,只需调节"变倍",配合"聚焦",使实际场景中的车牌尺寸尽量接近于推荐的车牌尺寸即可.
+    推荐的宽度:车牌在视频中的宽度在 120-200 个像素范围,或者占视频图像宽度的 1/10-1/7 之间.
+    <img width="100%" dataOrigin="img/安装引导.png">
+    <img width="100%" dataOrigin="img/车牌过大过小.png">
+    <span class="note">小提示:先调变倍,再调聚焦,车牌过大会影响识别率.</span>
+</pre>
+<h3>5.配置识别区域和虚拟线圈</h3>
+<pre>
+    视频流识别:识别的帧数越多,识别率越高.
+    识别区域:在"安装引导"界面,可自定义识别区域,通过配置识别区域可屏蔽掉不必要的干扰.
+    虚拟线圈的位置配置:虚拟线圈控制了识别结果的触发时机,可自定义线圈位置,线圈需绘制在识别区域内部.
+    <img width="100%" dataOrigin="img/识别区域.png">
+    <img width="100%" dataOrigin="img/最优识别区域.png">
+    <span class="note">小提示:最佳识别区域在视频图像的下半部分,车牌尺寸合适,且车辆由上至下驶入识别了较长距离（虚拟线圈多绘制于此）.</span>
+</pre>
+<h3>6.安装外置补光灯</h3>
+<pre>
+    通过安装外置补光灯,可在夜间得到更好的成像质量和提高识别率.外置补光灯使用停车场专用白光 LED 补光灯,带光敏电阻自动开关功能,防水等级 IP65.
+    <img width="100%" dataOrigin="img/补光灯安装效果.png">
+    <img style="margin-bottom: -20px;" dataOrigin="img/补光灯错误安装.png">
+    错误提示:外置补光灯与一体机安装距离过近,两者的距离小于30cm,补光灯的光线会直接被车牌表面的反光涂层反射到镜头,导致车牌在视频图像中引起过曝,显得发白,影响最终的识别结果.
+</pre>
+<h3>7.调整内置补光灯亮度</h3>
+<pre>
+    在"安装引导"界面,可调节内置LED亮度等级.错误亮度等级,内置补光灯过亮,照成过曝情况,此时应该降低补光灯的亮度,如下:
+    <img width="100%" dataOrigin="img/亮度等级.png">
+    <span class="note">小提示:内置亮度设为2-3级就行,对于识别距离超过6米的停车场,可提高亮度等级,不是车牌越亮越容易识别.</span>
+</pre>
+<h3>8.接通其它接口线路,满足典型应用需求</h3>
+<h4>8.1 单排端子整体结构</h4>
+<img dataOrigin="img/接口输入输出2.png">
+<br><br>
+<table border="1px" cellspacing="0px" align="center">
+    <caption style="background-color:darkseagreen">车牌识别一体机接口说明</caption>
+    <tr bgcolor="#a9a9a9">
+        <th>序号</th>
+        <th>功能</th>
+        <th>标识</th>
+        <th>说明</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>电源</td>
+        <td>12V<br>
+            GND
+        </td>
+        <td>支持9-24V</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>网络接口</td>
+        <td>RJ45</td>
+        <td>支持10/100Mbps</td>
+    </tr>
+    <tr>
+        <td rowspan="2">3</td>
+        <td rowspan="2">IO接口</td>
+        <td>OUT1<br>
+            OUT2
+        </td>
+        <td>可用于道闸抬杆</td>
+    </tr>
+    <tr>
+        <td>IN1+/IN1-<br>
+            IN2+/IN2-
+        </td>
+        <td>可接地感线圈，用于外部信号触发抓图</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>AUDIO</td>
+        <td>GND<br>
+            OUT<br>
+            IN
+        </td>
+        <td>音频输入/输出</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>TTL_OUT</td>
+        <td>1<br>
+            GND<br>
+            2
+        </td>
+        <td>TTL-5V信号输出</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>RS485</td>
+        <td>A1<br>
+            B1<br>
+            GND
+        </td>
+        <td>连接上位机，输出识别结果,协议参照"识别结果串口推送"</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>RS485/RS232</td>
+        <td>A2<br>
+            B2<br>
+            GND
+        </td>
+        <td>与 SDK 协作,实现双向透明通道
+        </td>
+    </tr>
+</table>
+<h4>8.2 双排端子整体结构</h4>
+<img dataOrigin="img/接口输入输出1.png">
+<br><br>
+<table border="1px" cellspacing="0px" align="center">
+    <caption style="background-color:darkseagreen">车牌识别一体机接口说明</caption>
+    <tr bgcolor="#a9a9a9">
+        <th>序号</th>
+        <th>功能</th>
+        <th>标识</th>
+        <th>说明</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>电源</td>
+        <td>12V<br>
+            GND
+        </td>
+        <td>支持9-24V</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>网络接口</td>
+        <td>RJ45</td>
+        <td>支持10/100Mbps</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>USB接口</td>
+        <td>USB</td>
+        <td>USB接口</td>
+    </tr>
+    <tr>
+        <td rowspan="2">4</td>
+        <td rowspan="2">IO接口</td>
+        <td>OUT1<br>
+            OUT2<br>
+            OUT3<br>
+            OUT4
+        </td>
+        <td>可用于道闸抬杆</td>
+    </tr>
+    <tr>
+        <td>IN1+/IN1-<br>
+            IN2+/IN2-<br>
+            IN3+/IN3-
+        </td>
+        <td>可接地感线圈，用于外部信号触发抓图</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>AUDIO</td>
+        <td>GND<br>
+            OUT<br>
+            IN
+        </td>
+        <td>音频输入/输出</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>TTL5V</td>
+        <td>OUT</td>
+        <td>TTL信号输出</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>RS485</td>
+        <td>A1<br>
+            B1<br>
+            GND
+        </td>
+        <td>连接上位机，输出识别结果,协议参照"识别结果串口推送"</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>RS485/RS232</td>
+        <td>A2<br>
+            B2<br>
+            GND
+        </td>
+        <td>与 SDK 协作,实现双向透明通道
+        </td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>重置</td>
+        <td>RESET</td>
+        <td>设备重启/设备复位</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>TF卡槽</td>
+        <td>TF CARD</td>
+        <td>TF卡存储,最大支持128G</td>
+    </tr>
+</table>
+<h4>8.3 典型应用场景</h4>
+<h5>(1)白名单直接抬杆放行</h5>
+<pre>
+    白名单数据导入设备,开关量输出 1 接道闸,车牌识别触发后,在设备上白名单验证通过后直接抬杆放行.
+    请做如下配置:基本设置->输入输出->输出配置.
+    <img width="100%" dataOrigin="img/输出配置.png">
+</pre>
+<h5>(2)实际地感触发车牌识别</h5>
+<pre>
+    开关量输入1接地感线圈.
+    请做如下配置:智能分析->基本配置->输出结果.
+    <img width="100%" dataOrigin="img/基本配置.png">
+</pre>
+<h5>(3)RS485接口外接其它设备输出车牌识别信息</h5>
+<pre>
+    车牌识别触发后,在设备上白名单验证通过后,通过RS485-1进行输出.
+    请做如下配置:基本设置->输入输出->输出配置.
+    <img dataOrigin="img/白名单验证通过.png">
+    <span class="note">    注:出厂默认拨码开关485是1.2.5.6在on;若是要使用232,请将拨码开关3.4.7.8在on.</span>
+    <img dataOrigin="img/电路板.png">
+</pre>
+<h5>(4)外接闪光灯,使用爆闪功能</h5>
+<pre>
+    请做如下配置:
+    开关量输入2接地感线圈,地感线圈都支持开关量信号,通过地感线圈控制闪光灯,将闪关灯连接在尾线或接线板的开关量输出接口,同时配置车牌输出方式为外部输入2触发.
+    <img width="100%" dataOrigin="img/输入输出.png">  
+    此时需要调节触发延迟时间,与闪光灯配合,使识别效果最佳.
+    <img dataOrigin="img/触发延迟.png">
+</pre>
+<h4>8.4 正确安装案例</h4>
+    <img width="100%" dataOrigin="img/正确安装案例.png">
+    <br><br>
+<h4>8.5 错误安装案例</h4>
+    <img width="100%" dataOrigin="img/错误安装案例.png">
+    <br><br>
+
+<h3>9.常见问题解答</h3>
+<h4>(1)相机登陆的IP、用户名和密码</h4>
+<pre>
+    出厂默认 IP:192.168.1.100,用户名:admin,密码:admin.
+</pre>
+<h4>(2)忘记IP地址或用户名密码怎么办?</h4>
+<pre>
+    采用硬件复位的方式解决.
+    操作方法:打开设备外盖,黑色盖板上有圆孔,通过圆孔使用工具长按电路板上的复位按钮,待设备LED灯闪两下后松开按钮,设备重启后即可恢复到默认的IP、用户名和密码.
+</pre>
+<h4>(3)一体机配置工具</h4>
+<pre>
+    若客户电脑IE版本(要求IE版本8.0以上)太低或电脑配置太低无法打开设备网页,可使用一体机配置工具对设备进行配置.<a href="http://it-wy.cn/download/tool/一体机调试工具.rar">一体机配置工具点击获取.</a>
+</pre>
+<h4>(4)相机无法登陆</h4>
+<ul>
+    <li>
+        请确保设备和登陆电脑在同一个局域网,局域网无其他设备和一体机IP冲突,IP冲突会导致登陆不上.<br>
+        判断方法:先断开设备,再通过在电脑上ping设备IP,能ping通说明局域网此IP已经在使用.
+    </li>
+    <li>
+        请检查并确保网口指示灯亮,指示灯不亮说明网络不通,导致登陆不上,此时需检查网络.
+    </li>
+</ul>
+<h4>(5)网页端登陆的常见问题</h4>
+<ul>
+    <li>
+        登陆设备后,登陆界面显示不正常,请确保IE版本是IE8.0及以上.
+    </li>
+    <li>
+        登陆到实时视频界面,无视频播放,此问题为没有安装控件,重新刷新网页,在网页会提示安装控件,安装完成即可看到实时视频.
+    </li>
+</ul>
+<h4>(6)识别问题</h4>
+<ul>
+    <li>车牌识别错误:为保证最佳识别,请确保相机侧角<30度,尽量与车道平行;车牌呈像清楚、像素在120~200.</li>
+    <li>一体机视频卡顿:场景中运动物体较多会干扰识别,可在"安装引导"界面绘制识别区域,将干扰物绘制于识别区域外.</li>
+</ul>
+<h4>(7)录相机连接不上设备</h4>
+<pre>    硬盘录相机接受RTSP over tcp 请求模式;海康NVR连接时请将设备视频编码方式设为H264.</pre>
+<h4>(8)推送结果问题</h4>
+<pre>   域名访问接收HTTP推送结果需要设置DNS服务器.
+</pre>
+
+</body>
+</html>

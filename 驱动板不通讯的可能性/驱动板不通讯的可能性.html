@@ -5,93 +5,70 @@
     <meta http-equiv="pragma" content="no-cache"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
+    <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>        
+    <script src="../js/imgload_gifload.js"></script>     
     <title>驱动板不通讯的可能性</title>
-    <style>
-        body {
-            width: 800px;
-            margin: 0 auto;
-            word-wrap: break-word;
-            word-break: break-all;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        img {
-            display: block;
-            margin: 20px 0;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-        }
-
-        .apparent {
-            color: red;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
-<h1 style="margin: 30px;" align="center">驱动板不通讯的可能性</h1>
-<p style="font-size: 18px;color: darkred;padding:0 40px;">驱动板不通讯是指显示屏上信息不会更新,也没有声音播报.<br>显示屏上信息会更新或者有声音的,都不属于不通讯的范围.</p>
-<div class="content">
-    <ol>
-        <li>
-            <h3>摄像机的端子排插错位</h3>
-            打开摄像机顶盖查看.
-            <img dataOrigin="img/端子插错位.png">
-            上图所示端子排插错位了,现场人员一定要检查这里,我们已经被"坑"了不下十次.
-        </li>
-        <li>
-            <h3>语音输出道口编号不一致</h3>
-            打开管理软件,在"车道设置",双击某条车道信息查看.
-            <img dataOrigin="img/语音输出道口.png">
-            道口编号是软件自动生成的,不要修改.<br>
-            如上图,道口编号和语音输出道口号<span class="apparent">必须一致</span>,除非你确定不一致的作用是什么.
-        </li>
-        <li>
-            <h3>摄像机与驱动板RS485连接不对</h3>
-            检查摄像机到驱动板的连线.
-            <img dataOrigin="img/摄像机与显示屏连线.png">
-            <img dataOrigin="img/A和B.png">
-            如上图,摄像机的A2接驱动板的A+,B2接驱动板的B-.
-        </li>
-        <li>
-            <h3>检查"Config Setting.exe"的LED类型不是室内屏2.0</h3>
-            打开软件根目录,找到"Config"文件夹里的"Config Setting.exe".
-            <img dataOrigin="img/ConfigSetting.png">
-            <img dataOrigin="img/LED类型.png">
-            LED类型必须选"室内屏2.0",除非你知道其它类型的用途.<br>
-            软件发布时,默认设置的LED类型是"室内屏2.0".
-        </li>
-        <li>
-            <h3>电脑操作系统不是WIN7</h3>
-            检查电脑操作系统,若不是win7请更换到win7.<br>
-            目前我们发现软件在win10下运行时不能和驱动板通讯.<br>
-            <span class="apparent">一般情况下,现场所有的屏均不能通讯,很可能就是操作系统的原因造成的.</span>
-        </li>
-        <li>
-            <h3>RS485通讯线是网线的两芯</h3>
-            摄像机到驱动板的RS485线建议用两芯的铜软线,如下图:
-            <img dataOrigin="img/线材正确1.png">
-            最低要求也是网线的四芯,如下图:
-            <img dataOrigin="img/线材正确2.png">
-            <span class="apparent">千万不要用网线的两芯做RS485的通讯线,如下图:</span>
-            <img dataOrigin="img/线材错误.png">
-        </li>
-        <li>
-            <h3>驱动板故障</h3>
-            <img width="100%" dataOrigin="img/驱动板信号指示灯.png">
-            检查驱动板上的指示灯.<br>
-            <span class="apparent">重点关注驱动板上的D6和D7指示灯</span>,相机发送指令给驱动板时,这两个指示灯会闪烁.<br>
-            D5是运行指示灯,正常情况下间隔1秒闪烁一次.<br>
-            D4和D11正常情况下保持常亮.<br>
-            <span class="apparent">最简单的办法就是对调进出口驱动板,排查是否驱动板故障引起的不通讯.</span>
-        </li>
-    </ol>
-</div>
-
+<p class="title">驱动板不通讯的可能性</p>
+<pre><span class="redBig">    驱动板不通讯是指显示屏上信息不会更新,也没有声音播报.
+    显示屏上信息会更新或者有声音的,都不属于不通讯的范围.</span>
+</pre>
+<h3>1.摄像机的端子排插错位</h3>
+<pre>
+    打开摄像机顶盖查看.
+    <img dataOrigin="img/端子插错位.png">
+    上图所示端子排插错位了,现场人员一定要检查这里,我们已经被"坑"了不下十次.
+</pre>
+<h3>2.语音输出道口编号不一致</h3>
+<pre>
+    打开管理软件,在"车道设置",双击某条车道信息查看.
+    <img dataOrigin="img/语音输出道口.png">
+    道口编号是软件自动生成的,不要修改.
+    如上图,道口编号和语音输出道口号<span >必须一致</span>,除非你确定不一致的作用是什么.
+</pre>
+<h3>3.摄像机与驱动板RS485连接不对</h3>
+<pre>
+    检查摄像机到驱动板的连线.
+    <img dataOrigin="img/摄像机与显示屏连线.png">
+    <img dataOrigin="img/A和B.png">
+    如上图,摄像机的A2接驱动板的A+,B2接驱动板的B-.
+</pre>
+<h3>4.检查"Config Setting.exe"的LED类型不是室内屏2.0</h3>
+<pre>
+    打开软件根目录,找到"Config"文件夹里的"Config Setting.exe".
+    <img dataOrigin="img/ConfigSetting.png">
+    <img dataOrigin="img/LED类型.png">
+    LED类型必须选"室内屏2.0",除非你知道其它类型的用途.
+    软件发布时,默认设置的LED类型是"室内屏2.0".
+</pre>
+<h3>5.电脑操作系统不是WIN7</h3>
+<pre>
+    检查电脑操作系统,若不是win7请更换到win7.
+    目前我们发现软件在win10下运行时不能和驱动板通讯.
+    <span >一般情况下,现场所有的屏均不能通讯,很可能就是操作系统的原因造成的.</span>
+</pre>
+<h3>6.RS485通讯线是网线的两芯</h3>
+<pre>
+    摄像机到驱动板的RS485线建议用两芯的铜软线,如下图:
+    <img dataOrigin="img/线材正确1.png">
+    最低要求也是网线的四芯,如下图:
+    <img dataOrigin="img/线材正确2.png">
+    <span >千万不要用网线的两芯做RS485的通讯线,如下图:</span>
+    <img dataOrigin="img/线材错误.png">
+</pre>
+<h3>7.驱动板故障</h3>
+<pre>
+<img width="100%" dataOrigin="img/驱动板信号指示灯.png">
+检查驱动板上的指示灯.
+<span >重点关注驱动板上的D6和D7指示灯</span>,相机发送指令给驱动板时,这两个指示灯会闪烁.
+D5是运行指示灯,正常情况下间隔1秒闪烁一次.
+D4和D11正常情况下保持常亮.
+<span >最简单的办法就是对调进出口驱动板,排查是否驱动板故障引起的不通讯.</span>
+</pre>
 </body>
 </html>

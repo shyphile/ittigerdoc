@@ -5,57 +5,31 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
+    <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>
+    <script src="../js/imgload_gifload.js"></script> 
     <title>单车道双向通行系统配置方法</title>
-    <style>
-        body {
-            width: 800px;
-            margin: 0 auto;
-            word-wrap: break-word;
-            word-break: break-all;
-            /*border: 1px solid red;*/
-            /*overflow: hidden;*/
-        }
-
-        img {
-            display: block;
-            margin: -20px auto 0;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-        }
-
-        h1 {
-            margin: 30px;
-        }
-
-        pre {
-            font-size: 16px;
-            line-height: 30px;
-        }
-    </style>
 </head>
 <body>
-<h1 align="center">单车道双向通行系统配置方法</h1>
-<pre>
-    单车道配置两台车牌识别摄像机实现双向通行,只需在软件层面做以下设置即可.
-    避免了单车道双向进出导致的误识别问题,如拍到车尾的车牌.
-</pre>
-<h3>1.车场公共属性配置</h3>
-<pre>
+    <p class="title">单车道双向通行系统配置方法</p>
+    <pre>
+        进出共用一个车道的,容易发生重复识别的现像.如拍到车尾车牌,导致重复触发开匣.
+    按照以下介绍的方法设置,可以解决此类问题.</pre>
+    <h3>1.车场公共属性配置</h3>
+    <pre>
     <img dataOrigin="img/公共属性配置.png">
-    将上图的"相同车牌不处理时间"设置成60秒,即相同车牌两次识别间隔时间为60秒.
-</pre>
-<h3>2.在浏览器里设置行车方向</h3>
-<pre>
-    在浏览器里输入相机IP地址,输入用户名和密码.
-    用户名和密码默认都是admin.
-    <img dataOrigin="img/安装引导.png">
-    <img dataOrigin="img/识别参数设置.png">
-    <img dataOrigin="img/从上至下.png">
-    最后保存即可.
-</pre>
+    将上图的"相同车牌不处理时间"设置成60秒,即60秒内相同车牌只识别一次.</pre>
+    <h3>2.在浏览器里设置行车方向</h3>
+    <pre>
+        在浏览器里输入相机IP地址,输入用户名和密码.
+        用户名和密码默认都是admin.
+        <img dataOrigin="img/安装引导.png">
+        <img dataOrigin="img/识别参数设置.png">
+        <img dataOrigin="img/从上至下.png">
+        最后保存即可.
+    </pre>
 </body>
 </html>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script>
+    <title>摄像机安装和调试技巧</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+            word-wrap:break-word;
+            word-break:break-all;
+            /*border: 1px solid red;*/
+            /*overflow: hidden;*/
+        }
+
+        img {
+            display: block;
+            margin: -20px auto 0;
+            -webkit-box-shadow: 7px 8px 4px #333333;
+            -moz-box-shadow: 7px 8px 4px #333333;
+            box-shadow: 7px 8px 4px #333333;
+            /*width: 100%;*/
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        pre {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        h5 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .redBig {
+            font-family: 微软雅黑;
+            font-size: 17px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">摄像机安装和调试技巧</h1>
+<h3>1.现场安装</h3>
+<pre>
+    推荐摄像机安装在道闸的前面,尽量避免起落杆遮挡画面影响车牌的识别,摄像机建议采用高杆安装方式,离地面
+1.4米以上,俯角在15~40,同时加装一个三维万向节.
+    三维万向节如图:
+    <img dataOrigin="img/万向节.png">
+    <span class="redBig">我司设备出厂已配置万向节.</span>
+    现场总体布局可参考下图:
+    <img dataOrigin="img/布置图.png">
+</pre>
+<h3>2.摄像机安装的高度</h3>
+<pre >
+    对小区,商场等以小车为主的停车场,安装高度推荐在1.4m至1.7m之间;
+    对以大货车为主的场地,如地磅等,车牌位置较高,此时安装高度推荐在1.6m至2m之间;
+    <img dataOrigin="img/安装高度影响.png">
+</pre>
+<h3>3.虚拟线圈的设置</h3>
+<pre>
+    在IE网页端的"安装引导"上进行绘制,确保虚拟线圈绘制在视频画面的下半部分,务必确保所有来车的车牌都
+能触碰到虚拟线圈,以此来确定虚拟线圈的宽度;
+    虚拟线圈下边缘的线可以拉到视频画面的底部,以此来确定虚拟线圈的高度.
+    如图:
+    <img width="100%" dataOrigin="img/虚拟线圈.png">
+</pre>
+<h3>4.车牌成像的要求:大小和水平</h3>
+<pre>
+    车牌成像的像素值推荐在<span class="redBig">140~160</span>之间,能够达到最佳识别率,或者车牌在视频画面的宽度占视频画面宽度
+的<span class="redBig">1/8~1/9</span>最佳,最直观的调试方式,<span class="redBig">车牌在虚拟线圈区域的大小和蓝色虚拟车牌尺寸相当</span>.
+    调试方式:
+    <img dataOrigin="img/变倍聚焦.png">
+    同时加装一个三维万向节.调节好摄像机的视角,<span class="redBig">尽量保持车牌水平</span>.避免出现车牌左高右低或者左低右高的
+
+情况.如<img style="display: inline" dataOrigin="img/识别车牌-错.png">,出现此类效果会影响识别率.
+
+    最佳的效果可以参考:<img style="display: inline;height: 50px;" dataOrigin="img/识别车牌-正确.png">.
+</pre>
+<h3>5.识别区域的设置</h3>
+<pre>
+    在IE网页端的"安装引导"上进行绘制,<span class="redBig">把车牌的在画面上的有效运动范围都包含进来.</span>
+    <span class="redBig">注意:所有现场都必须画上识别区域!</span>
+    如图:
+    <img width="100%" dataOrigin="img/识别区.png">
+    绿色线圈即为识别区域;红色线圈即为虚拟线圈.
+</pre>
+
+
+
+</body>
+</html>

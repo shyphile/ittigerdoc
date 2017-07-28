@@ -12,7 +12,7 @@
     <title>支付宝-条码支付功能开通详解</title>
 </head>
 <body>
-<h1>支付宝-条码支付功能开通详解</h1>
+<p class="title">支付宝-条码支付功能开通详解</p>
 <pre>
     条码支付：即商家使用扫码设备，扫描用户支付宝钱包上的条码/二维码，完成收款。
     链接:<a href="https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.jIqxso&treeId=194&articleId=106039&docType=1" title="" target="_blank">https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.jIqxso&treeId=194&articleId=106039&docType=1</a>
@@ -56,15 +56,15 @@
 </pre>
 <h3>3.生成支付所需key文件</h3> 
 <pre>
-	签约通过后,客户将如下信息发送给我方:
-        APPID,应用私钥,支付宝公钥.
+    签约通过后,客户将如下信息发送给我方:
+    APPID,应用私钥,支付宝公钥.
     应用私钥和支付宝公钥是上文提醒保存在同一个文件夹里的两个文件.
     APPID需要在支付宝开放平台上查看.
-    查看APPID和支付宝公钥的方法:
+    查看APPID和支付宝公钥的方法:    
     <img dataOrigin="img/查看appid和应用私钥.png" alt="" width="100%" >   
-	我方接收到此三个信息后会生成一个key文件,将该key文件拷贝到软件根目录下,即实现了支付宝的条码支付功能.
-    特别注意，密钥要去掉注释部分，且转换成一行字符，否则回车换行也成为密钥的一部分，将导致无法正常加解密。
-	<img dataOrigin="img/alipay.png" alt="">
+    我方接收到此三个信息后会生成一个key文件,将该key文件拷贝到软件根目录下,即实现了支付宝的条码支付功能.
+    特别注意，密钥要去掉注释部分，且转换成一行字符，否则回车换行也成为密钥的一部分，将导致无法正常加解密。	
+    <img dataOrigin="img/alipay.png" alt="">
 </pre>
 </body>
 </html>

@@ -13,18 +13,17 @@
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
     <script src="../js/imgload_gifload.js"></script>  
-   
 </head>
 <body>
-<h1 align="center">脱机收费操作说明</h1>
-<h2>1.关闭白名单功能</h2>
+<p class="title">脱机收费操作说明</p>
+<h3>1.关闭白名单功能</h3>
 <pre>
     用浏览器登入摄像机,用户名和密码默认:admin,然后如下图设置.
     <img dataOrigin="img/关闭白名单.png">
     <span class="redBig">注:纯脱机收费的应用场合,内部车牌数据请通过<a href="http://it-wy.cn/download/tool/一体机配置工具1.0.15.2.rar">白名单导入工具</a>添加.</span>
     <span class="redBig">注:内部车牌到期时间不要大于2037年,建议最大设到2030年即可.</span>
 </pre>
-<h2 style="color: red;">2.出入口配置组网</h2>
+<h3 style="color: red;">2.出入口配置组网</h3>
 <pre>
     如下图,按照实际摄像机的安装位置定义相机是入口还是出口.
     <img dataOrigin="img/出入口配置.png">
@@ -32,25 +31,25 @@
     <img dataOrigin="img/出入口配置-参数设置.png">
     如上图设置后,192.168.0.4的相机里也会生成相同的组网信息.
 </pre>
-<h2>3.串口参数设置</h2>
+<h3>3.串口参数设置</h3>
 <pre>
     <img dataOrigin="img/串口设置.png">
     <span class="redBig">注:串口参数设置错误会导致没有显示和语音输出.</span>
 </pre>
-<h2>4.用"OfflineSetting.exe"自定义语音和收费标准.</h2>
+<h3>4.用"OfflineSetting.exe"自定义语音和收费标准.</h3>
 <pre>
     <span class="redBig">入口摄像机可以不设置收费标准,出口摄像机必须设置收费标准.</span>
     <img class="gif" dataOrigin="img/OfflineSetting.png" data-gif="img/OfflineSetting.gif" >
     <span class="redBig">更改设置后需要重启摄像机才能生效.</span>
 </pre>
-<h2>5.重启摄像机</h2>
+<h3>5.重启摄像机</h3>
 <pre>
     <img dataOrigin="img/重启摄像机.png">
-     <span class="redBig">
-        注意:
-        a.月租车脱机进出记录不会上传到软件端,只有临时车进出记录和收费记录才会上传,识别截图不上传.
-        b.通过软件手动输入的车牌不会被脱机模式使用,只有摄像机识别的车牌才能作为脱机时判断收费的依据.
-        c.相机间的网络故障将会中断脱机收费模式,因为出口相机在计算停车费时,会调用入口相机里存储的该车入场时间.
+    <span class="redBig">
+    注意:
+    a.月租车脱机进出记录不会上传到软件端,只有临时车进出记录和收费记录才会上传,识别截图不上传.
+    b.通过软件手动输入的车牌不会被脱机模式使用,只有摄像机识别的车牌才能作为脱机时判断收费的依据.
+    c.相机间的网络故障将会中断脱机收费模式,因为出口相机在计算停车费时,会调用入口相机里存储的该车入场时间.
     </span>
 </pre>
 </body>

@@ -1,10 +1,11 @@
- body {
+body {
     width: 800px;
     margin: 0 auto;
 }
 
 pre{
     font-size: 16px;
+    line-height: 2em;
     white-space:pre-wrap;
     /*white-space:-moz-pre-wrap;
     white-space:-pre-wrap;
@@ -12,34 +13,36 @@ pre{
     word-wrap:break-word;
 }
 
+ul pre {
+    margin: 0px;
+}
+
 img {
     display: block;
-    margin: 0px auto;
+    margin: -20px auto;
     -webkit-box-shadow: 7px 8px 4px #333333;
     -moz-box-shadow: 7px 8px 4px #333333;
     box-shadow: 7px 8px 4px #333333;
 }
 
-h1{
-    margin: 30px;
+p.title{
+    font-size: 32px;
+    font-family:黑体;
+    font-weight:bold;
     text-align: center;
 }
 
 h5 {
     font-size: 14px;
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 li {
     margin-top: 10px;
 }
 
-ul pre {
-    margin: 0px;
-}
-
 .explain {
-    font-size: 9px;
+    font-size: 12px;
     text-align: center;
     margin-bottom: -30px;
     margin-top: 1px;
@@ -63,8 +66,23 @@ ul pre {
     font-weight: bold;
 }
 
-.apparent {
-    color: red;
-    font-size: 18px;
-    font-weight: bold;
+.note {  
+    color: blue;
+    font-size: 14px;
+}
+
+.menu h4 {
+    text-indent: 1em;
+}
+
+.menu h5 {
+    text-indent: 2em;
+}
+
+td {
+    text-align: center;
+}
+
+ul>li{
+    line-height:2em;
 }

@@ -24,8 +24,8 @@
             <div class="background_profil" onclick="displayCount()">
                 <div style="display: none; color: white;" id="count">
                     您是第
-                    <script src="http://count.knowsky.com/count1/count.asp?id=82048&sx=1&ys=41" language="JavaScript"
-                    charset="gb2312"></script>
+                    <!--<script src="http://count.knowsky.com/count1/count.asp?id=82048&sx=1&ys=41" language="JavaScript"-->
+                    <!--charset="gb2312"></script>-->
                     位访客.
                 </div>
             </div>
@@ -49,10 +49,7 @@
                                 <a class="vip" href="./摄像机调试方法/摄像机调试方法.html">摄像机调试方法-经验分享</a>
                             </li>
                             <li>
-                                <a class="vip" href="./摄像机安装和调试技巧/摄像机安装和调试技巧.html">摄像机安装和调试技巧</a>
-                            </li>
-                            <li>
-                                <a href="./车牌识别一体机安装调试指南/车牌识别一体机安装调试指南.html">摄像机安装调试指南</a>
+                                <a href="./车牌识别一体机安装调试指南/130W车牌识别一体机安装调试指南.html">130万像素摄像机安装调试指南</a>
                             </li>
                             <li>
                                 <a class="vip" href="./sixStep/sixStep.html">调试流程六步走 </a>
@@ -77,7 +74,7 @@
                                 <a class="vip" href="./车牌识别共享操作集中说明/车牌识别共享操作集中说明.html">车牌识别共享操作集中说明</a>
                             </li>
                             <li>
-                                <a href="./白名单脱机显示和语音播报设置/白名单脱机显示和语音播报设置.html">脱机送显和报语音功能 参数设置</a>
+                                <a href="./白名单脱机显示和语音播报设置/白名单脱机显示和语音播报设置.html">白名单脱机送显和报语音功能 参数设置</a>
                             </li>
                             <li>
                                 <a class="vip" href="./收费员培训资料/收费员培训资料.html">收费员培训手册</a>
@@ -93,7 +90,7 @@
                     <li  class="dropdown"><a data-toggle="dropdown">硬件资料<i class="icon-arrow"></i></a>
                         <ol class="dropdown-menu">
                             <li>
-                                <a href="./车牌识别一体机用户手册/车牌识别一体机用户手册.html">车牌识别一体机用户手册（新机壳）</a>
+                                <a href="./车牌识别一体机用户手册/130W车牌识别一体机用户手册.html">130万像素车牌识别一体机用户手册</a>
                             </li>
                             <li>
                                 <a href="tool/车牌识别管线图尺寸图.zip">车牌识别管线图尺寸图.cad</a>
@@ -109,7 +106,7 @@
                                 <a href="./车牌识别系统软件说明书/车牌识别系统软件说明书.html">车牌识别系统管理软件说明书</a>
                             </li>
                             <li>
-                                <a href="./中央收费说明/中央收费使用说明.html">中央收费使用说明书</a>
+                                <a href="./中央收费说明/中央收费使用说明.html">中央收费操作说明</a>
                             </li>
                             <li>
                                 <a href="./车场预警功能说明/车场预警功能说明.html">车场预警功能的使用</a>
@@ -124,7 +121,7 @@
                                 <a href="./单车道双向通行系统/单车道双向通行系统.html">单车道双向通行系统设置方法</a>
                             </li>
                             <li>
-                                <a href="SQL Server 客户端连接的问题/SQL Server 客户端连接的问题.html">SQL Server客户端连接的问题</a>
+                                <a href="SQL Server 客户端连接的问题/SQL Server 常见问题汇总.html">SQL Server 常见问题汇总</a>
                             </li>
                             <li>
                                 <a href="非机动车刷卡功能详解/非机动车刷卡功能详解.html">非机动车刷卡功能详解</a>
@@ -198,7 +195,7 @@
                         </li>
                     </ol>  
                 </div>
-                 <p class="title">Intentions to be the best</p>
+                <p class="title">Intentions to be the best</p>
             </div>
             <div class="card">
                 <iframe id="iframepage" name="frame" src="./homePage/homePage.html" frameborder="0" scrolling="no"
@@ -216,17 +213,21 @@
             var imgs=topWin.document.getElementsByTagName('img'); //子窗口所有img对象
             $(imgs).each(function(index,element){
                 if($(this).offset().top<ch){
+                   if(!$(this).attr('src')){
                     $(this).attr('src',$(this).attr('dataOrigin'));
                 }
-            });
+            }
+        });
 
             document.onscroll=function(){ //因为兼容性问题 不能用jquery的scroll();
             var distance=$(this).scrollTop();  //父窗口滚动距离
             $(imgs).each(function(index,element){
                 if($(this).offset().top<(distance+ch-10)){
-                    $(this).attr('src',$(this).attr('dataOrigin'));
-                }
-            });
+                    if(!$(this).attr('src')){  //src属性不存在才执行替换逻辑,以免影响gif图循环
+                       $(this).attr('src',$(this).attr('dataOrigin'));
+                   }                 
+               }
+           });
         };
     });
            //子网页图像加载后,调用此方法,动态调整iframe的高度
