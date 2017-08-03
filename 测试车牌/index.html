@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" onload="">
 <head>
     <meta charset="UTF-8">
@@ -44,8 +44,8 @@
         var initTopValue = initTop;
         var imgDiv, img;
         $(document).ready(function () {
-            winHeight =$(document).height();
-            document.body.style.height = winHeight + "px";    
+            winHeight = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight;
+            document.body.style.height = winHeight + "px";  
             imgDiv = document.getElementById("imgDiv");
             img = document.getElementById("img");
             moveTimer = setInterval(moveImg, moveTimeValue);  //第一次启动图片移动
