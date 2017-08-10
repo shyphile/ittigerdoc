@@ -5,96 +5,63 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
-  <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <title>调试流程六步走</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .content {
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: bold;
-            color: darkcyan;
-            position: absolute;
-            left: 150px;
-        }
-
-        .content1 {
-            top: 90px;
-        }
-
-        .content2 {
-            top: 215px;
-        }
-
-        .content3 {
-            top: 348px;
-        }
-
-        .content4 {
-            top: 475px;
-        }
-
-        .content5 {
-            top: 595px;
-        }
-
-        .content6 {
-            top: 732px;
-        }
-    </style>
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>停车系统快速部署引导</title>
+    <link href="../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.gif.js"></script>
+    <script src="../js/imgload_gifload.js"></script> 
 </head>
 <body>
-    <img src="调试流程六步走.png">
-    <div class="content content1">
-        <pre>
-                                        a.管理电脑操作系统要求:Win7,32位和64位都可以;
-                                        b.停车场内每台电脑都要安装dotNet4.6,下载链接:<a href="../tool/NDP46-KB3045557-x86-x64-AllOS-ENU.rar"
-                                                                       target="_blank">点此下载</a>;
-                                        c.选择一台不会经常关机的电脑安装SQL2008数据库,只需装一次,切勿重复安装.
-                                          下载链接:<a href="ed2k://|file|cn_sql_server_2008_r2_developer_x86_x64_ia64_dvd_522724.iso|4662884352|E436F05BCB0165FDF7E5E61862AB6BE1|/" target="_blank">点此下载</a>.
+    <h3>1.定位原则</h3>
+    <pre>
+        <img src="img/位置选择的建议.png" width="80%">
+        <img src="img/相机安装位置选择原则.png" width="80%">
     </pre>
-    </div>
-    <div class="content content2">
-        <pre>
-                                        a.下载最新车牌识别管理软件,拷贝至除C盘外的其它盘,如D盘;
-                                        b.解压下载的软件,发送"ParkUI.exe"快捷方式到桌面即完成软件部署;
-                                        c.停车场内每台电脑都要拷贝一份软件.
-                                          软件下载地址为本网站底部栏.
+    <h3>2.放线规则</h3>
+    <pre>
+        (1)每台相机需要一根独立网线,网线至少要预留4米;
+        (2)从岗亭或控制室放一根220v的电源线到道匣或显示屏安装的位置,220v电源可以并联分出去给其它
+    的道匣和显示屏供电;
+        (3)从相机到道匣放一根8芯线(预留4芯备用).
+        <img src="img/直观布线图1.png" width="80%">  
     </pre>
-    </div>
-    <div class="content content3">
-        <pre>
-                                        a.在装数据库的电脑上打开软件所在文件夹;
-                                        b.找到"CreateDatabase.exe",填写正确的参数;
-                                        c.点击"创建数据库"按钮,提示创建成功后再点击"保存连接字符串"按钮.
-    </pre>
-    </div>
+    <h3>3.接线方法</h3>
+    <pre>
+       参考下图接线.
+       <img src="img/简化功能接线-接线指导图1.png" width="80%">  
+   </pre>
+   <h3>4.软件部署</h3>
+   <pre>
+       (1)首先下载必要的文件
+       <a href="../tool/NDP46-KB3045557-x86-x64-AllOS-ENU.rar" target="_blank">dotNet4.6(车牌识别管理软件基于此架构编写，需要它的支持才能够运行)</a>
+       <a href="ed2k://|file|cn_sql_server_2008_r2_developer_x86_x64_ia64_dvd_522724.iso|4662884352|E436F05BCB0165FDF7E5E61862AB6BE1|/" target="_blank">SQL2008R2数据库下载(请先安装迅雷,再下载)</a>[如果不使用sql2008数据库,可不用下载]
+       <a href="../index.html#software_down" target="_blank">车场管理软件</a>
+       <a href="../tool/批量导入数据模版及工具V22.zip" target="_blank">批量导入数据模版及工具</a>
+       <a href="../tool/设置可读可写共享文件夹.rar" target="_blank">设置可读可写共享文件夹(一键解决局域网内共享问题)</a>
+       <a href="../tool/一体机配置工具1.0.15.2.rar" target="_blank">摄像机调试工具(含白名单导入模版及功能)</a>
 
-    <div class="content content4">
-        <pre>
-                                        a.布线请参考<a href="../commPic/直接布线图2.png" target="_blank">布线图-立体说明</a>;
-                                        b.设备间接线参考<a href="../commPic/简化功能接线-接线指导图1.png" target="_blank">接线图-常用</a>,这是最常见的接线方式.
-                                        c.参考<a href="../摄像机安装和调试技巧/摄像机安装和调试技巧.html" target="_blank">"摄像机安装和调试技巧"</a>设置相机角度和相关的参数.
-    </pre>
-    </div>
-    <div class="content content5">
-        <pre>
-                                        a.软件相关设置参考<a href="../车牌识别管理软件快速操作手册/车牌识别管理软件快速操作手册.html"
-                                                     target="_blank">"车牌识别管理软件快速操作手册"</a>"和<a href="../车牌识别系统软件说明书/车牌识别系统软件说明书.html" target="_blank">"车牌识别管理软件说明书"</a>;
-                                        b.下载摄像机调试工具<a href="../tool/调试工具打包下载.rar" target="_blank">"调试工具打包下载"</a>,修改相机参数;
-                                        c.参考<a href="../摄像机调试方法/摄像机调试方法.html"
-                                               target="_blank">"摄像机调试方法-经验分享"</a>,设置相机角度和相关的参数.
-    </pre>
-    </div>
-    <div class="content content6">
-        <pre>
-                                        多电脑多岗亭的停车场需要设置数据库,加密狗和车牌图片共享.
-                                        具体参考<a href="../车牌识别共享操作集中说明/车牌识别共享操作集中说明.html" target="_blank">车牌识别共享操作集中说明</a>.
-    </pre>
-    </div>
+       (2)软件参数设置
+       a.解压下载的车场管理软件,发送"ParkUI.exe"快捷方式到桌面即完成软件部署;
+       <span class="note">注:用于停车场管理的电脑都要拷贝一份车场管理软件.</span>
+       b.安装dotNet4.6;若使用sql2008数据库,还需要安装sql2008数据库软件.
+       c.插上加密狗,打开桌面上的"ParkUI.exe"快捷方式,第一次打开数秒的等待时间.
+           等待一段时间后,弹出找不到数据库的对话框,点击"是",然后按照提示完成数据库创建.
+           <a href="../车牌识别管理软件快速操作手册/车牌识别管理软件快速操作手册.html#createDatabase" target="_blank">数据库创建参考这里</a>.
+       d.进入软件主界面,设置收费标准\车场设置\车道设置\增加收费员账户;
+       e.切换到收费员账户登入软件并进入实时监控,即可开始收费操作.
+       
+       详细的软件操作参考<a href="../车牌识别管理软件快速操作手册/车牌识别管理软件快速操作手册.html" target="_blank">软件快速操作手册</a>.
+       多电脑多岗亭的停车场需要设置数据库,加密狗和车牌图片共享,参考<a href="../车牌识别共享操作集中说明/车牌识别共享操作集中说明.html" target="_blank">车牌识别共享操作集中说明</a>.
+   </pre>
+   <h3>5.相机调试</h3>
+   <pre>
+       a.修改相机IP;
+       b.画虚拟线圈和识别区域;
+       c.观察车牌成像大小和角度,是否符合要求;
+       详细的相机调试方法参考<a href="../摄像机调试方法/摄像机调试方法.html" target="_blank">摄像机调试方法</a>.
+   </pre>
 </body>
 </html>
