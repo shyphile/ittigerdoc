@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link href="../../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery.gif.js"></script>
+    <script src="../../js/imgload_gifload.js"></script> 
+    <title>入场收费功能</title>
+</head>
+<body>
+<p class="title">入场收费功能</p>
+<span class="redBig">以下参数设置只对当前电脑有效,多台电脑需多次如法炮制.</span>
+<h3>1.功能介绍</h3>
+<pre>   顾名思议,车辆入场时收费,出场时不收费直接出去.
+</pre>
+<h3>2.操作说明</h3>
+<h4>2.1 定义收费标准并绑定给车场</h4>
+<pre>
+    在软件的收费设置里增加收费标准,收费类型选择"记次收费",即按进入次数收费.
+    然后在车场设置里绑定该标准.
+    <img dataOrigin="img/收费标准.png" />
+    <img dataOrigin="img/绑定收费标准.png">
+</pre>
+<h4>2.2 开启入场收费功能</h4>
+<pre>    在软件根目录里找到Config文件夹,在此文件夹下有个ExtendConfig.xml,用记事本打开该文件,并将"EntryCharge"的value值设为1,如下图.
+    <img dataOrigin="img/EntryCharge.png" />
+    更改后,保存并重启车牌识别管理软件.
+</pre>
+<h4>2.3 进入实时监控收费</h4>
+<pre>
+    当有车辆正常识别进场时,软件会弹出收费框,收费员收取停车费后,点击"确认开匣"",车辆进场,软件记录该车辆收费信息.该车出场时,直接免费放行.
+    <img dataOrigin="img/收费信息.png">
+</pre>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link href="../../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery.gif.js"></script>
+    <script src="../../js/imgload_gifload.js"></script> 
+    <title>月租车套餐充值功能</title>
+</head>
+<body>
+<p class="title">月租车套餐充值功能</p>
+<span class="redBig">以下参数设置只对当前电脑有效,多台电脑需多次如法炮制.</span>
+<h3>1.功能介绍</h3>
+<pre>    套餐规定了充值的金额和时间,管理员为车主充值时,只需选择套餐类型即可.
+省去手动输入金额和时间的麻烦.另一好处时,如果充值操作员不是可信的人,本功能可防止操作员徇私舞弊.
+</pre>
+<h3>2.操作说明</h3>
+<h4>2.1 定义收费套餐</h4>
+<pre>
+    <img dataOrigin="img/定义收费套餐.png" />
+    在此增删改收费套餐规则,规则包含充值金额和充值时间.
+</pre>
+<h4>2.2 绑定收费套餐</h4>
+<pre>    套餐绑定是针对车的,不是针对用户.
+    一辆车可以绑定多个套餐.
+    <img dataOrigin="img/绑定操作.png" width="100%">
+    按照上图标识的步骤操作即可为车辆绑定套餐,可为某辆车或多辆车绑定一个或多个套餐.
+    解除套餐绑定:解除某辆车某个已绑定的套餐.
+    清除所选用户套餐:可为某辆车或多辆车解除所有已绑定的套餐.
+</pre>
+<h4>2.3 套餐充值操作</h4>
+<pre>
+    先开启套餐收费功能,开启方法如下:
+    在软件根目录里找到Config文件夹,在此文件夹下有个Config Setting.exe,打开并将"套餐收费"功能开启,如下图.
+    <img dataOrigin="img/configsetting.png" />
+    更改后,保存并重启车牌识别管理软件.
+    进入"车辆管理"窗口,如下图操作,完成月租车套餐充值.
+    <img dataOrigin="img/套餐充值.png" />
+</pre>
+</body>
+</html>

@@ -62,6 +62,7 @@
     //    var iframepage=document.getElementById('iframepage');
     //    setIframeHeight(iframepage);
     //});
+    $('#updateing').text('a');
 });
 
 //  function iFrameHeight() {

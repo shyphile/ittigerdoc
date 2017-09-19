@@ -135,4 +135,8 @@ ol li ol li a:before {
 }
 ol li span { /* For IE6/7. */
     margin: 0 250px 5px -25px;
-}   
+} 
+div>ol>li .new{
+    padding-bottom: 4px;
+    padding-left: 2px;
+}
