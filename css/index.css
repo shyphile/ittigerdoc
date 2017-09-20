@@ -139,4 +139,5 @@ ol li span { /* For IE6/7. */
 div>ol>li .new{
     padding-bottom: 4px;
     padding-left: 2px;
+    /*text-align: */
 }

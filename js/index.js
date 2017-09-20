@@ -57,12 +57,12 @@
     }
 
     $('#activeBtn').click();  //使管理软件一栏默认展开
-
+    displayCount();
     //$('li>a').click(function(){
     //    var iframepage=document.getElementById('iframepage');
     //    setIframeHeight(iframepage);
     //});
-    $('#updateing').text('a');
+    
 });
 
 //  function iFrameHeight() {
@@ -74,10 +74,27 @@
 // }
 
 function displayCount() {
-    if ($('#count a').attr('href') == 'http://count.knowsky.com') {
-        $('#count a').attr('href', './homePage/homePage.html');
-    }
-    $('#count').show();
+    var countInfo=$('#countJS a').attr('title'); 
+    // 今天访问：17 累计访问：20114 点击申请计数器
+    var temp1=countInfo.indexOf('：')+1;
+    var temp11=countInfo.indexOf('累计访问');
+    var dayCount=countInfo.substring(temp1,temp11);
+    var temp2=countInfo.lastIndexOf('：')+1;
+    var temp22=countInfo.indexOf('点击申请计数器');
+    var totalCount=countInfo.substring(temp2,temp22);
+    var countInfoText="您是今天第<span style='color:blue;'>"+dayCount+"</span>位访问,累计访问量:<span style='color:limegreen;'>"+totalCount+'</span>次.<br />感谢您的支持.';
+    $('#countInfo').css(
+        {
+            'color':'white',
+            'font-size':'18px',
+            'text-align':'center',
+            'padding-top':'10px',
+        });
+    $('#countInfo').html(countInfoText);
+    // if ($('#count a').attr('href') == 'http://count.knowsky.com') {
+    //     $('#count a').attr('href', './homePage/homePage.html');
+    // }
+    // $('#count').show();
 }
 
 // var timer1;
