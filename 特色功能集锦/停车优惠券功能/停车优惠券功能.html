@@ -26,7 +26,7 @@
 <pre>
    在软件根目录里找到Config文件夹,在此文件夹下有个Coupon.xml1.
    首先将该文件重命名为Coupon.xml,即去掉原文件名后面的"1",然后用记事本打开该文件,如下图.
-    <img src="img/couponxml.png" />
+    <img dataOrigin="img/couponxml.png" />
     ParkingID:区分停车场的唯一ID号,不能相同,此ID与商户对应.ID自定义,尽可能编的复杂点.
     <span class="note">ID由字母和数字组成,不能包含其它字符.</span>
     IP:发行优惠券的服务器IP地址.
@@ -37,17 +37,17 @@
 </pre>
 <h4>2.2 增加物业信息</h4>
 <pre>    通过浏览器访问发行优惠券的web程序.
-    <img src="img/login.png">
+    <img dataOrigin="img/login.png">
     登入成功后,如下图增加物业信息.
-    <img src="img/添加物业.png">
+    <img dataOrigin="img/添加物业.png">
     输入物业名称,如'summer'.
     修改或删除物业信息:在物业名称上右键,在弹出的菜单中选择.
 </pre>
 <h4>2.3 增加商户信息</h4>
 <pre>
     在物业名称上右键,如下图,选择"添加商户".
-    <img src="img/添加商户.png">
-    <img src="img/添加商户信息.png">
+    <img dataOrigin="img/添加商户.png">
+    <img dataOrigin="img/添加商户信息.png">
     商户:名称自定义.
     车场:即前文提到的Coupon.xml里的ParkingID的信息.
     券过期时间:商户发行券给消费者,在之后多长时间内必须使用,否则过期失效.
@@ -59,19 +59,19 @@
 <pre>
     物业操作员用于定义定额券面额和发行优惠券给商户,还有查询所有记录.
     如下图操作.
-    <img src="img/新增物业操作员.png">
+    <img dataOrigin="img/新增物业操作员.png">
     操作员增加成功后,账号和密码是登入程序的凭证.如下图,
-    <img src="img/操作员信息.png" width="100%">
-    <img src="img/login_sum.png">
+    <img dataOrigin="img/操作员信息.png" width="100%">
+    <img dataOrigin="img/login_sum.png">
     默认物业操作员权限不够,可更改权限.
-    <img src="img/权限设置.png">
+    <img dataOrigin="img/权限设置.png">
     <span class="note">物业操作员信息不可修改,只能删除.</span>
 </pre>
 <h4>2.5 增加商户操作员</h4>
 <pre>
     商户操作员主要用于发行优惠券给车主,其次可以查询商户发放的券记录.
     如下图操作.
-    <img src="img/增加商户操作员.png">
+    <img dataOrigin="img/增加商户操作员.png">
     操作员增加成功后,账号和密码是登入程序的凭证.
     也可修改商户操作员的权限.
     <span class="note">商户操作员信息不可修改,只能删除.</span>
@@ -80,7 +80,7 @@
 <pre>
     只有物业操作员可以预先设定定额券的信息.
     定额券规定了可以减免的固定金额.
-    <img src="img/定额券.png">
+    <img dataOrigin="img/定额券.png">
 </pre>
 <h4>2.7 商户充值</h4>
 <pre>
@@ -96,26 +96,26 @@
 <pre>
     查询商户给车主发放的优惠券记录.
     以物业管理员登入,点击物业名称,再点击"券发放记录",可查看该物业管理的所有商户发行的优惠券信息;点击商户名称,再点击"券发放记录",只能查看该商户发行的优惠券信息.
-    <img src="img/券发放记录所有.png" width="100%">
+    <img dataOrigin="img/券发放记录所有.png" width="100%">
 </pre>
 <h4>2.8 商户充值记录</h4>
 <pre>
     查询物业给商户发放的优惠券记录.
     点击物业名称,再点击"商户充值记录",可查看该物业为所有商户发行的优惠券信息.
     点击商户名称,再点击"商户充值记录",只能查看物业为该商户发行的优惠券信息.
-    <img src="img/商户充值记录所有.png" width="100%">
+    <img dataOrigin="img/商户充值记录所有.png" width="100%">
 </pre>
 <h4><span class="redBig">2.9 商户发券操作</span></h4>
 <pre>
     商户访问为车主发券的网站,注意该网站与物业为商户发券网站不同.
     登入后,界面如下:
-    <img src="img/release.png">
+    <img dataOrigin="img/release.png">
 
     发行联网优惠券的,需要绑定车牌号,如下图:
-    <img src="img/联机型券.png" width="100%">
+    <img dataOrigin="img/联机型券.png" width="100%">
 
     发行脱机优惠券的,需要将系统生成的二维码发送给车主,如下图:
-    <img src="img/脱机型券.png" width="100%">
+    <img dataOrigin="img/脱机型券.png" width="100%">
     <span class="redBig">
         注意事项:
         1.发行联网优惠券时,停车场软件必须进入实时监控,否则发行会失败;
@@ -130,30 +130,30 @@
     联网券绑定了车牌号,当识别到车牌时,软件自动按照联网券类型扣除一定的费用或时长.
     例子:
     商户为'鄂E34555'这辆车发行一张定额券.
-    <img src="img/发券鄂E34555.png">
+    <img dataOrigin="img/发券鄂E34555.png">
 
     商户能查询到发行的记录.
-    <img src="img/鄂E34555券发放记录.png" width="100%">
+    <img dataOrigin="img/鄂E34555券发放记录.png" width="100%">
 
     该车出场时,停车软件自动使用为该车绑定的优惠券,车主不用感知.
-    <img src="img/收费窗口优惠.png">
+    <img dataOrigin="img/收费窗口优惠.png">
 
 
     脱机券需要车主将二维码信息提供给收费员,收费员用扫码抢扫描后,再扣除一定的费用或时长.
     例子:
     商户给'张三'这个人发行一张定额券.
-    <img src="img/脱机定额优惠券.png">
+    <img dataOrigin="img/脱机定额优惠券.png">
 
     商户能查询到发行的记录.
-    <img src="img/脱机券发放记录.png" width="100%">
+    <img dataOrigin="img/脱机券发放记录.png" width="100%">
 
     '张三'驾车出场时,将二维码给收费员扫描,如果是该车场的优惠券,停车软件自动使用为该车绑定的优惠券.
-    <img src="img/脱机收费窗口.png">
+    <img dataOrigin="img/脱机收费窗口.png">
 </pre>
 <h4>2.11 优惠券消费查询</h4>
 <pre>
     打开停车管理软件,报表管理-->收费明细记录表.
-    <img src="img/报表优惠券.png">
+    <img dataOrigin="img/报表优惠券.png">
 </pre>
 </body>
 </html>
