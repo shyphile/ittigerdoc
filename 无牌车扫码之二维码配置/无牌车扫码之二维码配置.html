@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>QRCode test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<script type="text/javascript" src="./jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./qrcode.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<style>
+	div>span{
+		background-color: brown;
+		color:white;
+		font-size: 16px;
+	}
+	.col-md-4 label{
+		font-family: 微软雅黑;
+		font-size: 16px;
+	}
+	input{
+		margin-bottom: 14px;
+		font-weight: bold;	
+	}
+	.msg{
+
+		font-size: 14px;
+		font-weight: bold;
+		font-family:sans-serif;
+		margin-top: 20px;
+	}
+	.msg>div{
+		margin-bottom: 6px;
+	}
+	.msg>#config_Msg{
+		background-color: #99FF33;
+		margin-bottom: 18px;
+	}
+</style>
+</head>
+<body class="container">
+	<hr />
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<label for="ParkingID">ParkingID(自动生成):</label><input id="ParkingID" class="form-control" type="text" value=""/>
+			<label for="TerminalID">TerminalID(客户端ID):</label><input class="form-control"id="TerminalID" type="text" value="1" />
+			<label for="inID">入口车道编号(<a>在软件里查看</a>):</label><input class="form-control" id="inID" type="text" value="1"/>
+			<label for="outID">出口车道编号(<a>在软件里查看</a>):</label><input class="form-control" id="outID" type="text" value="2"/>
+			<button id="btn" style="float: right;" class="btn btn-primary"><i class="glyphicon glyphicon-saved"></i> 生成二维码信息</button>
+		</div>
+		<div class="col-md-4"><img src="道口编号.png" style="display: none;"></div>
+	</div>
+	<hr />
+	<div style="clear: right;"></div>
+	<div class="row">
+		<div class="col-md-3" id='saveToast'></div>
+		<div class="col-md-3">
+			<div id="qrcode_in" class="qrcode"><span>入口二维码</span></div>
+		</div>
+		<div class="col-md-3">
+			<div id="qrcode_out" class="qrcode"><span>出口二维码</span></div>
+		</div>
+		<div class="col-md-3"></div>
+	</div>	
+	<hr />
+	<div class="msg">
+		<div id="config_Msg"></div>
+		<div id="in_Msg"></div>
+		<div id="out_Msg"></div>
+	</div>	
+	
+
+	<script type="text/javascript">
+		var ParkingID;
+		var qrcode_in,qrcode_out;
+		$(document).ready(function() {
+			ParkingID = document.getElementById("ParkingID");
+			ParkingID.value=newGuid();
+
+			qrcode_in = new QRCode(document.getElementById("qrcode_in"), {
+				width : 200,
+				height : 200
+			});
+
+			qrcode_out = new QRCode(document.getElementById("qrcode_out"), {
+				width : 200,
+				height : 200
+			});
+
+			$("#btn").on("click", function (e) {
+				// ParkingID.value=newGuid();
+				$('span').show();
+				var in_str="http://www.it-wy.cn:9191/?ChannelIndex="+$.trim($('#inID').val())+"&ParkingID="+$.trim($('#ParkingID').val())+"&TerminalID="+$.trim($('#TerminalID').val());
+				var out_str="http://www.it-wy.cn:9191/VehicleOut/index?ChannelIndex="+$.trim($('#outID').val())+"&ParkingID="+$.trim($('#ParkingID').val())+"&TerminalID="+$.trim($('#TerminalID').val());	
+				var config_Msg="以下两行配置信息复制到NoPlate.xml文件里替换原有两行<br .>&nbsp;&nbsp;&lt;ParkingID&gt;"+$.trim($('#ParkingID').val())+"&lt;/ParkingID&gt;"+"<br>"+"&nbsp;&nbsp;&lt;TerminalID&gt;"+$.trim($('#TerminalID').val())+"&lt;/TerminalID&gt;"
+				makeCode(in_str,out_str);
+				$('#in_Msg').text(in_str+"---入口链接地址");
+				$('#out_Msg').text(out_str+"---出口链接地址");
+				$('#config_Msg').html(config_Msg);
+				$('#saveToast').html("二维码保存方法:<br />在二维码上点击鼠标右键--->'图片另存为'<br /><br /><br />ParkingID和TerminalID配置信息复制到NoPlate.xml文件里替换原有两行");
+			});
+
+			$("#ParkingID").focus(function(){
+				// ParkingID.value=newGuid();
+			});
+			$('a').click(function(){
+				$('img').show('slow');
+			});
+			$('span').hide();
+			// makeCode();
+		});
+
+		function makeCode (in_str,out_str) {			
+			qrcode_in.makeCode(in_str);
+			qrcode_out.makeCode(out_str);
+		}
+
+		function newGuid()
+		{
+			var guid = "";
+			for (var i = 1; i <= 32; i++){
+				var n = Math.floor(Math.random()*16.0).toString(16);
+				guid +=   n;
+				if((i==8)||(i==12)||(i==16)||(i==20))
+					guid += "-";
+			}
+			return guid;    
+		}
+
+	</script>
+</body>
+</html>

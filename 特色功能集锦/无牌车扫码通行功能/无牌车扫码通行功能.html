@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link href="../../css/css/font-awesome.css" rel="stylesheet" media="screen">
+    <link rel='stylesheet' id='jquery-gif-css' href='../../css/jquery.gif.css' type='text/css' media='all'/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/jquery.gif.js"></script>
+    <script src="../../js/imgload_gifload.js"></script> 
+    <title>无牌车扫码通行功能</title>
+</head>
+<body>
+<p class="title">无牌车扫码通行功能</p>
+<span class="redBig">以下参数设置只对当前电脑有效,多台电脑需多次如法炮制.</span>
+<h3>1.功能介绍</h3>
+<pre>  无牌车或不能识别的车牌,通过微信或支付宝扫描张贴的二维码进出场.
+  进场时,系统分配一个临时车牌给该车主,之后处理流程同正常识别到车牌一样.
+  出场时,车主主动扫描张贴的二维码,系统自动检索出为该车主分配的临时车牌,之后处理流程同正常识别到车牌一样.
+  本功能支持移动支付,可应用于无人执守的停车场.
+</pre>
+<h3>2.操作说明</h3>
+<h4>2.1 开启无牌车扫码通行功能</h4>
+<pre>
+   在软件根目录里找到Config文件夹,在此文件夹下有个NoPlate.xml1.
+   首先将该文件重命名为NoPlate.xml,即去掉原文件名后面的"1",然后用记事本打开该文件,如下图.
+    <img src="img/npplatexml.png" />
+    IP:运行'无牌车扫码通行'程序的服务器IP地址,无特殊情况下,IP地址保持默认,即123.56.159.161.
+    ParkingID:区分停车场的唯一ID号,不能相同.ID自定义,尽可能编的复杂点.
+    不熟悉的,可访问"http://it-wy.cn/download/noplate"自动生成.
+    <span class="note">ID由字母和数字组成,不能包含其它字符.</span>
+    TerminalID:多电脑管理的停车场,本ID用于区分不同电脑,同一车场内ID不能相同.
+    如某停车场有A,B两台电脑管理两进两出,那A电脑TerminalID就是1,B电脑是2.
+    PayLink:实现移动支付的跳转链接,不能更改.
+    更改后,保存并重启车牌识别管理软件.
+</pre>
+<h4>2.2 功能使用</h4>
+<pre>
+    停车场管理软件进入'实时监控'即开始使用本功能.
+    使用本功能,需要本地电脑能够访问运行'无牌车扫码通行'程序的服务器,
+    在实时监控右上角可查看本地电脑是否能与服务器通讯.
+	<img src="img/通讯指示.png">
+	<span class="redBig">指示标识是红色时,本功能将不能使用,请检查本地网络.</span>
+</pre>
+<h4>2.3 二维码信息准备</h4>
+<pre>
+    <a href="../../无牌车扫码之二维码配置/无牌车扫码之二维码配置.html" target="_blank">点击配置二维码信息</a>,如下图操作:
+
+</pre>	
+<h4>2.4 车主使用方法</h4>
+<pre>
+
+</pre>	
+<h4>2.5 注意事项</h4>
+<pre>
+	a.软件必须进实时监控;
+	b.使用的二维码必须是对应ParkingID生成,否则会造成使用混乱;
+	c.收费电脑必须网络正常,且能够访问外网.
+	d.要增加移动支付的,必须还通我司支付功能,否则只支持现金支付.
+</pre>
+</body>
+</html>

@@ -82,7 +82,7 @@ function displayCount() {
     var temp2=countInfo.lastIndexOf('：')+1;
     var temp22=countInfo.indexOf('点击申请计数器');
     var totalCount=countInfo.substring(temp2,temp22);
-    var countInfoText="您是今天第<span style='color:blue;'>"+dayCount+"</span>位访问,累计访问量:<span style='color:limegreen;'>"+totalCount+'</span>次.<br />感谢您的支持.';
+    var countInfoText="您是今天第<span style='color:blue;'>"+dayCount+"</span>位访客,累计访问量:<span style='color:limegreen;'>"+totalCount+'</span>次.<br />感谢您的支持.';
     $('#countInfo').css(
         {
             'color':'white',

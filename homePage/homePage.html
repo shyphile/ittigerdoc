@@ -5,93 +5,85 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../无牌车扫码之二维码配置/bootstrap/css/bootstrap.min.css">
     <title>index</title>
     <style>
-        .info {
-            border-left:1px dotted solid;
-            margin-top: 2%;
-            margin-left: 25%;
-            font-size: 16px;
-            color: white;
-            /*border: 1px solid brown;*/
-            position: absolute;
-            top: 0;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-        }
+    .block{
+        width:600px;
+        margin:6px auto;
+        font-size: 18px;
+        border: 1px solid rgb(0,128,0);
+        border-radius: 5px;
+        background-color: lightgray;
+        opacity: 0.8;
+    }
+    .block>span{
+        font-size: 18px;
+        color: rgb(128,255,255); 
+        font-family:微软雅黑;
+        background-color: gray;
+    }
 
-            .info ul li {
-                padding: 5px;
-                font-weight: 400;
-            }
+    div>img{
+        width: 80%;
+    }
 
-        .content {
-            margin: 300px 20% 0 30%;
-            /*text-align: center;*/
-            font-size: 20px;
-            /*font-weight: bold;*/
-            color: white;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-        }
+    dt{
+        font-weight: bold;
+        color:purple;
+        margin-top: 12px;
+    }
+    body{
+        background-image: url(backimage.png);
+    }
 
-        .redBig {
-            font-family: 微软雅黑;
-            font-size: 17px;
-            color: yellowgreen;
-            font-weight: bold;
-        }
-        .ad{
-            width:400px;
-        }
-        .ad>h2{
-            color:aqua;
-        }
-        .ad ol li{
-            margin-bottom:5px;
-            font-size:1.2em;
-            color:antiquewhite;
-        }
-        .ad>p{
-            margin:1px 0;
-            font-size:12px;
-            float:right;
-            color:lightgray;
-        }
-        .special{
-            width:600px;
-             margin: 30px 20% 0 30%;
-            /*text-align: center;*/
-            font-size: 20px;
-            /*font-weight: bold;*/
-            color: white;
-            -webkit-box-shadow: 7px 8px 4px #333333;
-            -moz-box-shadow: 7px 8px 4px #333333;
-            box-shadow: 7px 8px 4px #333333;
-        }
-    </style>
+</style>
 </head>
-<body style="background-color: #666666;height:1800px;">
-    <img src="camera.png" style="position: fixed;right: 0px;top: 10px;">
+<body class="">
+    <div class="row"> 
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+            <div class="block">
+                <span>更新公告</span>
+                <ol>
+                    <li>
+                        更新车牌识别管理软件至V2613<br />
+                    </li>
+                </ol>
+            </div>
+            <div class="block">
+                <span>功能特点</span>
+                <dl>
+                    <dt>三色显示屏</dt>
+                    <dd>整屏全三彩,替代红绿灯功能.禁止通行:全屏红色显示信息;等待确认:全屏黄色显示信息;合法通行,全屏绿色显示信息.</dd>
+                    <dt>出口遥控收费和入口遥控确认开闸</dt>
+                    <dd>重点解决保安不会操作电脑的问题,遥控开闸后软件端能够产生收费和通行记录.</dd>
+                    <dt>车位预警</dt>
+                    <dd>解决月租车不停在自己的车位,在小区内胡乱停放,占用小区临时车位的问题.系统自动向管理人员推送警告信息,杜绝乱停乱放.</dd>
+                    <dt>满位等待入场功能</dt>
+                    <dd>当车场满位后,等待入场的车辆识别后,在停车场有车出场时,无须倒车二次识别,自动开闸入场.</dd>
+                    <dt>TTS万能语音播报</dt>
+                    <dd>播报任意内容的语音,语音自定义,不限定范围.可以针对每一台车设定个性化称呼,比如:李先生,欢迎回家!</dd>
+                    <dt>无牌车自动入场</dt>
+                    <dd>支持无牌车自动出入场,用户使用手机扫二维码出入场,并计费.</dd>
+                    <dt>车牌识别一体机和显示屏只需一个IP地址</dt>
+                    <dd>为减少网络资源消耗,减少故障节点,显示屏和摄像机使用同一根网线通讯,即只需一个IP地址。</dd>
+                    <dt>软件集中授权</dt>
+                    <dd>多个停车场多台电脑情况下,一个局域网内的所有系统仅只需一个加密狗.</dd>
+                    <dt>内置数据库</dt>
+                    <dd>系统采用内置数据库方案,不需要重新安装数据库,减少系统的维护难度.</dd>
+                    <dt>系统支持时段控制</dt>
+                    <dd>可在指定时段放行或禁止指定某种类型车辆通行,例:小区内0:00-5:00禁止临时车进出.</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="col-md-4 text-right">
+            <img src="camera.png">
+        </div>
+    </div>
 
-    <div class="info">
-      <!--  <span style="display:inline-block;font-size:30px;margin-bottom:50px;color:yellow;">祝有情人的情人节快乐。</span>-->
-        <!--<div style="color: cyan;">温馨提示</div>-->
-        <!--<ul>
-            <li>网页资料较大,建议在wifi模式下浏览</li>
-            <li>
-                手机浏览时,不建议在微信或QQ中打开网站链接,<br>
-                可拷贝链接至浏览器中打开
-            </li>
-            <li>网页资料保存本地快捷键:Ctrl+S</li>
-        </ul>
-        <pre class="redBig"> 
-    由于编写过程中软硬件版本也在不断完善,本培训资料会保持更新.
-    涉及到的内容和示例,以及用户反馈的勘误也会随时进行修改...
-</pre>-->
+   <!--  <div class="info">
         <div class="ad">
             <h2>我司参与的公众平台对接项目</h2>
             <ol>
@@ -100,57 +92,22 @@
                 <li>上海停车场信息上报平台</li>
                 <li>杭州P+R公交卡支付对接</li>
                 <li>上海公交卡支付对接</li>
-                <!--<li>......</li>-->
             </ol>
             <p>平台对接不断的持续开发中......</p>
         </div>
-    </div>
-    <div class="content">
-        <div style="color: cyan;">更新公告</div>
-        <ol>
-            <li>
-                更新车牌识别管理软件至V2613<br />
-                <!--该版本有大功能的更新:<br />
-                a.支持mysql数据库;<br />
-                b.支持非机动车刷卡控制;<br />
-                c.支持新型移动支付,扫码支付,预支付,无感支付,申请手续极其简单;<br />
-                d.已知的一些bug.<br />-->
-            </li>
-            <!--<li>
-                新增非机动车刷卡功能详解.
-            </li>
-            <li>
-                新增MySql数据库引擎使用说明.
-            </li>
-            <li>
-                更新常规接线图和特殊功能接线图.
-            </li>-->
-        </ol>
-    </div>
-    <div class="special">
-        <p  style="color: cyan;">功能特点</p>
-        <dl>
-            <dt>三色显示屏</dt>
-            <dd>整屏全三彩,替代红绿灯功能.禁止通行:全屏红色显示信息;等待确认:全屏黄色显示信息;合法通行,全屏绿色显示信息.</dd>
-            <dt>出口遥控收费和入口遥控确认开闸</dt>
-            <dd>重点解决保安不会操作电脑的问题,遥控开闸后软件端能够产生收费和通行记录.</dd>
-            <dt>车位预警</dt>
-            <dd>解决月租车不停在自己的车位,在小区内胡乱停放,占用小区临时车位的问题.系统自动向管理人员推送警告信息,杜绝乱停乱放.</dd>
-            <dt>满位等待入场功能</dt>
-            <dd>当车场满位后,等待入场的车辆识别后,在停车场有车出场时,无须倒车二次识别,自动开闸入场.</dd>
-            <dt>TTS万能语音播报</dt>
-            <dd>播报任意内容的语音,语音自定义,不限定范围.可以针对每一台车设定个性化称呼,比如:李先生,欢迎回家!</dd>
-            <dt>无牌车自动入场</dt>
-            <dd>支持无牌车自动出入场,用户使用手机扫二维码出入场,并计费.</dd>
-            <dt>车牌识别一体机和显示屏只需一个IP地址</dt>
-            <dd>为减少网络资源消耗,减少故障节点,显示屏和摄像机使用同一根网线通讯,即只需一个IP地址。</dd>
-            <dt>软件集中授权</dt>
-            <dd>多个停车场多台电脑情况下,一个局域网内的所有系统仅只需一个加密狗.</dd>
-            <dt>内置数据库</dt>
-            <dd>系统采用内置数据库方案,不需要重新安装数据库,减少系统的维护难度.</dd>
-            <dt>系统支持时段控制</dt>
-            <dd>可在指定时段放行或禁止指定某种类型车辆通行,例:小区内0:00-5:00禁止临时车进出.</dd>
-        </dl>
-    </div>
+    </div> -->
+
+    <script type="text/javascript">
+        var docHeight=$(document).height();
+        var screenHeight=window.screen.availHeight;
+        // alert(docHeight+','+screenHeight);
+        if(docHeight<screenHeight){
+            $('body').height(screenHeight);
+        }
+        else{
+            $('body').height(docHeight);
+        }
+        
+    </script>
 </body>
 </html>
