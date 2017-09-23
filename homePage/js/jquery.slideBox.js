@@ -14,10 +14,10 @@
 		//默认参数
 		var defaults = {
 			direction : 'left',//left,top
-			duration : 0.6,//unit:seconds
+			duration : 0.3,//unit:seconds
 			easing : 'swing',//swing,linear
 			delay : 3,//unit:seconds
-			startIndex : 0,
+			startIndex : 1,
 			hideClickBar : true,
 			clickBarRadius : 5,//unit:px
 			hideBottomBar : false,
