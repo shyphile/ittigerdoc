@@ -21,13 +21,13 @@
             });
 
             var docHeight=$(document).height();
-            var screenHeight=window.screen.availHeight;
+            var screenHeight=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
         // alert(docHeight+','+screenHeight);
             if(docHeight<screenHeight){
-                $('body').height(screenHeight);
+                $('body').height(screenHeight+300);
             }
             else{
-                $('body').height(docHeight);
+                $('body').height(docHeight+300);
              }
         
       });
@@ -66,6 +66,7 @@ dl>dd{
     text-indent: 2em;
 }
 body{
+	background-color: rgb(15,106,199);
     background-image: url(backimage.png);
 }
 html{
