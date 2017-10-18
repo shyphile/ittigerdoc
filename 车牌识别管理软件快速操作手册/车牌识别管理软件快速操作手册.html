@@ -12,11 +12,16 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.gif.js"></script>
-    <script src="../js/imgload_gifload.js"></script>  
+    <script src="../js/imgload_gifload.js"></script> 
+    <script type="text/javascript">
+        function softReadme(){
+            parent.document.getElementById('softReadme').click();    
+        }
+    </script> 
 </head>
 <body>
 <p class="title">车牌识别管理软件快速操作手册</p>
-软件操作详细信息,请参考<a href="../车牌识别系统软件说明书/车牌识别系统软件说明书.html" target="_blank">"车牌识别系统管理软件说明书"</a>.
+软件操作详细信息,请参考<a href="javascript:void(0);" onclick="softReadme()">"车牌识别系统管理软件说明书"</a>.
 <h3>1.选择数据库类型</h3>
 <pre>
     本软件同时支持MSSQL2008和MySql数据库引擎.

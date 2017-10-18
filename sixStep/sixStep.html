@@ -50,17 +50,27 @@
        c.插上加密狗,打开桌面上的"ParkUI.exe"快捷方式,弹出找不到数据库的对话框,点击"是",然后按照提示完成数据库创建.
            <a href="../车牌识别管理软件快速操作手册/车牌识别管理软件快速操作手册.html#createDatabase" target="_blank">数据库创建参考这里</a>.
        d.进入软件主界面,设置收费标准\车场设置\车道设置\增加收费员账户;
-       e.切换到收费员账户登入软件并进入实时监控,即可开始收费操作.
-       
-       详细的软件操作参考<a href="../车牌识别管理软件快速操作手册/车牌识别管理软件快速操作手册.html" target="_blank">软件快速操作手册</a>.
-       多电脑多岗亭的停车场需要设置数据库,加密狗和车牌图片共享,参考<a href="../车牌识别共享操作集中说明/车牌识别共享操作集中说明.html" target="_blank">车牌识别共享操作集中说明</a>.
+       e.切换到收费员账户登入软件并进入实时监控,即可开始收费操作.      
+       详细的软件操作参考<a href="javascript:void(0)" target="_blank" onclick="sofeQuickStudy()">软件快速操作手册</a>.
+       多电脑多岗亭的停车场需要设置数据库,加密狗和车牌图片共享,参考<a href="javascript:void(0)" onclick="share()">车牌识别共享操作集中说明</a>.
    </pre>
    <h3>5.相机调试</h3>
    <pre>
        a.修改相机IP;
        b.画虚拟线圈和识别区域;
        c.观察车牌成像大小和角度,是否符合要求;
-       详细的相机调试方法参考<a href="../摄像机调试方法/摄像机调试方法.html" target="_blank">摄像机调试方法</a>.
+       详细的相机调试方法参考<a href="javascript:void(0)" onclick="cameraDebug()" target="_blank">摄像机调试方法</a>.
    </pre>
 </body>
+<script type="text/javascript">
+  function share(){
+    parent.document.getElementById('share').click();
+  }
+  function sofeQuickStudy(){
+    parent.document.getElementById('sofeQuickStudy').click();    
+  }
+   function cameraDebug(){
+    parent.document.getElementById('cameraDebug').click();    
+  }
+</script>
 </html>
