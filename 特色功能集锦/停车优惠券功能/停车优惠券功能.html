@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
     <link href="../../css/css/font-awesome.css" rel="stylesheet" media="screen">
     <link rel='stylesheet' id='jquery-gif-css' href='../../css/jquery.gif.css' type='text/css' media='all'/>
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
@@ -17,17 +18,19 @@
 <p class="title">停车优惠券功能</p>
 <span class="redBig">以下参数设置只对当前电脑有效,多台电脑需多次如法炮制.</span>
 <h3>1.功能介绍</h3>
-<pre>   大型商业场所下,物业中心可为管辖的商户发行停车优惠券,商户再自主将优惠券下发给来店消费的客人或其它使用者.执优惠券的车主出场时能减免一定的停车费用.
+<pre>    大型商业场所下,物业中心可为管辖的商户发行停车优惠券,商户再自主将优惠券下发给来店消费的客人或其它使用者.执优惠券的车主出场时能减免一定的停车费用.
     优惠券分为定额优惠券\时长优惠券\自宝义优惠券.
     可在停车场联网和脱机下使用.
 </pre>
 <h3>2.操作说明</h3>
 <h4>2.1 开启停车优惠券功能</h4>
 <pre>
-   在软件根目录里找到Config文件夹,在此文件夹下有个Coupon.xml1.
-   首先将该文件重命名为Coupon.xml,即去掉原文件名后面的"1",然后用记事本打开该文件,如下图.
+    联系我司获取配置文件:Coupon.xml,将该文件拷贝到软件根目录的Config文件夹里,重启软件.
+    软件会检测该文件,若存在,则自动开启停车优惠券功能.
+    下面简单说一下该配置文件里的参数.
+    用记事本打开该文件,如下图.
     <img dataOrigin="img/couponxml.png" />
-    ParkingID:区分停车场的唯一ID号,不能相同,此ID与商户对应.ID自定义,尽可能编的复杂点.
+    ParkingID:区分停车场的唯一ID号,不能相同,此ID与商户对应.ID可自定义,尽可能编的复杂点.
     <span class="note">ID由字母和数字组成,不能包含其它字符.</span>
     IP:发行优惠券的服务器IP地址.
     能访问外网的停车场,可使用我司提供的云服务器发行优惠券. 
