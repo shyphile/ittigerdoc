@@ -7,10 +7,9 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="Cache" content="no-cache">
     <link rel="stylesheet" type="text/css" href="../无牌车扫码之二维码配置/bootstrap/css/bootstrap.min.css">
-    <link href="css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
     <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script> 
     <script src="../无牌车扫码之二维码配置/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.slideBox.js" type="text/javascript"></script>
+
     <script>
         jQuery(function($){
             var docHeight=$(document).height();
@@ -22,6 +21,10 @@
         else{
             $('body').height(docHeight+300);
         }
+        $('.item').click(function () {
+            window.open('../productPicSet/index.html');
+        });
+        $('#myCarousel').carousel();
         
     });
 
@@ -90,7 +93,7 @@ html{
                         更新车牌识别管理软件至2634版本
                     </li> 
                     <li>
-                        新增满位入场可配置
+                        新增产品图册下载 查看导航4.5
                     </li>
                     <li>
                         新增临时车停车超时禁止出场

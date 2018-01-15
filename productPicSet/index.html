@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -103,6 +103,7 @@
   $(function(){
       // Calling the plugin
       $('.tab-group').tabify();
+
     })
   </script>
 
@@ -212,7 +213,7 @@
       resizeable: true,
       ajaxCallback: function(success, end) {
         let str = "";
-        let templ = '<div class="box" style="opacity:0;filter:alpha(opacity=0);"><img src="../adpic/{{src}}.jpg" /><p style="text-align:right;">{{src1}}</p></div>';
+        let templ = '<div class="box" style="opacity:0;filter:alpha(opacity=0);"><img src="../adpic/{{src}}.png" /><p style="text-align:right;">{{src1}}</p></div>';
         for(let i = 0; i < 8; i++) {
           if(index>data.data.length-1){
             break;
@@ -236,7 +237,7 @@
       resizeable: true,
       ajaxCallback: function(success, end) {
         let str = "";
-        let templ = '<div class="box1" style="opacity:0;filter:alpha(opacity=0);"><img src="../adpic/{{src}}.jpg" /><p style="text-align:right;">{{src1}}</p></div>';
+        let templ = '<div class="box1" style="opacity:0;filter:alpha(opacity=0);"><img src="../adpic/{{src}}.png" /><p style="text-align:right;">{{src1}}</p></div>';
         for(let i = 0; i < 8; i++) {
           if(index1>data1.data.length-1){
             break;
@@ -276,7 +277,7 @@
    let wh=$(window).height();
    function init(value1,value2,value3,value4,value5){
     while(1){
-      let str='<div class="'+value1+'" ><img src="../adpic/{{src}}.jpg" /><p style="text-align:right;">{{src1}}</p></div>';
+      let str='<div class="'+value1+'" ><img src="../adpic/{{src}}.png" /><p style="text-align:right;">{{src1}}</p></div>';
       let index=value3[0];
       let de=value2.data[index].src.indexOf('/')+1;
       let picName=value2.data[index].src.slice(de);
@@ -286,7 +287,7 @@
 
       $(value4).append(str);
       let dh=$(value5).offset().top;
-      if(dh>(wh)){
+      if(dh>(wh) || index>10){
        break;
      }
    }
